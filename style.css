@@ -1111,3 +1111,7 @@ html {
 }
 
 
+.visitor-counter {
+  font-size: 0.95rem;
+  color: var(--subtext);
+}

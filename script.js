@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("theme-toggle-btn");
   const html = document.documentElement;
 
-  let theme = localStorage.getItem("theme") || 
+  let theme = localStorage.getItem("theme") ||
               (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  
+
   setTheme(theme);
 
   toggleBtn.addEventListener("click", () => {
@@ -15,12 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setTheme(mode) {
     html.setAttribute("data-theme", mode);
-
-
     toggleBtn.classList.toggle("theme-toggle--toggled", mode === "dark");
   }
+
+
+  fetch("https://nsxduqvwtk.execute-api.us-east-1.amazonaws.com/prod/counter")
+    .then((res) => res.json())
+    .then((data) => {
+      const visitsElement = document.getElementById("visitor-count");
+      if (visitsElement) {
+        visitsElement.textContent = data.visits;
+      }
+    })
+    .catch((err) => {
+      console.error("Error fetching visitor count:", err);
+    });
 });
-  
+
 
 
 
