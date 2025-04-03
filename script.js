@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://nsxduqvwtk.execute-api.us-east-1.amazonaws.com/prod/counter")
   .then((res) => res.json())
   .then((data) => {
-    const body = JSON.parse(data.body); 
     const visitsElement = document.getElementById("visitor-count");
-    if (visitsElement) {
-      visitsElement.textContent = body.visits;
+    if (visitsElement && data.visits !== undefined) {
+      visitsElement.textContent = data.visits;
     }
   })
+  
   .catch((err) => {
     console.error("Error fetching visitor count:", err);
   });
