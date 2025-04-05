@@ -44,8 +44,16 @@ jobs:
           echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
         shell: bash
 
+      - name: Inject API URL into script.js
+        run: |
+          sed -i "s|{{API_URL}}|${{ secrets.API_GATEWAY_URL }}|g" frontend/script.js
+
       - name: Upload frontend to S3
         run: aws s3 sync frontend/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
+
+      - name: Reset script.js placeholder
+        run: |
+          sed -i "s|${{ secrets.API_GATEWAY_URL }}|{{API_URL}}|g" frontend/script.js
 
       - name: Invalidate CloudFront Cache
         run: |
