@@ -1,8 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "__BACKEND_BUCKET__"
-    key            = "__BACKEND_KEY__"
-    region         = "__BACKEND_REGION__"
-    encrypt        = true
+    bucket  = "cloud-resume-terraform-state-storage"
+    key     = "cloud-resume/terraform.tfstate"
+    region  = "us-east-1"
+    encrypt = true
+
   }
 }

@@ -13,3 +13,4 @@ terraform.tfvars
 **/*.pyc
 cleaned/
 modules/lambda/src/*.zip
+backend.tf
