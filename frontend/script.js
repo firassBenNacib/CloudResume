@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  fetch("https://nsxduqvwtk.execute-api.us-east-1.amazonaws.com/prod/counter")
+   fetch("{{API_URL}}")
   .then((res) => res.json())
   .then((data) => {
     const visitsElement = document.getElementById("visitor-count");

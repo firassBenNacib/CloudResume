@@ -1,5 +1,16 @@
 node_modules/
-package.json
 package-lock.json
+package.json
 purge.config.cjs
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+.vscode/
+.DS_Store
+**/__pycache__/
+**/*.pyc
 cleaned/
+modules/lambda/src/*.zip
+backend.tf

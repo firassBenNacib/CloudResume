@@ -1,0 +1,6 @@
+root_domain     = "example.com"
+hosted_zone_id  = "Z*************" 
+bucket_name     = "exemple-bucket"
+alert_email     = "your@email.com"
+project_name    = "Cloud Resume Challenge"
+owner_name      = "Name"
