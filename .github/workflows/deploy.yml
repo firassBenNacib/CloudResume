@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'frontend/**'
-  workflow_dispatch:
 
 jobs:
   deploy-frontend:
@@ -27,12 +26,7 @@ jobs:
         id: get_cf_id
         working-directory: ./terraform
         run: |
-          if terraform output -raw cloudfront_distribution_id >/dev/null 2>&1; then
-            echo "CLOUDFRONT_ID=$(terraform output -raw cloudfront_distribution_id)" >> $GITHUB_ENV
-          else
-            echo "CloudFront Distribution ID not found. Skipping invalidation."
-            echo "CLOUDFRONT_ID=" >> $GITHUB_ENV
-          fi
+          echo "cloudfront_id=$(terraform output -raw cloudfront_distribution_id)" >> $GITHUB_OUTPUT
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -45,8 +39,7 @@ jobs:
         run: aws s3 sync frontend/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
       - name: Invalidate CloudFront Cache
-        if: env.CLOUDFRONT_ID != ''
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id $CLOUDFRONT_ID \
+            --distribution-id ${{ steps.get_cf_id.outputs.cloudfront_id }} \
             --paths "/*"
