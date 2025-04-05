@@ -23,12 +23,6 @@ jobs:
         working-directory: ./terraform
         run: terraform init
 
-      - name: Get CloudFront Distribution ID
-        id: get_cf_id
-        working-directory: ./terraform
-        run: |
-          echo "cloudfront_id=$(terraform output -raw cloudfront_distribution_id)" >> $GITHUB_OUTPUT
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -36,11 +30,25 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Fetch CloudFront Distribution ID dynamically
+        run: |
+          CLOUDFRONT_ID=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[?Aliases.Items[?@=='${{ secrets.ROOT_DOMAIN }}']].Id" \
+            --output text)
+
+          if [ -z "$CLOUDFRONT_ID" ]; then
+            echo "CloudFront Distribution ID not found. Exiting."
+            exit 1
+          fi
+
+          echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
+        shell: bash
+
       - name: Upload frontend to S3
         run: aws s3 sync frontend/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id ${{ steps.get_cf_id.outputs.cloudfront_id }} \
+            --distribution-id $CLOUDFRONT_ID \
             --paths "/*"
