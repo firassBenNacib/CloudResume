@@ -37,6 +37,10 @@ jobs:
         working-directory: ./terraform
         run: terraform init
 
+      - name: Terraform Apply (auto-approve to ensure state)
+        working-directory: ./terraform
+        run: terraform apply -auto-approve
+
       - name: Get Terraform outputs safely
         working-directory: ./terraform
         run: |
