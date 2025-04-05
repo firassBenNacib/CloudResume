@@ -30,17 +30,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Fetch API Gateway URL dynamically
-        id: get_api_url
+      - name: Get CloudFront and API Gateway info
+        id: tf_outputs
+        working-directory: ./terraform
         run: |
-          API_URL=$(aws apigateway get-rest-apis \
-            --query "items[?name=='cloud-resume-api'].id" \
-            --output text)
-          if [ -z "$API_URL" ]; then
-            echo "API Gateway not found. Exiting."
-            exit 1
-          fi
-          echo "API_URL=https://${API_URL}.execute-api.${{ secrets.AWS_REGION }}.amazonaws.com/prod/" >> $GITHUB_ENV
+          echo "api_url=$(terraform output -raw api_url)" >> $GITHUB_ENV
+          echo "cloudfront_id=$(terraform output -raw cloudfront_distribution_id)" >> $GITHUB_ENV
 
       - name: Inject API URL into script.js
         run: |
@@ -49,23 +44,12 @@ jobs:
       - name: Upload frontend to S3
         run: aws s3 sync frontend/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
-      - name: Reset API placeholder in script.js
+      - name: Reset script.js to template
         run: |
           sed -i "s|$API_URL|{{API_URL}}|g" frontend/script.js
-
-      - name: Fetch CloudFront Distribution ID dynamically
-        run: |
-          CLOUDFRONT_ID=$(aws cloudfront list-distributions \
-            --query "DistributionList.Items[?Aliases.Items[?@=='${{ secrets.ROOT_DOMAIN }}']].Id" \
-            --output text)
-          if [ -z "$CLOUDFRONT_ID" ]; then
-            echo "CloudFront Distribution ID not found. Exiting."
-            exit 1
-          fi
-          echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
 
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id $CLOUDFRONT_ID \
+            --distribution-id "$cloudfront_id" \
             --paths "/*"
