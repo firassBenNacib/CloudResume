@@ -16,37 +16,38 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
-
-      - name: Configure AWS credentials
+      - name: Setup AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Configure Terraform backend dynamically
-        working-directory: ./terraform
+      - name: Get API Gateway and CloudFront IDs dynamically
         run: |
-          sed -i 's|__BACKEND_BUCKET__|${{ secrets.TF_STATE_BUCKET }}|' backend.tf
-          sed -i 's|__BACKEND_KEY__|${{ secrets.TF_STATE_KEY }}|' backend.tf
-          sed -i 's|__BACKEND_REGION__|${{ secrets.AWS_REGION }}|' backend.tf
+          # Get the API Gateway ID by name
+          API_ID=$(aws apigateway get-rest-apis \
+            --query "items[?name=='CloudResumeCounterAPI'].id" \
+            --output text)
 
-      - name: Initialize Terraform
-        working-directory: ./terraform
-        run: terraform init
+          if [ -z "$API_ID" ]; then
+            echo "❌ API Gateway not found. Exiting."
+            exit 1
+          fi
 
-      - name: Terraform Apply (auto-approve to ensure state)
-        working-directory: ./terraform
-        run: terraform apply -auto-approve
-
-      - name: Get Terraform outputs safely
-        working-directory: ./terraform
-        run: |
-          API_URL=$(terraform output -raw api_url)
-          CLOUDFRONT_ID=$(terraform output -raw cloudfront_distribution_id)
+          API_URL="https://${API_ID}.execute-api.${AWS_REGION}.amazonaws.com/prod/counter"
           echo "API_URL=$API_URL" >> $GITHUB_ENV
+
+          # Get the CloudFront Distribution ID by domain name
+          CLOUDFRONT_ID=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[?Aliases.Items[?@=='${{ secrets.ROOT_DOMAIN }}']].Id" \
+            --output text)
+
+          if [ -z "$CLOUDFRONT_ID" ]; then
+            echo "❌ CloudFront Distribution ID not found. Exiting."
+            exit 1
+          fi
+
           echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
 
       - name: Inject API URL into script.js
@@ -56,7 +57,7 @@ jobs:
       - name: Upload frontend to S3
         run: aws s3 sync frontend/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
-      - name: Reset script.js to template
+      - name: Reset script.js placeholder
         run: |
           sed -i "s|$API_URL|{{API_URL}}|g" frontend/script.js
 
