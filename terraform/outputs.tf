@@ -22,3 +22,8 @@ output "api_url" {
   description = "Invoke URL of the deployed API Gateway endpoint"
   value       = module.apigateway.api_url
 }
+
+output "cloudfront_distribution_id" {
+  description = "ID of the CloudFront distribution"
+  value       = module.cloudfront.cloudfront_distribution_id
+}
