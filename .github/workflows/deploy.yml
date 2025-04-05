@@ -8,6 +8,10 @@ on:
       - 'frontend/**'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   deploy-frontend:
     runs-on: ubuntu-latest
@@ -24,30 +28,24 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Get API Gateway and CloudFront IDs dynamically
+        id: ids
         run: |
-          # Get the API Gateway ID by name
           API_ID=$(aws apigateway get-rest-apis \
             --query "items[?name=='CloudResumeCounterAPI'].id" \
             --output text)
 
-          if [ -z "$API_ID" ]; then
-            echo "❌ API Gateway not found. Exiting."
-            exit 1
-          fi
-
-          API_URL="https://${API_ID}.execute-api.${AWS_REGION}.amazonaws.com/prod/counter"
-          echo "API_URL=$API_URL" >> $GITHUB_ENV
-
-          # Get the CloudFront Distribution ID by domain name
           CLOUDFRONT_ID=$(aws cloudfront list-distributions \
             --query "DistributionList.Items[?Aliases.Items[?@=='${{ secrets.ROOT_DOMAIN }}']].Id" \
             --output text)
 
-          if [ -z "$CLOUDFRONT_ID" ]; then
-            echo "❌ CloudFront Distribution ID not found. Exiting."
+          if [[ -z "$API_ID" || -z "$CLOUDFRONT_ID" ]]; then
+            echo "Missing API ID or CloudFront ID. Exiting."
             exit 1
           fi
 
+          API_URL="https://${API_ID}.execute-api.${{ secrets.AWS_REGION }}.amazonaws.com/prod/counter"
+
+          echo "API_URL=$API_URL" >> $GITHUB_ENV
           echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
 
       - name: Inject API URL into script.js
