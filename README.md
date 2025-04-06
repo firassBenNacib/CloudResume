@@ -114,7 +114,7 @@ cloud-resume/
 
 - **GitHub Actions** automates deployment for both frontend and backend:
   - **Frontend Pipeline**:
-    - Runs on each commit to `main` or `frontend` branch.
+    - Runs on each commit to `main`.
     - Uploads static files (HTML, CSS, JS) to S3.
     - **Invalidates CloudFront cache** to reflect changes immediately.
   - **Backend Pipeline**:
