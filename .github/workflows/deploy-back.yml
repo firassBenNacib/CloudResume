@@ -51,9 +51,16 @@ jobs:
           echo "Zipping Lambda function..."
           zip views_counter.zip views_counter.py
 
-      - name: Terraform apply if tests pass
+      - name: Terraform Plan (safe)
         if: ${{ success() }}
         working-directory: terraform
+        env:
+          TF_VAR_root_domain: ${{ secrets.ROOT_DOMAIN }}
+          TF_VAR_hosted_zone_id: ${{ secrets.HOSTED_ZONE_ID }}
+          TF_VAR_bucket_name: ${{ secrets.BUCKET_NAME }}
+          TF_VAR_alert_email: ${{ secrets.ALERT_EMAIL }}
+          TF_VAR_owner_name: ${{ secrets.OWNER_NAME }}
+          TF_VAR_project_name: ${{ secrets.PROJECT_NAME }}
         run: |
           terraform init
-          terraform apply -auto-approve
+          terraform plan -no-color
