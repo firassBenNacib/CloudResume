@@ -22,7 +22,7 @@ module "dynamodb" {
 
 module "lambda" {
   source               = "./modules/lambda"
-  lambda_zip_path      = "${path.module}/modules/lambda/src/views_counter.zip"
+  lambda_zip_path      = "${path.module}/modules/lambda/src/main/views_counter.zip"
   lambda_exec_role_arn = module.iam.lambda_exec_role_arn
   dynamodb_table_name  = module.dynamodb.table_name
   tags = {
