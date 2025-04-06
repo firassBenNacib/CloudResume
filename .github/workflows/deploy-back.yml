@@ -51,14 +51,14 @@ jobs:
           echo "Zipping Lambda function..."
           zip views_counter.zip views_counter.py
 
-      - name: Mask sensitive Terraform outputs
+      - name: Mask Terraform outputs
         working-directory: terraform
         run: |
           terraform init -backend=false
           terraform output -raw cloudfront_distribution_id | xargs -I {} echo "::add-mask::{}"
           terraform output -raw cloudfront_domain_name | xargs -I {} echo "::add-mask::{}"
 
-      - name: Terraform Plan (safe)
+      - name: Terraform Plan
         if: ${{ success() }}
         working-directory: terraform
         env:
@@ -71,3 +71,41 @@ jobs:
         run: |
           terraform init
           terraform plan -no-color
+
+      - name: Export masked CloudFront and API values
+        run: |
+          API_ID=$(aws apigateway get-rest-apis \
+            --query "items[?name=='CloudResumeCounterAPI'].id" \
+            --output text)
+
+          CLOUDFRONT_ID=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[?Aliases.Items[?@=='${{ secrets.ROOT_DOMAIN }}']].Id" \
+            --output text)
+
+          if [[ -z "$API_ID" || -z "$CLOUDFRONT_ID" ]]; then
+            echo "Missing API ID or CloudFront ID. Exiting."
+            exit 1
+          fi
+
+          API_URL="https://${API_ID}.execute-api.${AWS_REGION}.amazonaws.com/prod/counter"
+
+          echo "::add-mask::$API_URL"
+          echo "::add-mask::$CLOUDFRONT_ID"
+
+          echo "API_URL=$API_URL" >> $GITHUB_ENV
+          echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
+
+      - name: Inject API URL into script.js
+        run: sed -i "s|{{API_URL}}|$API_URL|g" frontend/script.js
+
+      - name: Sync frontend to S3
+        run: aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} --delete
+
+      - name: Reset script.js placeholder
+        run: sed -i "s|$API_URL|{{API_URL}}|g" frontend/script.js
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "$CLOUDFRONT_ID" \
+            --paths "/*"
