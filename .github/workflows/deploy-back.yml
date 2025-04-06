@@ -51,6 +51,13 @@ jobs:
           echo "Zipping Lambda function..."
           zip views_counter.zip views_counter.py
 
+      - name: Mask sensitive Terraform outputs
+        working-directory: terraform
+        run: |
+          terraform init -backend=false
+          terraform output -raw cloudfront_distribution_id | xargs -I {} echo "::add-mask::{}"
+          terraform output -raw cloudfront_domain_name | xargs -I {} echo "::add-mask::{}"
+
       - name: Terraform Plan (safe)
         if: ${{ success() }}
         working-directory: terraform
