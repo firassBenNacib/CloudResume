@@ -14,7 +14,7 @@ This project is my version of the [Cloud Resume Challenge](https://cloudresumech
 - [Installation](#installation)
 - [Usage](#usage)
 - [CI/CD Pipeline](#cicd-pipeline)
-- [Monitoring](#monitoring)
+- [Monitoring](#monitoring-1)
 - [License](#license)
 - [Authors](#authors)
 ## Features
