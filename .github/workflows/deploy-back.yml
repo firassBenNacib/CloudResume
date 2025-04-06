@@ -26,6 +26,7 @@ jobs:
 
       - name: Run Lambda tests
         run: |
+          # Move to the correct test directory
           cd terraform/modules/lambda/src/test
           python -m unittest discover .
 
