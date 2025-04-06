@@ -3,14 +3,17 @@ from unittest.mock import MagicMock, patch
 import sys
 import os
 
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../main')))
 
-with patch('boto3.resource') as mock_dynamodb_resource:
-    mock_table = MagicMock()
-    mock_table.update_item.return_value = {'Attributes': {'visits': 10}}
-    mock_dynamodb_resource.return_value.Table.return_value = mock_table
 
-    from views_counter import lambda_handler
+with patch.dict(os.environ, {"TABLE_NAME": "fake_table"}):
+    with patch('boto3.resource') as mock_dynamodb_resource:
+        mock_table = MagicMock()
+        mock_table.update_item.return_value = {'Attributes': {'visits': 10}}
+        mock_dynamodb_resource.return_value.Table.return_value = mock_table
+
+        from views_counter import lambda_handler
 
 class TestLambdaHandler(unittest.TestCase):
 
