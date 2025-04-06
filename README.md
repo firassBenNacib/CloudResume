@@ -16,7 +16,7 @@ This project is my version of the [Cloud Resume Challenge](https://cloudresumech
 - [CI/CD Pipeline](#cicd-pipeline)
 - [Monitoring](#monitoring)
 - [License](#license)
-
+- [Authors](#authors)
 ## Features
 
 - Static resume hosted on S3 with custom domain.
