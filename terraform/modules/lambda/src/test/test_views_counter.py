@@ -1,5 +1,11 @@
 import unittest
 from unittest.mock import MagicMock
+import sys
+import os
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../main')))
+
 from views_counter import lambda_handler
 
 class TestLambdaHandler(unittest.TestCase):
