@@ -6,4 +6,5 @@ output "table_name" {
 output "table_arn" {
   description = "The ARN of the DynamoDB table"
   value       = aws_dynamodb_table.visitor_count.arn
+  sensitive = true
 }
