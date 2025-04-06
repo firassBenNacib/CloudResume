@@ -138,5 +138,3 @@ This project is licensed under the [MIT License](./LICENSE).
 ## Authors
 
 Created and maintained by [Firas Ben Nacib](https://github.com/firassBenNacib) - bennacibfiras@gmail.com
-```
-
