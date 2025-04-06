@@ -53,7 +53,7 @@ jobs:
           sed -i "s|{{API_URL}}|$API_URL|g" frontend/script.js
 
       - name: Upload frontend to S3
-        run: aws s3 sync frontend/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
+        run: aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} --delete
 
       - name: Reset script.js placeholder
         run: |
