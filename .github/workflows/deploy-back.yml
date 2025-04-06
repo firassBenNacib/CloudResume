@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Lambda tests
         run: |
-          cd terraform/modules/lambda/test
+          cd terraform/modules/lambda/src/test
           python -m unittest discover .
 
       - name: Set up AWS credentials
