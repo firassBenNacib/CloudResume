@@ -55,7 +55,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: frontend
-        run: npm ci
+        run: npm install
 
       - name: Build Tailwind CSS
         working-directory: frontend
