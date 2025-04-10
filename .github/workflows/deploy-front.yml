@@ -48,6 +48,19 @@ jobs:
           echo "API_URL=$API_URL" >> $GITHUB_ENV
           echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        working-directory: frontend
+        run: npm run build
+
       - name: Inject API URL into script.js
         run: |
           sed -i "s|{{API_URL}}|$API_URL|g" frontend/script.js
