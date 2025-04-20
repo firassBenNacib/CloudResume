@@ -76,6 +76,7 @@ jobs:
             --include "output.css" \
             --include "script.js" \
             --include "sitemap.xml" \
+            --include "robots.txt" \
             --include "images/*" \
             --include "files/*" 
 
