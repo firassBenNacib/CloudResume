@@ -64,9 +64,14 @@ jobs:
       - name: Inject API URL into script.js
         run: |
           sed -i "s|{{API_URL}}|$API_URL|g" frontend/script.js
-
+          
       - name: Upload frontend to S3
-        run: aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} --delete
+        run: |
+          aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} \
+            --delete \
+            --exclude "node_modules/*" \
+            --exclude "package*.json" \
+            --exclude "*.lock"
 
       - name: Reset script.js placeholder
         run: |
