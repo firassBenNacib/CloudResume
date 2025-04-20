@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "cloud-resume-frontend",
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
@@ -9,11 +9,7 @@
     "daisyui": "^5.0.27",
     "tailwindcss": "^3.4.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "frontend": "file:"
+    "cloud-resume-frontend": "file:"
   }
 }

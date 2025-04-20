@@ -70,8 +70,10 @@ jobs:
           aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} \
             --delete \
             --exclude "node_modules/*" \
-            --exclude "package*.json" \
-            --exclude "*.lock"
+            --exclude "**/node_modules/*" \
+            --exclude "*.lock" \
+            --exclude "*.json"
+      
 
       - name: Reset script.js placeholder
         run: |
