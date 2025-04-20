@@ -75,11 +75,9 @@ jobs:
             --exclude "*.json"
       
 
-      - name: Escape API URL and reset script.js
+      - name: Reset script.js placeholder
         run: |
-          ESCAPED_API_URL=$(printf '%s\n' "$API_URL" | sed -e 's/[\/&]/\\&/g')
-          sed -i "s|$ESCAPED_API_URL|{{API_URL}}|g" frontend/script.js
-      
+          sed -i "s|$API_URL|{{API_URL}}|g" frontend/script.js
 
       - name: Invalidate CloudFront Cache
         run: |
