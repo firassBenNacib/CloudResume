@@ -69,11 +69,15 @@ jobs:
         run: |
           aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} \
             --delete \
-            --exclude "node_modules/*" \
-            --exclude "**/node_modules/*" \
-            --exclude "*.lock" \
-            --exclude "*.json"
-      
+            --exclude "*" \
+            --include "index.html" \
+            --include "style.css" \
+            --include "toggle.css" \
+            --include "output.css" \
+            --include "script.js" \
+            --include "sitemap.xml" \
+            --include "images/*" \
+            --include "files/*" 
 
       - name: Reset script.js placeholder
         run: |
