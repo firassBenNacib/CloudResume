@@ -16,7 +16,7 @@ This project is my version of the [Cloud Resume Challenge](https://cloudresumech
 - [CI/CD Pipeline](#cicd-pipeline)
 - [Monitoring](#monitoring-1)
 - [License](#license)
-- [Authors](#authors)
+- [Author](#author)
 ## Features
 
 - Static resume hosted on S3 with custom domain.
@@ -135,6 +135,6 @@ cloud-resume/
 
 This project is licensed under the [MIT License](./LICENSE).
 
-## Authors
+## Author
 
 Created and maintained by [Firas Ben Nacib](https://github.com/firassBenNacib) - bennacibfiras@gmail.com
