@@ -67,7 +67,7 @@ if (terminalBody) {
 | |___| | (_) | |_| | (_| |
  \\____|_|\\___/ \\__,_|\\|
 </pre>
-<div>Cloud & DevOps Engineer – AWS & Azure Certified</div>`,
+<div>Cloud & DevOps Engineer – AWS, Azure & Kubernetes Certified</div>`,
 
     experience: 'Extensive experience with AWS, Kubernetes, Terraform, Jenkins, GitLab CI, Docker.',
     education: 'Cloud & DevOps Engineering – ESPRIT',
