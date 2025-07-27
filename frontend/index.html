@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Official portfolio of Firas Ben Nacib – Cloud & DevOps Engineer. Certified in AWS, Azure, Kubernetes (CKA). Projects include EcoAuto and OptiChat.">
+  <meta name="description" content="Official portfolio of Firas Ben Nacib - Cloud & DevOps Engineer. Certified in AWS, Azure, Kubernetes (CKA). Projects include EcoAuto and OptiChat.">
 
   <meta name="author" content="Firas Ben Nacib">
   <title>Firas Ben Nacib | Cloud & DevOps Engineer Portfolio</title>
@@ -69,14 +69,14 @@
           </svg>
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
+          <li><a href="#home" data-i18n="home">Home</a></li>
+          <li><a href="#about" data-i18n="about">About</a></li>
+          <li><a href="#projects" data-i18n="projects">Projects</a></li>
+          <li><a href="#skills" data-i18n="skills">Skills</a></li>
+          <li><a href="#certifications" data-i18n="certifications">Certifications</a></li>
+          <li><a href="#experience" data-i18n="experience">Experience</a></li>
+          <li><a href="#footer" data-i18n="contact">Contact</a></li>
+        </ul>        
       </div>
     </div>
  
@@ -86,30 +86,38 @@
       </p>
     </div>
 
-    <div class="navbar-end">
+    <div class="navbar-end" style="display: flex; align-items: center; gap: 1rem;">
+      <div class="lang-dropdown">
+        <button id="lang-toggle" aria-label="Changer la langue">
+          <i class="fa-solid fa-earth-americas"></i>
+        </button>
+        <div id="lang-menu" class="lang-menu hidden">
+          <button data-lang="en">English</button>
+          <button data-lang="fr">French</button>
+        </div>
+      </div>
       <button
-      class="theme-toggle theme-toggle--toggled"
-      type="button"
-      title="Toggle theme"
-      aria-label="Toggle theme"
-      id="theme-toggle-btn"
-      
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        width="1em"
-        height="1em"
-        fill="currentColor"
-        class="theme-toggle__inner-moon"
-        viewBox="0 0 32 32"
+        class="theme-toggle theme-toggle--toggled"
+        type="button"
+        title="Toggle theme"
+        aria-label="Toggle theme"
+        id="theme-toggle-btn"
       >
-        <path d="M27.5 11.5v-7h-7L16 0l-4.5 4.5h-7v7L0 16l4.5 4.5v7h7L16 32l4.5-4.5h7v-7L32 16l-4.5-4.5zM16 25.4a9.39 9.39 0 1 1 0-18.8 9.39 9.39 0 1 1 0 18.8z" />
-        <circle cx="16" cy="16" r="8.1" />
-      </svg>
-    </button>
-      
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          width="1.3em"
+          height="1.3em"
+          fill="currentColor"
+          class="theme-toggle__inner-moon"
+          viewBox="0 0 32 32"
+        >
+          <path d="M27.5 11.5v-7h-7L16 0l-4.5 4.5h-7v7L0 16l4.5 4.5v7h7L16 32l4.5-4.5h7v-7L32 16l-4.5-4.5zM16 25.4a9.39 9.39 0 1 1 0-18.8 9.39 9.39 0 1 1 0 18.8z" />
+          <circle cx="16" cy="16" r="8.1" />
+        </svg>
+      </button>
     </div>
+    
     
   </nav>
   
@@ -132,16 +140,23 @@
         </div>
         <div class="hero-buttons">
           <a 
-            href="mailto:bennacibfiras@gmail.com?subject=Hi Firas, I'd like to hire you" 
-            class="btn-primary" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Hire Me! <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
-          </a>
-          <a href="files/Firas_Ben_Nacib_Resume.pdf" target="_blank" class="btn-outline">
-            Download CV <i class="fas fa-download"></i>
-          </a>
+          href="mailto:bennacibfiras@gmail.com?subject=Hi Firas, I'd like to hire you" 
+          class="btn-primary" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          data-i18n="hireMe"
+        >
+          Hire Me! <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+        </a>
+        <a 
+          href="files/Firas_Ben_Nacib_Resume.pdf" 
+          target="_blank" 
+          class="btn-outline"
+          data-i18n="downloadCV"
+        >
+          Download CV <i class="fas fa-download"></i>
+        </a>
+        
         </div>
         
       </div>
@@ -183,109 +198,113 @@
     
     <div class="section-divider"></div>
     <section id="projects" class="section projects">
-   
-      <h2  class="section-title">Projects</h2>
+      <h2 class="section-title">Projects</h2>
     
       <div class="project-wrapper">
+    
         <div class="project">
           <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/CloudResume" target="_blank" aria-label="GitHub repo">
-              Cloud Resume Challenge – AWS Edition
+            <a class="project-title-link" href="https://github.com/firassBenNacib/KubleOps" target="_blank" aria-label="GitHub repo">
+              KubleOps  Cloud-Native DevOps Platform on AWS
             </a>
-            <a href="https://github.com/firassBenNacib/CloudResume" target="_blank" aria-label="GitHub repo">
+            <a href="https://github.com/firassBenNacib/KubleOps" target="_blank" aria-label="GitHub repo">
               <i class="fa-brands fa-github fa-xl"></i>
             </a>
           </div>
-          
           <p>
-            Fully completed the Cloud Resume Challenge using AWS and Terraform. 
-            Designed a serverless infrastructure with an S3-hosted static website, API Gateway, Lambda, and DynamoDB.
-            Implemented CI/CD with GitHub Actions and added real-time monitoring with CloudWatch + SNS.
+            Set up a production-ready infrastructure using Terraform and AWS EKS with full GitOps deployment. Laid out a highly available VPC across two AZs, with dual NAT gateways and secure access via a bastion host. Configured EC2 node groups with autoscaling and used IRSA for secure pod access to ECR.
           </p>
-        
-
-        
-          <button class="expand-btn">
-            Tech Stack <span class="arrow-icon">▼</span>
-          </button>
-        
+          <p>
+            Integrated ArgoCD and Helm for application delivery through ALB Ingress Controller. Installed Prometheus, Grafana, SonarQube, and Trivy using an EC2-based bootstrap script. CI/CD flows were wired through CircleCI for builds, scans, and image pushes.
+          </p>
+          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p><strong>Tools:</strong> AWS (S3, CloudFront, ACM, Route 53, Lambda, API Gateway, DynamoDB, CloudWatch, SNS, IAM), Terraform, GitHub Actions</p>
+            <p><strong>Tools:</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53), Terraform, Helm, ArgoCD, CircleCI, Prometheus, Grafana, SonarQube, Trivy</p>
           </div>
         </div>
-        
-            
+    
+ 
         <div class="project">
           <div class="project-title">
             <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" aria-label="GitHub repo">
-              EcoAuto – Cost-Effective Web Hosting Architecture
+              EcoAuto - Cost-Effective Web Hosting Architecture
             </a>
             <a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" aria-label="GitHub repo">
               <i class="fa-brands fa-github fa-xl"></i>
             </a>
           </div>
-          
           <p>
-            Designed and deployed a cost-optimized, highly available AWS infrastructure using Terraform. Integrated EC2 Auto Scaling, RDS, 
-            S3 static hosting, CloudFront, and Lambda@Edge for backend origin routing. Implemented full automation with serverless Lambda 
-            functions for scheduled EC2/RDS start-stop, backend origin switching, Route 53 DNS updates, and dynamic CloudFront security 
-            group synchronization.
+            Designed and deployed a cost-optimized, highly available AWS infrastructure using Terraform. Integrated EC2 Auto Scaling, RDS, S3 static hosting, CloudFront, and Lambda@Edge for backend origin routing. Automated EC2 and RDS start-stop, DNS updates, and CloudFront security group syncing with Lambda functions.
           </p>
-          <p><strong>This project serves as the base template powering infrastructure for projects like 
-            <a href="https://tal9i7.tn/" target="_blank" rel="noopener noreferrer">Tal9i7.tn</a>.
-          </strong></p>
-          
-          
-          <button class="expand-btn">
-            Tech Stack <span class="arrow-icon">▼</span>
-          </button>
-        
+          <p><strong>This project powers infrastructure behind <a href="https://tal9i7.tn/" target="_blank" rel="noopener noreferrer">Tal9i7.tn</a>.</strong></p>
+          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p>
-              <strong>Tools:</strong> AWS (EC2, ASG, RDS, S3, CloudFront, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge),
-              Terraform, GitLab CI, Docker
-            </p>
+            <p><strong>Tools:</strong> AWS (EC2, ASG, RDS, S3, CloudFront, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge), Terraform, GitLab CI, Docker</p>
           </div>
         </div>
-        
-      
+    
         <div class="project">
           <div class="project-title">
-            <span>Release Automation Platform – Vermeg</span>
+            <a class="project-title-link" href="https://github.com/firassBenNacib/CloudResume" target="_blank" aria-label="GitHub repo">
+              Cloud Resume Challenge - AWS Edition
+            </a>
+            <a href="https://github.com/firassBenNacib/CloudResume" target="_blank" aria-label="GitHub repo">
+              <i class="fa-brands fa-github fa-xl"></i>
+            </a>
           </div>
-          <p>Built a smart platform to automate enterprise deployments on WildFly and IBM WebSphere. Streamlined release workflows with Ansible, CI/CD, and database scripting. The system was deployed on OpenShift and included automated tests with a multi-environment CI/CD pipeline for development, testing, and production.</p>
+          <p>
+            Fully completed the Cloud Resume Challenge using AWS and Terraform. Designed a serverless infrastructure with an S3-hosted static website, API Gateway, Lambda, and DynamoDB. Implemented CI/CD with GitHub Actions and added real-time monitoring with CloudWatch + SNS.
+          </p>
+          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
+          <div class="project-tools-collapsible">
+            <p><strong>Tools:</strong> AWS (S3, CloudFront, ACM, Route 53, Lambda, API Gateway, DynamoDB, CloudWatch, SNS, IAM), Terraform, GitHub Actions</p>
+          </div>
+        </div>
     
-          <button class="expand-btn">
-            Tech Stack <span class="arrow-icon">▼</span>
-          </button>
-          
+        <div class="project">
+          <div class="project-title">
+            <span>Release Automation Platform - Vermeg</span>
+          </div>
+          <p>
+            Built a smart platform to automate enterprise deployments on WildFly and IBM WebSphere. Streamlined release workflows with Ansible, CI/CD, and database scripting. The system was deployed on OpenShift and included automated tests with a multi-environment CI/CD pipeline.
+          </p>
+          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
             <p><strong>Tools:</strong> Jenkins, Ansible, PostgreSQL, Oracle SQL, OpenShift, Selenium</p>
           </div>
         </div>
- 
-        <div class="project">
-          <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/OptiChat" target="_blank" aria-label="GitHub repo">
-              OptiChat – Scalable Messaging System
-            </a>
-            <a href="https://github.com/firassBenNacib/OptiChat" target="_blank" aria-label="GitHub repo">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-          
-          <p>Created a scalable messaging system at Vermeg, using KEDA for auto-scaling and Argo CD for smooth GitOps deployments. Monitoring with Prometheus and Grafana ensured peak performance.</p>
-          <p><strong>This repository is a demonstration/prototype version of the real platform.</strong></p>
-          <button class="expand-btn">
-            Tech Stack <span class="arrow-icon">▼</span>
-          </button>
-          <div class="project-tools-collapsible">
-            <p><strong>Tools:</strong> Docker, Kubernetes, Argo CD, Jenkins, Helm, KEDA, Prometheus, Grafana, ActiveMQ</p>
+      </div>
+    
+      <div class="more-projects-wrapper">
+        <div id="more-projects-section" class="fade-in">
+          <div class="project">
+            <div class="project-title">
+              <a class="project-title-link" href="https://github.com/firassBenNacib/OptiChat" target="_blank" aria-label="GitHub repo">
+                OptiChat - Scalable Messaging System
+              </a>
+              <a href="https://github.com/firassBenNacib/OptiChat" target="_blank" aria-label="GitHub repo">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a>
+            </div>
+            <p>
+              Created a scalable messaging system at Vermeg using KEDA for auto-scaling and Argo CD for GitOps deployments. Monitored everything with Prometheus and Grafana to ensure peak performance.
+            </p>
+            <p><strong>This repository is a simplified prototype of the full system.</strong></p>
+            <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
+            <div class="project-tools-collapsible">
+              <p><strong>Tools:</strong> Docker, Kubernetes, Argo CD, Jenkins, Helm, KEDA, Prometheus, Grafana, ActiveMQ</p>
+            </div>
           </div>
         </div>
-    
+
+        <div class="more-projects-toggle-wrapper">
+          <button class="expand-btn more-toggle collapsed" id="more-projects-toggle">
+            Show More
+          </button>
+        </div>
       </div>
     </section>
+    
     
     <div class="section-divider"></div>
     
@@ -417,7 +436,7 @@
           
           
           <div class="certification-card">
-            <h4><i class="fa-brands fa-aws"></i> AWS Certified Solutions Architect – Associate</h4>
+            <h4><i class="fa-brands fa-aws"></i> AWS Certified Solutions Architect - Associate</h4>
             <p>Issued by Amazon Web Services</p>
             <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1a6a5fa99c404436b7fa2e8de97fc3d1"
                target="_blank"
@@ -466,7 +485,7 @@
   
     <section id="experience" class="section experience-section">
       
-      <h2 class="section-title">My Career Timeline</h2>
+      <h2 class="section-title" data-i18n="careerTitle">My Career Timeline</h2>
     
  
       <div class="accordion-wrapper">
@@ -474,11 +493,11 @@
 
         <div class="accordion-item">
           <button class="accordion-toggle" aria-controls="bna-desc" aria-expanded="true">
-            <span>🏦 Full Stack Developer Intern – BNA (2022)</span>
+            <span>🏦 Full Stack Developer Intern - BNA (2022)</span>
           </button>
           <div id="bna-desc" class="accordion-content open">
             <p>
-              My first tech experience ever — I built a real-time banking app and learned the *true* meaning of "debugging in production". A great intro to development and teamwork in a corporate setting.
+              My first tech experience ever, I built a real-time banking app and learned the *true* meaning of "debugging in production". A great intro to development and teamwork in a corporate setting.
             </p>
           </div>
         </div>
@@ -486,7 +505,7 @@
 
         <div class="accordion-item">
           <button class="accordion-toggle" aria-controls="vermeg-summer-desc" aria-expanded="false">
-            <span>⚙️ DevOps Intern – Vermeg (2023)</span>
+            <span>⚙️ DevOps Intern - Vermeg (2023)</span>
           </button>
           <div id="vermeg-summer-desc" class="accordion-content">
             <p>
@@ -498,7 +517,7 @@
 
         <div class="accordion-item">
           <button class="accordion-toggle" aria-controls="vermeg-final-desc" aria-expanded="false">
-            <span>🚀 DevOps Intern – Vermeg (2024)</span>
+            <span>🚀 DevOps Intern - Vermeg (2024)</span>
           </button>
           <div id="vermeg-final-desc" class="accordion-content">
             <p>
@@ -512,6 +531,7 @@
     
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="./script.js"></script>
+
 </body>
 <footer id="footer" class="footer">
   <div class="footer-content">

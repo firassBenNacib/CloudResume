@@ -13,30 +13,50 @@ document.addEventListener("DOMContentLoaded", () => {
     setTheme(theme);
   });
 
+  const moreProjectsBtn = document.getElementById("more-projects-toggle");
+  const moreProjectsSection = document.getElementById("more-projects-section");
+  
+  if (moreProjectsBtn && moreProjectsSection) {
+    moreProjectsBtn.addEventListener("click", () => {
+      const isVisible = moreProjectsSection.classList.contains("show");
+  
+      if (isVisible) {
+        moreProjectsSection.classList.remove("expand");
+        moreProjectsSection.classList.add("collapse");
+  
+        moreProjectsSection.classList.remove("show");
+        moreProjectsBtn.innerHTML = 'Show More<span class="arrow-icon">▼</span>';
+        moreProjectsBtn.classList.add("collapsed");
+      } else {
+        moreProjectsSection.classList.remove("collapse");
+        moreProjectsSection.classList.add("expand");
+  
+        moreProjectsSection.classList.add("show");
+        moreProjectsBtn.innerHTML = 'Show Less<span class="arrow-icon">▲</span>';
+        moreProjectsBtn.classList.remove("collapsed");
+      }
+    });
+  }
+  
+  
+
   function setTheme(mode) {
     html.setAttribute("data-theme", mode);
     toggleBtn.classList.toggle("theme-toggle--toggled", mode === "dark");
   }
 
-
-   fetch("{{API_URL}}")
-  .then((res) => res.json())
-  .then((data) => {
-    const visitsElement = document.getElementById("visitor-count");
-    if (visitsElement && data.visits !== undefined) {
-      visitsElement.textContent = data.visits;
-    }
-  })
-  
-  .catch((err) => {
-    console.error("Error fetching visitor count:", err);
-  });
-
-});
-
-
-
-
+  fetch("{{API_URL}}")
+    .then((res) => res.json())
+    .then((data) => {
+      const visitsElement = document.getElementById("visitor-count");
+      if (visitsElement && data.visits !== undefined) {
+        visitsElement.textContent = data.visits;
+      }
+    })
+    .catch((err) => {
+      console.error("Error fetching visitor count:", err);
+    });
+}); 
 
 const terminalBody = document.getElementById('terminal-body');
 
@@ -67,10 +87,10 @@ if (terminalBody) {
 | |___| | (_) | |_| | (_| |
  \\____|_|\\___/ \\__,_|\\|
 </pre>
-<div>Cloud & DevOps Engineer – AWS, Azure & Kubernetes Certified</div>`,
+<div>Cloud & DevOps Engineer - AWS, Azure & Kubernetes Certified</div>`,
 
     experience: 'Extensive experience with AWS, Kubernetes, Terraform, Jenkins, GitLab CI, Docker.',
-    education: 'Cloud & DevOps Engineering – ESPRIT',
+    education: 'Cloud & DevOps Engineering - ESPRIT',
     skills: 'AWS, Azure, Kubernetes, Terraform, Docker, Ansible, Jenkins, Argo CD, GitOps',
     projects: 'Tal9i7.tn AWS Infrastructure, Release Automation Platform, OptiChat',
     github: '<a href="https://github.com/firassBenNacib" target="_blank">https://github.com/firassBenNacib</a>',
