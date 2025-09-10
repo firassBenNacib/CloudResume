@@ -2,552 +2,472 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Official portfolio of Firas Ben Nacib - Cloud & DevOps Engineer. Certified in AWS, Azure, Kubernetes (CKA). Projects include EcoAuto and OptiChat.">
-
-  <meta name="author" content="Firas Ben Nacib">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <title>Firas Ben Nacib | Cloud & DevOps Engineer Portfolio</title>
+  <meta name="description" content="Official portfolio of Firas Ben Nacib - Cloud & DevOps Engineer. Certified in AWS, Azure, Kubernetes (CKA). Projects include EcoAuto and OptiChat.">
+  <meta name="author" content="Firas Ben Nacib">
   <meta name="keywords" content="Firas, Firas Ben, Firas Ben Nacib, Firas Nacib, Firas Ncib, Ben Nacib, Ben Ncib, Ncib, Nacib, Firas Ben Ncib portfolio, firasbennacib.com">
-  <link rel="canonical" href="https://firasbennacib.com" />
+
+  <link rel="canonical" href="https://firasbennacib.com/" />
+  <link rel="alternate" href="https://firasbennacib.com/" hreflang="en" />
+  <link rel="alternate" href="https://firasbennacib.com/fr/" hreflang="fr" />
+  <link rel="alternate" href="https://firasbennacib.com/" hreflang="x-default" />
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var theme = saved || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400..800&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="images/chibi.png" type="image/png" />
+  <link rel="preload" as="image" href="images/chibi.png" />
+  <link rel="preload" as="font" href="https://cdn.jsdelivr.net/npm/@vscode/codicons/dist/codicon.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vscode/codicons/dist/codicon.css">
 
   <meta property="og:title" content="Firas Ben Nacib - Cloud & DevOps Engineer" />
   <meta property="og:description" content="Explore my Cloud Resume and DevOps projects built with AWS, Terraform, and CI/CD." />
   <meta property="og:image" content="https://firasbennacib.com/images/profile.png" />
-  <meta property="og:url" content="https://firasbennacib.com" />
+  <meta property="og:url" content="https://firasbennacib.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="fr_FR" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Firas Ben Nacib - Cloud Resume" />
   <meta name="twitter:description" content="DevOps Resume built on AWS with Terraform, CI/CD, and automation." />
   <meta name="twitter:image" content="https://firasbennacib.com/images/profile.png" />
 
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Firas Ben Nacib",
-      "url": "https://firasbennacib.com",
-      "jobTitle": "Cloud & DevOps Engineer",
-      "sameAs": [
-        "https://github.com/firassBenNacib",
-        "https://linkedin.com/in/firas-bennacib"
-      ]
-    }
-    </script>
-    
-
-
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Firas Ben Nacib",
+    "url": "https://firasbennacib.com/",
+    "jobTitle": "Cloud & DevOps Engineer",
+    "sameAs": [
+      "https://github.com/firassBenNacib",
+      "https://linkedin.com/in/firas-bennacib"
+    ]
+  }
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script>
-
-  <script src="https://kit.fontawesome.com/53050f10f4.js" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="toggle.css" />
-  <link href="./output.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/inner-moon.min.css" rel="stylesheet" >
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="images/chibi.png" type="image/png" />
 </head>
-
 <body>
+  <header>
+    <nav class="navbar fixed bg-base-100 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <button tabindex="0" class="btn btn-ghost btn-circle" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+          </button>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+      </div>
 
-  <nav class="navbar bg-base-100 shadow-sm fixed top-0 z-10">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle" aria-label="Menu">
-   
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      <div class="navbar-center">
+        <span class="visitor-counter" aria-live="polite">
+          <span class="codicon codicon-eye" aria-hidden="true"></span>
+          <span>Views:</span>
+          <span id="visitor-count"></span>
+        </span>
+      </div>
+
+      <div class="navbar-end">
+        <div class="lang-dropdown">
+          <button id="lang-toggle" aria-label="Change language">
+            <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+          </button>
+          <div id="lang-menu" class="lang-menu hidden" role="menu" aria-label="Language menu">
+            <a href="/" hreflang="en" rel="alternate" role="menuitem">English</a>
+            <a href="/fr/" hreflang="fr" rel="alternate" role="menuitem">Français</a>
+          </div>
+        </div>
+        <button class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em" fill="currentColor" class="theme-toggle__expand" viewBox="0 0 32 32">
+            <clipPath id="theme-toggle__expand__cutout">
+              <path d="M0-11h25a1 1 0 0017 13v30H0Z" />
+            </clipPath>
+            <g clip-path="url(#theme-toggle__expand__cutout)">
+              <circle cx="16" cy="16" r="8.4" />
+              <path d="M18.3 3.2c0 1.3-1 2.3-2.3 2.3s-2.3-1-2.3-2.3S14.7.9 16 .9s2.3 1 2.3 2.3zm-4.6 25.6c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm15.1-10.5c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zM3.2 13.7c1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3S.9 17.3.9 16s1-2.3 2.3-2.3zm5.8-7C9 7.9 7.9 9 6.7 9S4.4 8 4.4 6.7s1-2.3 2.3-2.3S9 5.4 9 6.7zm16.3 21c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm2.4-21c0 1.3-1 2.3-2.3 2.3S23 7.9 23 6.7s1-2.3 2.3-2.3 2.4 1 2.4 2.3zM6.7 23C8 23 9 24 9 25.3s-1 2.3-2.3 2.3-2.3-1-2.3-2.3 1-2.3 2.3-2.3z" />
+            </g>
           </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
-          <li><a href="#home" data-i18n="home">Home</a></li>
-          <li><a href="#about" data-i18n="about">About</a></li>
-          <li><a href="#projects" data-i18n="projects">Projects</a></li>
-          <li><a href="#skills" data-i18n="skills">Skills</a></li>
-          <li><a href="#certifications" data-i18n="certifications">Certifications</a></li>
-          <li><a href="#experience" data-i18n="experience">Experience</a></li>
-          <li><a href="#footer" data-i18n="contact">Contact</a></li>
-        </ul>        
+        </button>
       </div>
-    </div>
- 
-    <div class="navbar-center">
-      <p class="visitor-counter">
-        Views: <span id="visitor-count"></span>
-      </p>
-    </div>
+    </nav>
+  </header>
 
-    <div class="navbar-end" style="display: flex; align-items: center; gap: 1rem;">
-      <button
-        class="theme-toggle theme-toggle--toggled"
-        type="button"
-        title="Toggle theme"
-        aria-label="Toggle theme"
-        id="theme-toggle-btn"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          width="1.3em"
-          height="1.3em"
-          fill="currentColor"
-          class="theme-toggle__inner-moon"
-          viewBox="0 0 32 32"
-        >
-          <path d="M27.5 11.5v-7h-7L16 0l-4.5 4.5h-7v7L0 16l4.5 4.5v7h7L16 32l4.5-4.5h7v-7L32 16l-4.5-4.5zM16 25.4a9.39 9.39 0 1 1 0-18.8 9.39 9.39 0 1 1 0 18.8z" />
-          <circle cx="16" cy="16" r="8.1" />
-        </svg>
-      </button>
-    </div>
-    
-    
-  </nav>
-  
-  
-
-
-  <div class="main-content">
-
-
-    <section id="home" class="section hero">
-      <div class="hero-centered">
-        <img src="images/chibi.png" alt="Firas Ben Nacib" class="hero-avatar" />
-        <h2 class="hero-intro">Hi! I’m Firas Ben Nacib</h2>
-        <h1 class="hero-title">Cloud & DevOps Engineer</h1>
-        <div class="hero-subinfo">
-          <p><i class="fas fa-map-marker-alt"></i> Tunisia</p>
-          <p><i class="fas fa-calendar-alt"></i> 24 Years</p>
-          <p><i class="fas fa-certificate"></i> AWS, Azure & Kubernetes Certified</p>
-          <p><i class="fas fa-terminal"></i> Loves Infrastructure as Code</p>
-        </div>
-        <div class="hero-buttons">
-          <a 
-          href="mailto:bennacibfiras@gmail.com?subject=Hi Firas, I'd like to hire you" 
-          class="btn-primary" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          data-i18n="hireMe"
-        >
-          Hire Me! <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+<main class="main-content">
+  <section id="home" class="section hero">
+    <div class="hero-centered">
+      <img src="images/chibi.png" alt="Firas Ben Nacib" class="hero-avatar" width="160" height="160" decoding="async" fetchpriority="high" />
+      <h2 class="hero-intro">Hi! I’m Firas Ben Nacib</h2>
+      <h1 class="hero-title">Cloud & DevOps Engineer</h1>
+      <div class="hero-subinfo">
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Tunisia</p>
+        <p><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 25 Years</p>
+        <p><i class="fa-solid fa-certificate" aria-hidden="true"></i> AWS, Azure, Kubernetes & Terraform Certified</p>
+        <p><i class="fa-solid fa-terminal" aria-hidden="true"></i> Loves Infrastructure as Code</p>
+      </div>
+      <div class="hero-buttons">
+        <a href="mailto:bennacibfiras@gmail.com?subject=Hi Firas, I'd like to hire you" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          Hire Me! <i class="fa-solid fa-paper-plane" style="margin-left: .5rem;" aria-hidden="true"></i>
         </a>
-        <a 
-          href="files/Firas_Ben_Nacib_Resume.pdf" 
-          target="_blank" 
-          class="btn-outline"
-          data-i18n="downloadCV"
-        >
-          Download CV <i class="fas fa-download"></i>
+        <a href="files/Firas_Ben_Nacib_Resume.pdf" class="btn-outline" target="_blank" rel="noopener noreferrer">
+          Download CV <i class="fa-solid fa-download" aria-hidden="true"></i>
         </a>
-        
-        </div>
-        
       </div>
+    </div>
 
-      <div class="terminal-window">
-        <div class="terminal-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="title">terminal</span>
-        </div>
-        <div class="terminal-body" id="terminal-body">
-          <div class="terminal-intro">Type <span class="keyword">'help'</span> to list commands.</div>
-        </div>
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="title">terminal</span>
       </div>
-    </section>
-    
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-intro">Type <span class="keyword">'help'</span> to list commands.</div>
+      </div>
+    </div>
+  </section>
 
+  <div class="section-divider"></div>
 
-    <div class="section-divider"></div>
-    
-    <section id="about" class="section about">
-     
-    
-      <div class="about-content">
-        <h2  class="section-title">About Me</h2>
-        <div class="about-wrapper">
-          <img src="images/profile.png" alt="Firas Ben Nacib" class="about-img">
-          <div class="about-text">
-         
-            <p>👋</p>
-            <p>
-             Hey! I'm Firas, a <strong>Cloud & DevOps Engineer</strong> who loves <strong>AWS</strong> and tries to automate everything—even watering plants if I could. I'm always building solid <strong>CI/CD pipelines</strong>, managing infrastructure with <strong>Terraform</strong> and <strong>Ansible</strong>, and exploring <strong>Kubernetes</strong> and <strong>GitOps</strong> to make life easier. I've also worked a bit with Azure, but AWS is where my heart is. I enjoy solving real problems and making technology work seamlessly.
-            </p>
-          </div>
+  <section id="about" class="section about">
+    <div class="about-content">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-wrapper">
+        <img src="images/profile.png" alt="Firas Ben Nacib" class="about-img" width="180" height="180" loading="lazy" decoding="async">
+        <div class="about-text">
+          <p>
+            Hey! I'm Firas, a <strong>Cloud & DevOps Engineer</strong> who loves <strong>AWS</strong> and tries to automate everything. I'm always building solid <strong>CI/CD pipelines</strong>, managing infrastructure with <strong>Terraform</strong> and <strong>Ansible</strong>, and exploring <strong>Kubernetes</strong> and <strong>GitOps</strong> to make life easier. I've also worked a bit with Azure, but AWS is where my heart is. I enjoy solving real problems and making technology work seamlessly.
+          </p>
         </div>
       </div>
-    </section>
-    
-    <div class="section-divider"></div>
-    <section id="projects" class="section projects">
-      <h2 class="section-title">Projects</h2>
-    
-      <div class="project-wrapper">
-    
+    </div>
+  </section>
 
+  <div class="section-divider"></div>
+
+  <section id="projects" class="section projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-wrapper">
+      <div class="project">
+        <div class="project-title">
+          <a class="project-title-link" href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            KubleOps - Cloud-Native DevOps Platform
+          </a>
+          <a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p>
+          Set up a production-ready infrastructure using Terraform and AWS EKS with full GitOps deployment. Laid out a highly available VPC across two AZs, with dual NAT gateways and secure access via a bastion host. Configured EC2 node groups with autoscaling and used IRSA for secure pod access to ECR.
+        </p>
+        <p>
+          Integrated ArgoCD and Helm for application delivery through ALB Ingress Controller. Installed Prometheus, Grafana, SonarQube, and Trivy using an EC2-based bootstrap script. CI/CD flows were wired through CircleCI for builds, scans, and image pushes.
+        </p>
+        <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53), Terraform, Helm, ArgoCD, CircleCI, Prometheus, Grafana, SonarQube, Trivy</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            EcoAuto - Cost-Effective Web Hosting Architecture
+          </a>
+          <a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p>
+          Designed and deployed a cost-optimized, highly available AWS infrastructure using Terraform. Integrated EC2 Auto Scaling, RDS, S3 static hosting, CloudFront, and Lambda@Edge for backend origin routing. Automated EC2 and RDS start-stop, DNS updates, and CloudFront security group syncing with Lambda functions.
+        </p>
+        <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> AWS (EC2, ASG, RDS, S3, CloudFront, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge), Terraform, GitLab CI, Docker</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <a class="project-title-link" href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            Cloud Resume Challenge - AWS Edition
+          </a>
+          <a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p>
+          Fully completed the Cloud Resume Challenge using AWS and Terraform. Designed a serverless infrastructure with an S3-hosted static website, API Gateway, Lambda, and DynamoDB. Implemented CI/CD with GitHub Actions and added real-time monitoring with CloudWatch + SNS.
+        </p>
+        <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> AWS (S3, CloudFront, ACM, Route 53, Lambda, API Gateway, DynamoDB, CloudWatch, SNS, IAM), Terraform, GitHub Actions</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <span>Release Automation Platform - Vermeg</span>
+        </div>
+        <p>
+          Built a smart platform to automate enterprise deployments on WildFly and IBM WebSphere. Streamlined release workflows with Ansible, CI/CD, and database scripting. The system was deployed on OpenShift and included automated tests with a multi-environment CI/CD pipeline.
+        </p>
+        <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> Jenkins, Ansible, PostgreSQL, Oracle SQL, OpenShift, Selenium</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-projects-wrapper">
+      <div id="more-projects-section" class="fade-in">
         <div class="project">
           <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/KubleOps" target="_blank" aria-label="GitHub repo">
-              KubleOps - Cloud-Native DevOps Platform
+            <a class="project-title-link" href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+              OptiChat - Scalable Messaging System
             </a>
-            <a href="https://github.com/firassBenNacib/KubleOps" target="_blank" aria-label="GitHub repo">
-              <i class="fa-brands fa-github fa-xl"></i>
+            <a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+              <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
             </a>
           </div>
           <p>
-            Set up a production-ready infrastructure using Terraform and AWS EKS with full GitOps deployment. Laid out a highly available VPC across two AZs, with dual NAT gateways and secure access via a bastion host. Configured EC2 node groups with autoscaling and used IRSA for secure pod access to ECR.
+            Created a scalable messaging system at Vermeg using KEDA for auto-scaling and Argo CD for GitOps deployments. Monitored everything with Prometheus and Grafana to ensure peak performance.
           </p>
-          <p>
-            Integrated ArgoCD and Helm for application delivery through ALB Ingress Controller. Installed Prometheus, Grafana, SonarQube, and Trivy using an EC2-based bootstrap script. CI/CD flows were wired through CircleCI for builds, scans, and image pushes.
-          </p>
+          <p><strong>This repository is a simplified prototype of the full system.</strong></p>
           <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p><strong>Tools:</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53), Terraform, Helm, ArgoCD, CircleCI, Prometheus, Grafana, SonarQube, Trivy</p>
-          </div>
-        </div>
-    
- 
-        <div class="project">
-          <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" aria-label="GitHub repo">
-              EcoAuto - Cost-Effective Web Hosting Architecture
-            </a>
-            <a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" aria-label="GitHub repo">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-          <p>
-            Designed and deployed a cost-optimized, highly available AWS infrastructure using Terraform. Integrated EC2 Auto Scaling, RDS, S3 static hosting, CloudFront, and Lambda@Edge for backend origin routing. Automated EC2 and RDS start-stop, DNS updates, and CloudFront security group syncing with Lambda functions.
-          </p>
-          <p><strong>This project powers infrastructure behind <a href="https://tal9i7.tn/" target="_blank" rel="noopener noreferrer">Tal9i7.tn</a>.</strong></p>
-          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
-          <div class="project-tools-collapsible">
-            <p><strong>Tools:</strong> AWS (EC2, ASG, RDS, S3, CloudFront, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge), Terraform, GitLab CI, Docker</p>
-          </div>
-        </div>
-    
-        <div class="project">
-          <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/CloudResume" target="_blank" aria-label="GitHub repo">
-              Cloud Resume Challenge - AWS Edition
-            </a>
-            <a href="https://github.com/firassBenNacib/CloudResume" target="_blank" aria-label="GitHub repo">
-              <i class="fa-brands fa-github fa-xl"></i>
-            </a>
-          </div>
-          <p>
-            Fully completed the Cloud Resume Challenge using AWS and Terraform. Designed a serverless infrastructure with an S3-hosted static website, API Gateway, Lambda, and DynamoDB. Implemented CI/CD with GitHub Actions and added real-time monitoring with CloudWatch + SNS.
-          </p>
-          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
-          <div class="project-tools-collapsible">
-            <p><strong>Tools:</strong> AWS (S3, CloudFront, ACM, Route 53, Lambda, API Gateway, DynamoDB, CloudWatch, SNS, IAM), Terraform, GitHub Actions</p>
-          </div>
-        </div>
-    
-        <div class="project">
-          <div class="project-title">
-            <span>Release Automation Platform - Vermeg</span>
-          </div>
-          <p>
-            Built a smart platform to automate enterprise deployments on WildFly and IBM WebSphere. Streamlined release workflows with Ansible, CI/CD, and database scripting. The system was deployed on OpenShift and included automated tests with a multi-environment CI/CD pipeline.
-          </p>
-          <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
-          <div class="project-tools-collapsible">
-            <p><strong>Tools:</strong> Jenkins, Ansible, PostgreSQL, Oracle SQL, OpenShift, Selenium</p>
+            <p><strong>Tools:</strong> Docker, Kubernetes, Argo CD, Jenkins, Helm, KEDA, Prometheus, Grafana, ActiveMQ</p>
           </div>
         </div>
       </div>
-    
-      <div class="more-projects-wrapper">
-        <div id="more-projects-section" class="fade-in">
-          <div class="project">
-            <div class="project-title">
-              <a class="project-title-link" href="https://github.com/firassBenNacib/OptiChat" target="_blank" aria-label="GitHub repo">
-                OptiChat - Scalable Messaging System
-              </a>
-              <a href="https://github.com/firassBenNacib/OptiChat" target="_blank" aria-label="GitHub repo">
-                <i class="fa-brands fa-github fa-xl"></i>
-              </a>
-            </div>
-            <p>
-              Created a scalable messaging system at Vermeg using KEDA for auto-scaling and Argo CD for GitOps deployments. Monitored everything with Prometheus and Grafana to ensure peak performance.
-            </p>
-            <p><strong>This repository is a simplified prototype of the full system.</strong></p>
-            <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
-            <div class="project-tools-collapsible">
-              <p><strong>Tools:</strong> Docker, Kubernetes, Argo CD, Jenkins, Helm, KEDA, Prometheus, Grafana, ActiveMQ</p>
-            </div>
-          </div>
+
+      <div class="more-projects-toggle-wrapper">
+        <button class="expand-btn more-toggle collapsed" id="more-projects-toggle">Show More</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="skills" class="section skills-section">
+    <div class="skills-container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-wrapper">
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloud & Infrastructure</h4>
+          <ul>
+            <li><a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">AWS</a></li>
+            <li><a href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer">Microsoft Azure</a></li>
+            <li><a href="https://www.openstack.org" target="_blank" rel="noopener noreferrer">OpenStack</a></li>
+          </ul>
         </div>
 
-        <div class="more-projects-toggle-wrapper">
-          <button class="expand-btn more-toggle collapsed" id="more-projects-toggle">
-            Show More
-          </button>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-gears" aria-hidden="true"></i> CI/CD & DevOps</h4>
+          <ul>
+            <li><a href="https://www.jenkins.io" target="_blank" rel="noopener noreferrer">Jenkins</a></li>
+            <li><a href="https://about.gitlab.com" target="_blank" rel="noopener noreferrer">GitLab CI</a></li>
+            <li><a href="https://github.com/features/actions" target="_blank" rel="noopener noreferrer">GitHub Actions</a></li>
+            <li><a href="https://circleci.com" target="_blank" rel="noopener noreferrer">CircleCI</a></li>
+            <li><a href="https://argo-cd.readthedocs.io" target="_blank" rel="noopener noreferrer">Argo CD</a></li>
+            <li><a href="https://www.sonarqube.org" target="_blank" rel="noopener noreferrer">SonarQube</a></li>
+            <li><a href="https://www.sonatype.com/products/repository-oss" target="_blank" rel="noopener noreferrer">Nexus</a></li>
+            <li><a href="https://aquasecurity.github.io/trivy/" target="_blank" rel="noopener noreferrer">Trivy</a></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i> Containers & Orchestration</h4>
+          <ul>
+            <li><a href="https://www.docker.com" target="_blank" rel="noopener noreferrer">Docker</a></li>
+            <li><a href="https://docs.docker.com/compose/" target="_blank" rel="noopener noreferrer">Docker Compose</a></li>
+            <li><a href="https://kubernetes.io" target="_blank" rel="noopener noreferrer">Kubernetes</a></li>
+            <li><a href="https://www.openshift.com" target="_blank" rel="noopener noreferrer">OpenShift</a></li>
+            <li><a href="https://helm.sh" target="_blank" rel="noopener noreferrer">Helm</a></li>
+            <li><a href="https://keda.sh" target="_blank" rel="noopener noreferrer">KEDA</a></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-code" aria-hidden="true"></i> Infrastructure as Code & Configuration Management</h4>
+          <ul>
+            <li><a href="https://www.terraform.io" target="_blank" rel="noopener noreferrer">Terraform</a></li>
+            <li><a href="https://www.ansible.com" target="_blank" rel="noopener noreferrer">Ansible</a></li>
+            <li><a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer">Bash</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Shell_script" target="_blank" rel="noopener noreferrer">Shell Scripting</a></li>
+            <li><a href="https://www.python.org" target="_blank" rel="noopener noreferrer">Python</a></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Monitoring & Logging</h4>
+          <ul>
+            <li><a href="https://prometheus.io" target="_blank" rel="noopener noreferrer">Prometheus</a></li>
+            <li><a href="https://grafana.com" target="_blank" rel="noopener noreferrer">Grafana</a></li>
+            <li><a href="https://www.elastic.co/what-is/elk-stack" target="_blank" rel="noopener noreferrer">ELK Stack</a></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-database" aria-hidden="true"></i> Databases & Servers</h4>
+          <ul>
+            <li><a href="https://www.postgresql.org" target="_blank" rel="noopener noreferrer">PostgreSQL</a></li>
+            <li><a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer">MySQL</a></li>
+            <li><a href="https://www.oracle.com/database/" target="_blank" rel="noopener noreferrer">Oracle SQL</a></li>
+            <li><a href="https://www.mongodb.com" target="_blank" rel="noopener noreferrer">MongoDB</a></li>
+            <li><a href="https://www.wildfly.org" target="_blank" rel="noopener noreferrer">WildFly</a></li>
+            <li><a href="https://www.ibm.com/cloud/websphere" target="_blank" rel="noopener noreferrer">WebSphere</a></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Version Control & Collaboration</h4>
+          <ul>
+            <li><a href="https://git-scm.com" target="_blank" rel="noopener noreferrer">Git</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://about.gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a></li>
+            <li><a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer">Jira</a></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-server" aria-hidden="true"></i> Linux Distributions</h4>
+          <ul>
+            <li><a href="https://ubuntu.com" target="_blank" rel="noopener noreferrer">Ubuntu</a></li>
+            <li><a href="https://www.centos.org" target="_blank" rel="noopener noreferrer">CentOS</a></li>
+            <li><a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux" target="_blank" rel="noopener noreferrer">RHEL</a></li>
+            <li><a href="https://aws.amazon.com/linux/" target="_blank" rel="noopener noreferrer">Amazon Linux</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    
-    
-    <div class="section-divider"></div>
-    
-    <section id="skills" class="section skills-section">
-      
+    </div>
+  </section>
 
-      <div class="skills-container">
-        <h2  class="section-title">Skills</h2>
-        <div class="skills-wrapper">
-    
-         <div class="skill-card">
-  <h4><i class="fa-solid fa-cloud"></i> Cloud & Infrastructure</h4>
-  <ul>
-    <li><a href="https://aws.amazon.com" target="_blank">AWS</a></li>
-    <li><a href="https://azure.microsoft.com" target="_blank">Microsoft Azure</a></li>
-    <li><a href="https://www.openstack.org" target="_blank">OpenStack</a></li>
-  </ul>
-</div>
+  <div class="section-divider"></div>
 
-<div class="skill-card">
-  <h4><i class="fa-solid fa-gears"></i> CI/CD & DevOps</h4>
-  <ul>
-    <li><a href="https://www.jenkins.io" target="_blank">Jenkins</a></li>
-    <li><a href="https://about.gitlab.com" target="_blank">GitLab CI</a></li>
-    <li><a href="https://github.com/features/actions" target="_blank">GitHub Actions</a></li>
-    <li><a href="https://argo-cd.readthedocs.io" target="_blank">Argo CD</a></li>
-    <li><a href="https://www.sonarqube.org" target="_blank">SonarQube</a></li>
-    <li><a href="https://www.sonatype.com/products/repository-oss" target="_blank">Nexus</a></li>
-    <li><a href="https://aquasecurity.github.io/trivy/" target="_blank">Trivy</a></li>
-  </ul>
-</div>
+  <section id="certifications" class="section certifications-section">
+    <div class="certifications-container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certifications-wrapper">
+        <div class="certification-card">
+          <h4>
+            <span style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:.5rem;">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:var(--accent);" aria-hidden="true">
+                <path d="M2.687 3.21l5.062 4.117c-.477.099-.837.53-.837 1.045 0 .133.24 .26.067.377L1.706 4.462a.81.81 0 01-.124-1.126.776.776 0 011.105-.126z"/>
+                <path d="M7.482 9.322L1.06 10.808a.786.786 0 01-.94-.603.801.801 0 01-.592-.958L7.095 7.77a1.076 1.076 0 00-.183.602c0 .414.232 .773.57 .95z"/>
+                <path d="M8.429 9.327l-2.905 6.12a.78.78 0 01-1.05.373.807.807 0 01-.365-1.07l2.86-6.028c.143.418.533.718.991.718.169 0 .328-.04.469-.113z"/>
+                <path d="M8.97 8.66l2.89 6.09a.807.807 0 01-.365 1.07.78.78 0 01-1.05-.372l-2.89-6.091c.124.053.261.083.405.083.481 0 .886-.33 1.01-.78z"/>
+                <path d="M8.462 9.31a1.07 1.07 0 00.546-.938c0-.233-.073-.448-.198-.624l6.478 1.499a.8.8 0 01.592.958.786.786 0 01-.94.603L8.462 9.31zM8.746.9v6.766a1.037 1.037 0 00-1.572 0V.901c0-.443.352-.801.786-.801.434 0 .786.358.786.8z"/>
+                <path d="M13.234 3.21a.776.776 0 011.104.126.81.81 0 01-.123 1.126L8.94 8.749c.043-.117.67-.244.067-.377 0-.516-.36-.946-.837-1.045l5.063-4.117z"/>
+                <path d="M7.96 3.302c-2.75 0-4.978 2.27-4.978 5.07 0 2.8 2.229 5.07 4.978 5.07 2.75 0 4.978-2.27 4.978-5.07 0-2.8-2.229-5.07-4.978-5.07zm-6.55 5.07c0-3.684 2.933-6.67 6.55-6.67 3.618 0 6.55 2.986 6.55 6.67 0 3.685-2.932 6.671-6.55 6.671-3.617 0-6.55-2.986-6.55-6.67z"/>
+              </svg>
+            </span>
+            Certified Kubernetes Administrator (CKA)
+          </h4>
+          <p>Issued by The Linux Foundation</p>
+          <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6daec97e-0738-43f1-9dba-1395f7cb2758-firas-ben-nacib-748a690a-feaa-43b1-b7a1-07bcea780ead-certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> View Credential
+          </a>
+        </div>
 
-<div class="skill-card">
-  <h4><i class="fa-solid fa-boxes-stacked"></i> Containers & Orchestration</h4>
-  <ul>
-    <li><a href="https://www.docker.com" target="_blank">Docker</a></li>
-    <li><a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a></li>
-    <li><a href="https://kubernetes.io" target="_blank">Kubernetes</a></li>
-    <li><a href="https://www.openshift.com" target="_blank">OpenShift</a></li>
-    <li><a href="https://helm.sh" target="_blank">Helm</a></li>
-    <li><a href="https://keda.sh" target="_blank">KEDA</a></li>
-  </ul>
-</div>
+        <div class="certification-card">
+          <h4><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> HashiCorp Terraform Associate (003)</h4>
+          <p>Issued by HashiCorp</p>
+          <a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer" class="cert-btn">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> View Credential
+          </a>
+        </div>
 
-<div class="skill-card">
-  <h4><i class="fa-solid fa-code"></i> Infrastructure as Code</h4>
-  <ul>
-    <li><a href="https://www.terraform.io" target="_blank">Terraform</a></li>
-    <li><a href="https://www.ansible.com" target="_blank">Ansible</a></li>
-    <li><a href="https://www.gnu.org/software/bash/" target="_blank">Shell Scripting</a></li>
-  </ul>
-</div>
+        <div class="certification-card">
+          <h4><i class="fa-brands fa-aws" aria-hidden="true"></i> AWS Certified Solutions Architect - Associate</h4>
+          <p>Issued by Amazon Web Services</p>
+          <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1a6a5fa99c404436b7fa2e8de97fc3d1" target="_blank" rel="noopener noreferrer" class="cert-btn">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> View Credential
+          </a>
+        </div>
 
-<div class="skill-card">
-  <h4><i class="fa-solid fa-chart-line"></i> Monitoring & Logging</h4>
-  <ul>
-    <li><a href="https://prometheus.io" target="_blank">Prometheus</a></li>
-    <li><a href="https://grafana.com" target="_blank">Grafana</a></li>
-    <li><a href="https://www.elastic.co/what-is/elk-stack" target="_blank">ELK Stack</a></li>
-  </ul>
-</div>
+        <div class="certification-card">
+          <h4><i class="fa-brands fa-aws" aria-hidden="true"></i> AWS Certified Cloud Practitioner</h4>
+          <p>Issued by Amazon Web Services</p>
+          <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1d6689b1355e481ba35a7bfa6e9c4dfa" target="_blank" rel="noopener noreferrer" class="cert-btn">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> View Credential
+          </a>
+        </div>
 
-<div class="skill-card">
-  <h4><i class="fa-solid fa-database"></i> Databases & Servers</h4>
-  <ul>
-    <li><a href="https://www.postgresql.org" target="_blank">PostgreSQL</a></li>
-    <li><a href="https://www.mysql.com" target="_blank">MySQL</a></li>
-    <li><a href="https://www.oracle.com/database/" target="_blank">Oracle SQL</a></li>
-    <li><a href="https://www.mongodb.com" target="_blank">MongoDB</a></li>
-    <li><a href="https://www.wildfly.org" target="_blank">WildFly</a></li>
-    <li><a href="https://www.ibm.com/cloud/websphere" target="_blank">WebSphere</a></li>
-  </ul>
-</div>
+        <div class="certification-card">
+          <h4><i class="fa-brands fa-microsoft" aria-hidden="true"></i> Microsoft Azure Fundamentals (AZ-900)</h4>
+          <p>Issued by Microsoft</p>
+          <a href="https://learn.microsoft.com/api/credentials/share/fr-fr/FirasBenNacib-6669/D1931B541BD8428E?sharingId=1EE28426564D1A99" target="_blank" rel="noopener noreferrer" class="cert-btn">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> View Credential
+          </a>
+        </div>
 
-<div class="skill-card">
-  <h4><i class="fa-solid fa-code-branch"></i> Version Control & Collaboration</h4>
-  <ul>
-    <li><a href="https://git-scm.com" target="_blank">Git</a></li>
-    <li><a href="https://github.com" target="_blank">GitHub</a></li>
-    <li><a href="https://about.gitlab.com" target="_blank">GitLab</a></li>
-    <li><a href="https://www.atlassian.com/software/jira" target="_blank">Jira</a></li>
-  </ul>
-</div>
-
-<div class="skill-card">
-  <h4><i class="fa-solid fa-desktop"></i> Operating Systems</h4>
-  <ul>
-    <li><a href="https://www.centos.org" target="_blank">CentOS</a></li>
-    <li><a href="https://ubuntu.com" target="_blank">Ubuntu</a></li>
-    <li><a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux" target="_blank">RHEL</a></li>
-    <li><a href="https://aws.amazon.com/amazon-linux-ami/" target="_blank">Amazon Linux</a></li>
-  </ul>
-</div>
-
-    
+        <div class="certification-card">
+          <h4><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Cisco Network Security</h4>
+          <p>Issued by Cisco</p>
+          <a href="https://www.credly.com/badges/2d760ef9-0f9a-4ed7-9c55-3a3180aadb40/public_url" target="_blank" rel="noopener noreferrer" class="cert-btn">
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> View Credential
+          </a>
         </div>
       </div>
-    </section> 
-    <div class="section-divider"></div>
-    <section id="certifications" class="section certifications-section">
-      
-      <div class="certifications-container">
-        <h2 class="section-title">Certifications</h2>
-    
-        <div class="certifications-wrapper">
-    
-          <div class="certification-card">
-            <h4>
-              <span style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
-                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; fill: var(--accent);">
-                  <path d="M2.687 3.21l5.062 4.117c-.477.099-.837.53-.837 1.045 0 .133.024.26.067.377L1.706 4.462a.81.81 0 01-.124-1.126.776.776 0 011.105-.126z"/>
-                  <path d="M7.482 9.322L1.06 10.808a.786.786 0 01-.94-.603.801.801 0 01.592-.958L7.095 7.77a1.076 1.076 0 00-.183.602c0 .414.232.773.57.95z"/>
-                  <path d="M8.429 9.327l-2.905 6.12a.78.78 0 01-1.05.373.807.807 0 01-.365-1.07l2.86-6.028c.143.418.533.718.991.718.169 0 .328-.04.469-.113z"/>
-                  <path d="M8.97 8.66l2.89 6.09a.807.807 0 01-.365 1.07.78.78 0 01-1.05-.372l-2.89-6.091c.124.053.261.083.405.083.481 0 .886-.33 1.01-.78z"/>
-                  <path d="M8.462 9.31a1.07 1.07 0 00.546-.938c0-.233-.073-.448-.198-.624l6.478 1.499a.8.8 0 01.592.958.786.786 0 01-.94.603L8.462 9.31zM8.746.9v6.766a1.037 1.037 0 00-1.572 0V.901c0-.443.352-.801.786-.801.434 0 .786.358.786.8z"/>
-                  <path d="M13.234 3.21a.776.776 0 011.104.126.81.81 0 01-.123 1.126L8.94 8.749c.043-.117.067-.244.067-.377 0-.516-.36-.946-.837-1.045l5.063-4.117z"/>
-                  <path d="M7.96 3.302c-2.75 0-4.978 2.27-4.978 5.07 0 2.8 2.229 5.07 4.978 5.07 2.75 0 4.978-2.27 4.978-5.07 0-2.8-2.229-5.07-4.978-5.07zm-6.55 5.07c0-3.684 2.933-6.67 6.55-6.67 3.618 0 6.55 2.986 6.55 6.67 0 3.685-2.932 6.671-6.55 6.671-3.617 0-6.55-2.986-6.55-6.67z"/>
-                </svg>
-              </span>
-              Certified Kubernetes Administrator (CKA)
-            </h4>
-            <p>Issued by The Linux Foundation</p>
-            <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6daec97e-0738-43f1-9dba-1395f7cb2758-firas-ben-nacib-748a690a-feaa-43b1-b7a1-07bcea780ead-certificate.pdf"
-               target="_blank"
-               class="cert-btn">
-              <i class="fas fa-external-link-alt"></i> View Credential
-            </a>
-          </div>
-          
-          
-          <div class="certification-card">
-            <h4><i class="fa-brands fa-aws"></i> AWS Certified Solutions Architect - Associate</h4>
-            <p>Issued by Amazon Web Services</p>
-            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1a6a5fa99c404436b7fa2e8de97fc3d1"
-               target="_blank"
-               class="cert-btn">
-              <i class="fas fa-external-link-alt"></i> View Credential
-            </a>
-          </div>
-    
-          <div class="certification-card">
-            <h4><i class="fa-brands fa-aws"></i> AWS Certified Cloud Practitioner</h4>
-            <p>Issued by Amazon Web Services</p>
-            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1d6689b1355e481ba35a7bfa6e9c4dfa"
-               target="_blank"
-               class="cert-btn">
-              <i class="fas fa-external-link-alt"></i> View Credential
-            </a>
-          </div>
-    
-          <div class="certification-card">
-            <h4><i class="fa-brands fa-microsoft"></i> Microsoft Azure Fundamentals (AZ-900)</h4>
-            <p>Issued by Microsoft</p>
-            <a href="https://learn.microsoft.com/api/credentials/share/fr-fr/FirasBenNacib-6669/D1931B541BD8428E?sharingId=1EE28426564D1A99"
-               target="_blank"
-               class="cert-btn">
-              <i class="fas fa-external-link-alt"></i> View Credential
-            </a>
-          </div>
-    
-          <div class="certification-card">
-            <h4><i class="fa-solid fa-network-wired"></i> Cisco Network Security</h4>
-            <p>Issued by Cisco</p>
-            <a href="https://www.credly.com/badges/2d760ef9-0f9a-4ed7-9c55-3a3180aadb40/public_url"
-               target="_blank"
-               class="cert-btn">
-              <i class="fas fa-external-link-alt"></i> View Credential
-            </a>
-          </div>
-    
-        </div>
+    </div>
+  </section>
+</main>
+
+  <footer id="footer" class="footer">
+    <div class="footer-content">
+      <h2 class="footer-title">Let's Connect</h2>
+      <div class="social-icons">
+        <a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="files/Firas_Ben_Nacib_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+          <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:bennacibfiras@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
       </div>
-    </section>
-    
-    
-    
-    <div class="section-divider"></div>
-  
-    <section id="experience" class="section experience-section">
-      
-      <h2 class="section-title" data-i18n="careerTitle">My Career Timeline</h2>
-    
- 
-      <div class="accordion-wrapper">
-    
+      <p class="footer-note">Made by Firas Ben Nacib &copy; 2025</p>
+    </div>
+  </footer>
 
-        <div class="accordion-item">
-          <button class="accordion-toggle" aria-controls="bna-desc" aria-expanded="true">
-            <span>🏦 Full Stack Developer Intern - BNA (2022)</span>
-          </button>
-          <div id="bna-desc" class="accordion-content open">
-            <p>
-              My first tech experience ever, I built a real-time banking app and learned the *true* meaning of "debugging in production". A great intro to development and teamwork in a corporate setting.
-            </p>
-          </div>
-        </div>
-    
-
-        <div class="accordion-item">
-          <button class="accordion-toggle" aria-controls="vermeg-summer-desc" aria-expanded="false">
-            <span>⚙️ DevOps Intern - Vermeg (2023)</span>
-          </button>
-          <div id="vermeg-summer-desc" class="accordion-content">
-            <p>
-              Got my first hands-on with CI/CD, automation, and monitoring. Improved pipeline efficiency and reduced manual errors. Fell in love with DevOps during this summer adventure.
-            </p>
-          </div>
-        </div>
-    
-
-        <div class="accordion-item">
-          <button class="accordion-toggle" aria-controls="vermeg-final-desc" aria-expanded="false">
-            <span>🚀 DevOps Intern - Vermeg (2024)</span>
-          </button>
-          <div id="vermeg-final-desc" class="accordion-content">
-            <p>
-              Returned to Vermeg for my final internship. Built a full automation platform, multi-environment CI/CD pipelines, and slashed deployment time by 42%. This project made me realize how much I love building efficient systems at scale.
-            </p>
-          </div>
-        </div>
-    
-      </div>
-    </section>
-    
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="./script.js"></script>
-
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script defer src="assets/script.js"></script>
+  <script defer src="https://kit.fontawesome.com/53050f10f4.js" crossorigin="anonymous"></script>
 </body>
-<footer id="footer" class="footer">
-  <div class="footer-content">
-    <h2 class="footer-title">Let's Connect</h2>
-    <div class="social-icons">
-      <a href="https://github.com/firassBenNacib" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="files/Firas_Ben_Nacib_Resume.pdf" target="_blank" aria-label="Resume">
-        <i class="fas fa-file-alt"></i>
-      </a>
-      <a href="mailto:firas.bennacib@gmail.com" aria-label="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
-
-    <p class="footer-note">
-      Made by Firas Ben Nacib &copy; 2025
-    </p>
-  </div>
-</footer>
-
-
 </html>

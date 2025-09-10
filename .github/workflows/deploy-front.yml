@@ -29,6 +29,7 @@ jobs:
 
       - name: Get API Gateway and CloudFront IDs dynamically
         id: ids
+        shell: bash
         run: |
           API_ID=$(aws apigateway get-rest-apis \
             --query "items[?name=='CloudResumeCounterAPI'].id" \
@@ -44,47 +45,31 @@ jobs:
           fi
 
           API_URL="https://${API_ID}.execute-api.${{ secrets.AWS_REGION }}.amazonaws.com/prod/counter"
+          echo "API_URL=$API_URL" >> "$GITHUB_ENV"
+          echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> "$GITHUB_ENV"
 
-          echo "API_URL=$API_URL" >> $GITHUB_ENV
-          echo "CLOUDFRONT_ID=$CLOUDFRONT_ID" >> $GITHUB_ENV
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        working-directory: frontend
-        run: npm install
-
-      - name: Build Tailwind CSS
-        working-directory: frontend
-        run: npm run build
-
-      - name: Inject API URL into script.js
+      - name: Inject API URL into assets/script.js
+        shell: bash
         run: |
-          sed -i "s|{{API_URL}}|$API_URL|g" frontend/script.js
-          
+          sed -i "s|{{API_URL}}|$API_URL|g" frontend/assets/script.js
+
       - name: Upload frontend to S3
+        shell: bash
         run: |
-          aws s3 sync frontend/ s3://${{ secrets.BUCKET_NAME }} \
+          aws s3 sync frontend/ "s3://${{ secrets.BUCKET_NAME }}/" \
             --delete \
-            --exclude "*" \
-            --include "index.html" \
-            --include "style.css" \
-            --include "toggle.css" \
-            --include "output.css" \
-            --include "script.js" \
-            --include "sitemap.xml" \
-            --include "robots.txt" \
-            --include "images/*" \
-            --include "files/*" 
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "node_modules/*"
 
-      - name: Reset script.js placeholder
+      - name: Reset script.js placeholder (local workspace)
+        if: always()
+        shell: bash
         run: |
-          sed -i "s|$API_URL|{{API_URL}}|g" frontend/script.js
+          sed -i "s|$API_URL|{{API_URL}}|g" frontend/assets/script.js
 
-      - name: Invalidate CloudFront Cache
+      - name: Invalidate CloudFront cache
+        shell: bash
         run: |
           aws cloudfront create-invalidation \
             --distribution-id "$CLOUDFRONT_ID" \
