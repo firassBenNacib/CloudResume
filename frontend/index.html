@@ -189,14 +189,14 @@
           </a>
         </div>
         <p>
-          Set up a production-ready infrastructure using Terraform and AWS EKS with full GitOps deployment. Laid out a highly available VPC across two AZs, with dual NAT gateways and secure access via a bastion host. Configured EC2 node groups with autoscaling and used IRSA for secure pod access to ECR.
+          Set up a production-ready infrastructure using Terraform and AWS EKS with full GitOps deployment. Built a highly available VPC across two AZs with configurable NAT and toggleable endpoints, plus optional bastion access. Ran a managed node group with autoscaling, added Karpenter for right-sized capacity, and used IRSA for secure pod access.
         </p>
         <p>
-          Integrated ArgoCD and Helm for application delivery through ALB Ingress Controller. Installed Prometheus, Grafana, SonarQube, and Trivy using an EC2-based bootstrap script. CI/CD flows were wired through CircleCI for builds, scans, and image pushes.
+          Integrated ArgoCD and Helm for delivery through the AWS Load Balancer Controller. Enabled ExternalDNS and Fluent Bit with managed EKS add-ons. Bootstrapped monitoring with an EC2 script and wired CI/CD in CircleCI for builds, scans, image pushes, and GitOps syncs.
         </p>
         <button class="expand-btn">Tech Stack <span class="arrow-icon">▼</span></button>
         <div class="project-tools-collapsible">
-          <p><strong>Tools:</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53), Terraform, Helm, ArgoCD, CircleCI, Prometheus, Grafana, SonarQube, Trivy</p>
+          <p><strong>Tools:</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53, ACM, CloudWatch), Terraform, Helm, ArgoCD, CircleCI, Karpenter, ExternalDNS, Fluent Bit, Prometheus, Grafana, Trivy</p>
         </div>
       </div>
 
