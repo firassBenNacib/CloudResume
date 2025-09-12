@@ -185,14 +185,14 @@
             </a>
           </div>
           <p>
-            Mise en place d’une infra prod prête à l’emploi via Terraform et AWS EKS avec un déploiement GitOps complet. VPC haute dispo sur deux AZ, doubles NAT, bastion sécurisé. Groupes EC2 autoscalés et IRSA pour l’accès ECR côté pods.
+            Mise en place d’une infrastructure prête pour la production avec Terraform et AWS EKS en GitOps complet. VPC hautement disponible sur deux zones de disponibilité avec NAT configurable, endpoints activables et bastion en option, plus un groupe de nœuds managé en autoscaling avec Karpenter et IRSA.
           </p>
           <p>
-            Intégration d’ArgoCD et Helm via ALB Ingress Controller. Installation de Prometheus, Grafana, SonarQube et Trivy via un script bootstrap sur EC2. CI/CD orchestré avec CircleCI pour build, scans et push d’images.
+            Intégration d’ArgoCD et Helm pour la livraison via AWS Load Balancer Controller. Activation d’ExternalDNS et de Fluent Bit avec des add-ons EKS gérés, supervision bootstrap via script EC2 et CI/CD CircleCI pour builds, scans, push d’images et synchronisations GitOps.
           </p>
           <button class="expand-btn">Stack technique <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p><strong>Outils :</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53), Terraform, Helm, ArgoCD, CircleCI, Prometheus, Grafana, SonarQube, Trivy</p>
+            <p><strong>Outils :</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM, Route 53, ACM, CloudWatch), Terraform, Helm, ArgoCD, CircleCI, Karpenter, ExternalDNS, Fluent Bit, Prometheus, Grafana, Trivy</p>
           </div>
         </div>
 
