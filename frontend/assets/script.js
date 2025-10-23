@@ -40,10 +40,10 @@
           skills:
             "AWS, Azure, Kubernetes, Terraform, Helm, Ansible, Docker, KEDA, Argo CD, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, ELK, Python, Bash, Git",
           projects: `
-<div><strong>KubleOps</strong> - Cloud-Native DevOps Platform (<a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener">GitHub</a>)</div>
-<div><strong>EcoAuto</strong> - Cost-Effective Web Hosting Architecture (<a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener">GitHub</a>)</div>
-<div><strong>Cloud Resume Challenge</strong> - AWS Edition (<a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener">GitHub</a>)</div>
-<div><strong>OptiChat</strong> - Scalable Messaging System (<a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener">GitHub</a>)</div>
+<div><strong>KubleOps</strong> - Cloud-Native DevOps Platform (<a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
+<div><strong>EcoAuto</strong> - Cost-Effective Web Hosting Architecture (<a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
+<div><strong>Cloud Resume Challenge</strong> - AWS Edition (<a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
+<div><strong>OptiChat</strong> - Scalable Messaging System (<a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
 <div><strong>Release Automation Platform</strong> - Vermeg</div>`,
           certs: `
 <div>Certified Kubernetes Administrator (CKA)</div>
@@ -53,11 +53,11 @@
 <div>Microsoft Azure Fundamentals (AZ-900)</div>
 <div>Cisco Network Security</div>`,
           resume:
-            '<a href="/files/Firas_Ben_Nacib_Resume.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>',
+            '<a href="/files/Firas_Ben_Nacib_Resume_EN.pdf" target="_blank" rel="noopener noreferrer">Open CV (PDF)</a>',
           github:
-            '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener">github.com/firassBenNacib</a>',
+            '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer">github.com/firassBenNacib</a>',
           linkedin:
-            '<a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener">linkedin.com/in/firas-bennacib</a>',
+            '<a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener noreferrer">linkedin.com/in/firas-bennacib</a>',
           contact:
             '<a href="mailto:bennacibfiras@gmail.com">bennacibfiras@gmail.com</a>',
           sudo:
@@ -99,10 +99,10 @@
           skills:
             "AWS, Azure, Kubernetes, Terraform, Helm, Ansible, Docker, KEDA, Argo CD, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, ELK, Python, Bash, Git",
           projects: `
-<div><strong>KubleOps</strong> - Plateforme DevOps Cloud-Native (<a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener">GitHub</a>)</div>
-<div><strong>EcoAuto</strong> - Hébergement Web économe et scalable (<a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener">GitHub</a>)</div>
-<div><strong>Cloud Resume Challenge</strong> - Édition AWS (<a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener">GitHub</a>)</div>
-<div><strong>OptiChat</strong> - Système de messagerie scalable (<a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener">GitHub</a>)</div>
+<div><strong>KubleOps</strong> - Plateforme DevOps Cloud-Native (<a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
+<div><strong>EcoAuto</strong> - Hébergement Web économe et scalable (<a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
+<div><strong>Cloud Resume Challenge</strong> - Édition AWS (<a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
+<div><strong>OptiChat</strong> - Système de messagerie scalable (<a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">GitHub</a>)</div>
 <div><strong>Plateforme d'automatisation des déploiements</strong> - Vermeg</div>`,
           certs: `
 <div>Certified Kubernetes Administrator (CKA)</div>
@@ -112,11 +112,11 @@
 <div>Microsoft Azure Fundamentals (AZ-900)</div>
 <div>Cisco Network Security</div>`,
           resume:
-            '<a href="/files/Firas_Ben_Nacib_Resume.pdf" target="_blank" rel="noopener">Ouvrir le CV (PDF)</a>',
+            '<a href="/files/Firas_Ben_Nacib_Resume_FR.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CV (PDF)</a>',
           github:
-            '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener">github.com/firassBenNacib</a>',
+            '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer">github.com/firassBenNacib</a>',
           linkedin:
-            '<a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener">linkedin.com/in/firas-bennacib</a>',
+            '<a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener noreferrer">linkedin.com/in/firas-bennacib</a>',
           contact:
             '<a href="mailto:bennacibfiras@gmail.com">bennacibfiras@gmail.com</a>',
           sudo:
@@ -210,7 +210,7 @@
       } else {
         target = new URL(base.pathname.includes("/fr/") ? "../" : "./", base);
       }
-      location.assign(target.href); 
+      location.assign(target.href);
     }
 
     if (moreBtn && moreSection) {
