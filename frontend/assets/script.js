@@ -71,8 +71,8 @@
 <div><a href="https://www.credly.com/badges/f8b19abd-42f6-43f0-a21c-677ab19b535e/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Security Specialist (CKS)</a></div>
 <div><a href="https://www.credly.com/badges/39dd875e-ad09-41a1-a9f9-075f45bd753c/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Administrator (CKA)</a></div>
 <div><a href="https://www.credly.com/badges/21b34410-97f6-4b26-a592-9018f97c128f/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
-<div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">KCSA: Kubernetes and Cloud Native Security Associate</a></div>
-<div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">KCNA: Kubernetes and Cloud Native Associate</a></div>
+<div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Security Associate (KCSA)</a></div>
+<div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Associate (KCNA)</a></div>
 <div><a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
 <div><a href="https://www.credly.com/badges/e20edd1d-e44a-4543-bfde-8e4a7a544a3c" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
 <div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
@@ -156,8 +156,8 @@
 <div><a href="https://www.credly.com/badges/f8b19abd-42f6-43f0-a21c-677ab19b535e/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Security Specialist (CKS)</a></div>
 <div><a href="https://www.credly.com/badges/39dd875e-ad09-41a1-a9f9-075f45bd753c/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Administrator (CKA)</a></div>
 <div><a href="https://www.credly.com/badges/21b34410-97f6-4b26-a592-9018f97c128f/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
-<div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">KCSA: Kubernetes and Cloud Native Security Associate</a></div>
-<div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">KCNA: Kubernetes and Cloud Native Associate</a></div>
+<div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Security Associate (KCSA)</a></div>
+<div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Associate (KCNA)</a></div>
 <div><a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
 <div><a href="https://www.credly.com/badges/e20edd1d-e44a-4543-bfde-8e4a7a544a3c" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
 <div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
