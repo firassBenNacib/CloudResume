@@ -8,8 +8,10 @@
 
     const i18n = {
       en: {
-        more: "Show More",
-        less: "Show Less",
+        moreProjects: "Show more projects",
+        lessProjects: "Show fewer projects",
+        stackView: "View stack",
+        stackHide: "Hide stack",
         prompt: "[guest@cloud-resume ~]$",
         cmds: {
           help: `
@@ -33,25 +35,48 @@
 |  _| | | | | (_| \\__ \\ | |_) |  __/ | | | | |\\  | (_| | (__| | |_) |
 |_|   |_|_|  \\__,_|___/ |____/ \\___|_| |_| |_| \\_|\\__,_|\\___|_|_.__/ 
 </pre>
-<div>Cloud & DevOps Engineer - AWS, Azure, Kubernetes & Terraform Certified</div>`,
+<div>Cloud & DevOps Engineer (Kubestronaut) - AWS, Azure, Kubernetes & Terraform Certified</div>`,
           experience:
             "Built prod-ready infra on AWS (EKS, VPC, ALB), GitOps with Argo CD & Helm, observability with Prometheus & Grafana, CI/CD with GitHub Actions / GitLab CI / Jenkins / CircleCI, and automation with Terraform & Ansible.",
-          education: "Cloud & DevOps Engineering - ESPRIT",
-          skills:
-            "AWS, Azure, Kubernetes, OpenShift, Terraform, Helm, Ansible, Docker, Docker Compose, KEDA, Argo CD, Jenkins, GitLab CI, GitHub Actions, CircleCI, Prometheus, Grafana, ELK, Trivy, SonarQube, Nexus, Python, Bash, Git",
+          education: `
+<div>ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</div>
+<div>Engineer's Degree, Computer Science</div>
+<div>2021 – 2024</div>
+<br>
+<div>IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</div>
+<div>2019 – 2021</div>`,
+          skills: `
+<div><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, OpenStack</div>
+<div><strong>Infrastructure as Code:</strong> Terraform, Ansible</div>
+<div><strong>Containers & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, Karpenter</div>
+<div><strong>Observability:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</div>
+<div><strong>Networking & Service Mesh:</strong> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
+<div><strong>Security:</strong> HashiCorp Vault, Falco, Trivy</div>
+<div><strong>CI/CD & DevOps Tooling:</strong> GitLab CI, GitHub Actions, Jenkins, CircleCI, Argo CD, SonarQube, Nexus</div>
+<div><strong>Languages & Scripting:</strong> Python, Bash, PowerShell, Groovy, Java, JavaScript, SQL, YAML</div>
+<div><strong>Version Control & Collaboration:</strong> Git, GitHub, GitLab, Jira</div>
+<div><strong>Operating Systems:</strong> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
+<div><strong>Virtualization & Platforms:</strong> VMware, VirtualBox, Proxmox, Vagrant</div>`,
           projects: `
 <div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
+<div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
+<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Demo</a></div>
+<div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Demo</a></div>
+<div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Demo</a></div>
 <div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
-<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a></div>
 <div><a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">OptiChat</a></div>
 <div>Release Automation Platform</div>`,
           certs: `
-<div><a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6daec97e-0738-43f1-9dba-1395f7cb2758-firas-ben-nacib-748a690a-feaa-43b1-b7a1-07bcea780ead-certificate.pdf" target="_blank" rel="noopener noreferrer">Certified Kubernetes Administrator (CKA)</a></div>
-<div><a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6daec97e-0738-43f1-9dba-1395f7cb2758-firas-ben-nacib-30dec65f-5968-475f-b091-babe21e4b554-certificate.pdf" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
+<div><a href="https://www.credly.com/badges/84ac6776-7130-487a-8e48-7455914f0e8c/public_url" target="_blank" rel="noopener noreferrer">Kubestronaut</a></div>
+<div><a href="https://www.credly.com/badges/f8b19abd-42f6-43f0-a21c-677ab19b535e/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Security Specialist (CKS)</a></div>
+<div><a href="https://www.credly.com/badges/39dd875e-ad09-41a1-a9f9-075f45bd753c/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Administrator (CKA)</a></div>
+<div><a href="https://www.credly.com/badges/21b34410-97f6-4b26-a592-9018f97c128f/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
+<div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">KCSA: Kubernetes and Cloud Native Security Associate</a></div>
+<div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">KCNA: Kubernetes and Cloud Native Associate</a></div>
+<div><a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
+<div><a href="https://www.credly.com/badges/e20edd1d-e44a-4543-bfde-8e4a7a544a3c" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
+<div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer">HashiCorp Terraform Associate (003)</a></div>
-<div><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1a6a5fa99c404436b7fa2e8de97fc3d1" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
-<div><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1d6689b1355e481ba35a7bfa6e9c4dfa" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
-<div><a href="https://learn.microsoft.com/api/credentials/share/fr-fr/FirasBenNacib-6669/D1931B541BD8428E?sharingId=1EE28426564D1A99" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/2d760ef9-0f9a-4ed7-9c55-3a3180aadb40/public_url" target="_blank" rel="noopener noreferrer">Cisco Network Security</a></div>`,
           github:
             '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer">github.com/firassBenNacib</a>',
@@ -68,8 +93,10 @@
         },
       },
       fr: {
-        more: "Afficher plus",
-        less: "Afficher moins",
+        moreProjects: "Afficher plus de projets",
+        lessProjects: "Afficher moins de projets",
+        stackView: "Voir la stack",
+        stackHide: "Masquer la stack",
         prompt: "[invite@cloud-resume ~]$",
         cmds: {
           help: `
@@ -93,25 +120,48 @@
 |  _| | | | | (_| \\__ \\ | |_) |  __/ | | | | |\\  | (_| | (__| | |_) |
 |_|   |_|_|  \\__,_|___/ |____/ \\___|_| |_| |_| \\_|\\__,_|\\___|_|_.__/ 
 </pre>
-<div>Ingénieur Cloud & DevOps - Certifié AWS, Azure, Kubernetes & Terraform</div>`,
+<div>Ingénieur Cloud & DevOps (Kubestronaut) - Certifié AWS, Azure, Kubernetes & Terraform</div>`,
           experience:
             "Mise en place d'infras prêtes pour la prod sur AWS (EKS, VPC, ALB), GitOps avec Argo CD & Helm, observabilité Prometheus & Grafana, CI/CD (GitHub Actions / GitLab CI / Jenkins / CircleCI), automatisation Terraform & Ansible.",
-          education: "Cloud & DevOps Engineering - ESPRIT",
-          skills:
-            "AWS, Azure, Kubernetes, OpenShift, Terraform, Helm, Ansible, Docker, Docker Compose, KEDA, Argo CD, Jenkins, GitLab CI, GitHub Actions, CircleCI, Prometheus, Grafana, ELK, Trivy, SonarQube, Nexus, Python, Bash, Git",
+          education: `
+<div>ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</div>
+<div>Diplôme d'ingénieur, Informatique</div>
+<div>2021 – 2024</div>
+<br>
+<div>IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</div>
+<div>2019 – 2021</div>`,
+          skills: `
+<div><strong>Plateformes Cloud:</strong> AWS, Microsoft Azure, OpenStack</div>
+<div><strong>Infrastructure as Code:</strong> Terraform, Ansible</div>
+<div><strong>Conteneurs & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, Karpenter</div>
+<div><strong>Observabilité:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</div>
+<div><strong>Réseau & Service Mesh:</strong> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
+<div><strong>Sécurité:</strong> HashiCorp Vault, Falco, Trivy</div>
+<div><strong>CI/CD & outils DevOps:</strong> GitLab CI, GitHub Actions, Jenkins, CircleCI, Argo CD, SonarQube, Nexus</div>
+<div><strong>Langages & Scripting:</strong> Python, Bash, PowerShell, Groovy, Java, JavaScript, SQL, YAML</div>
+<div><strong>Gestion de versions & Collaboration:</strong> Git, GitHub, GitLab, Jira</div>
+<div><strong>Systèmes:</strong> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
+<div><strong>Virtualisation & plateformes:</strong> VMware, VirtualBox, Proxmox, Vagrant</div>`,
           projects: `
 <div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
+<div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
+<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Démo</a></div>
+<div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Démo</a></div>
+<div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Démo</a></div>
 <div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
-<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a></div>
 <div><a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">OptiChat</a></div>
 <div>Plateforme d’Automatisation des Déploiements</div>`,
           certs: `
-<div><a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6daec97e-0738-43f1-9dba-1395f7cb2758-firas-ben-nacib-748a690a-feaa-43b1-b7a1-07bcea780ead-certificate.pdf" target="_blank" rel="noopener noreferrer">Certified Kubernetes Administrator (CKA)</a></div>
-<div><a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/6daec97e-0738-43f1-9dba-1395f7cb2758-firas-ben-nacib-30dec65f-5968-475f-b091-babe21e4b554-certificate.pdf" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
+<div><a href="https://www.credly.com/badges/84ac6776-7130-487a-8e48-7455914f0e8c/public_url" target="_blank" rel="noopener noreferrer">Kubestronaut</a></div>
+<div><a href="https://www.credly.com/badges/f8b19abd-42f6-43f0-a21c-677ab19b535e/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Security Specialist (CKS)</a></div>
+<div><a href="https://www.credly.com/badges/39dd875e-ad09-41a1-a9f9-075f45bd753c/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Administrator (CKA)</a></div>
+<div><a href="https://www.credly.com/badges/21b34410-97f6-4b26-a592-9018f97c128f/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
+<div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">KCSA: Kubernetes and Cloud Native Security Associate</a></div>
+<div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">KCNA: Kubernetes and Cloud Native Associate</a></div>
+<div><a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
+<div><a href="https://www.credly.com/badges/e20edd1d-e44a-4543-bfde-8e4a7a544a3c" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
+<div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer">HashiCorp Terraform Associate (003)</a></div>
-<div><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1a6a5fa99c404436b7fa2e8de97fc3d1" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
-<div><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1d6689b1355e481ba35a7bfa6e9c4dfa" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
-<div><a href="https://learn.microsoft.com/api/credentials/share/fr-fr/FirasBenNacib-6669/D1931B541BD8428E?sharingId=1EE28426564D1A99" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/2d760ef9-0f9a-4ed7-9c55-3a3180aadb40/public_url" target="_blank" rel="noopener noreferrer">Cisco Network Security</a></div>`,
           github:
             '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer">github.com/firassBenNacib</a>',
@@ -216,7 +266,7 @@
 
     if (moreBtn && moreSection) {
       moreBtn.setAttribute("aria-expanded", "false");
-      moreBtn.innerHTML = `${L.more}<span class="arrow-icon">▼</span>`;
+      setMoreProjectsLabel(false);
       moreBtn.addEventListener("click", () => {
         const expanded = moreSection.classList.contains("show");
         moreSection.classList.toggle("collapse", expanded);
@@ -224,11 +274,15 @@
         moreSection.classList.toggle("show", !expanded);
         moreBtn.classList.toggle("collapsed", expanded);
         moreBtn.setAttribute("aria-expanded", String(!expanded));
-        moreBtn.innerHTML = !expanded
-          ? `${L.less}<span class="arrow-icon">▲</span>`
-          : `${L.more}<span class="arrow-icon">▼</span>`;
+        setMoreProjectsLabel(!expanded);
       });
     }
+
+    const stackButtons = document.querySelectorAll(".project .expand-btn:not(#more-projects-toggle)");
+    stackButtons.forEach((btn) => {
+      btn.setAttribute("aria-expanded", "false");
+      setStackLabel(btn, false);
+    });
 
     const API_URL = "{{API_URL}}";
     if (typeof API_URL === "string" && !API_URL.includes("{{")) {
@@ -251,8 +305,10 @@
       if (btn.id === "more-projects-toggle") return;
       const block = btn.closest(".project")?.querySelector(".project-tools-collapsible");
       if (block) {
-        block.classList.toggle("open");
-        btn.classList.toggle("open");
+        const open = !block.classList.contains("open");
+        block.classList.toggle("open", open);
+        setStackLabel(btn, open);
+        btn.setAttribute("aria-expanded", String(open));
       }
     });
 
@@ -295,6 +351,18 @@
       );
 
       onScroll();
+    }
+
+    function setStackLabel(btn, isOpen) {
+      btn.classList.toggle("open", isOpen);
+      btn.innerHTML = `${isOpen ? L.stackHide : L.stackView}<span class="arrow-icon">▼</span>`;
+    }
+
+    function setMoreProjectsLabel(isOpen) {
+      if (!moreBtn) return;
+      moreBtn.innerHTML = isOpen
+        ? `${L.lessProjects}<span class="arrow-icon">▲</span>`
+        : `${L.moreProjects}<span class="arrow-icon">▼</span>`;
     }
   });
 
