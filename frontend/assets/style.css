@@ -68,7 +68,15 @@
   --divider-color:#3f3f46
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;color-scheme:light dark}
+html{
+  scroll-behavior:smooth;
+  color-scheme:light dark;
+  width:100%;
+  max-width:100%;
+  min-height:100%;
+  overflow-x:hidden;
+  overflow-y:auto
+}
 body{
   font-family:var(--font-body);
   background-color:var(--bg);
@@ -76,7 +84,11 @@ body{
   transition:background-color .2s ease,color .2s ease;
   will-change:background-color,color;
   scroll-snap-type:y mandatory;
-  overflow-y:scroll
+  min-height:100%;
+  overflow-y:auto;
+  overflow-x:hidden;
+  width:100%;
+  max-width:100%
 }
 .main-content{padding-top:var(--nav-h)}
 .navbar{
@@ -242,11 +254,18 @@ textarea{
   cursor:text
 }
 
-.section.projects{padding:0 2rem 4rem;display:flex;flex-direction:column;align-items:center;max-width:1200px;margin:0 auto}
-.project-wrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:2rem;width:100%}
+.section.projects{padding:0 2rem 4rem;display:flex;flex-direction:column;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+.project-wrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(500px,100%),1fr));gap:2rem;width:100%}
 .project{background:transparent;border:none;box-shadow:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:.65rem}
 .project:hover{transform:none;box-shadow:none}
 .project p{font-size:1.05rem;line-height:1.7;margin-bottom:.4rem;color:var(--body-color)}
+.project p,
+.project-title a,
+.project-title span,
+.project-tools-collapsible p{
+  overflow-wrap:anywhere;
+  word-break:break-word
+}
 .project-title{font-size:1.3rem;font-weight:700;display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem;flex-wrap:wrap;font-family:var(--font-subtitle)}
 .project-title a{color:inherit;text-decoration:none;transition:color .2s ease}
 .project-title a:hover{color:var(--primary-hover)}
@@ -372,8 +391,8 @@ textarea{
 }
 .arrow-icon{display:inline-block;margin-left:.5rem;transition:transform .3s ease}
 .expand-btn.open .arrow-icon{transform:rotate(180deg)}
-.project-tools-collapsible{max-height:0;overflow:hidden;opacity:0;transition:max-height .3s ease,opacity .3s ease}
-.project-tools-collapsible.open{max-height:500px;opacity:1}
+.project-tools-collapsible{display:none;opacity:0;overflow:visible}
+.project-tools-collapsible.open{display:block;opacity:1;animation:fadeIn .2s ease}
 .project-tools-collapsible p{font-size:1.05rem;line-height:1.7;margin-bottom:.4rem;color:var(--body-color)}
 .project p a{color:var(--primary);text-decoration:underline}
 .project p a:hover{color:var(--primary-hover)}
@@ -492,15 +511,15 @@ p a:hover{color:var(--primary-hover)}
 [data-theme="dark"] .cert-btn:hover{background-color:rgba(255,255,255,.10)}
 
 .more-projects-wrapper{display:flex;flex-direction:column;align-items:center;margin-top:2rem}
-#more-projects-section{width:100%}
+#more-projects-section{width:100%;overflow:visible}
+#more-projects-section .project-wrapper{overflow:visible}
 .more-projects-toggle-wrapper{display:flex;justify-content:center;margin-top:2rem}
 .more-toggle{font-size:.95rem;font-weight:700;padding:.5rem 1rem;min-width:170px;justify-content:center;letter-spacing:.01em;transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .2s ease}
 .more-toggle.collapsed{font-size:.95rem;padding:.5rem 1rem}
 
-.fade-in{opacity:0;max-height:0;overflow:hidden}
-.fade-in.expand{transition:opacity 1s ease-in-out,max-height 1s ease-in-out}
-.fade-in.collapse{transition:opacity .6s ease-in-out,max-height .6s ease-in-out}
-.fade-in.show{opacity:1;max-height:1500px}
+.fade-in{display:none;opacity:0;overflow:visible}
+.fade-in.expand,.fade-in.collapse{transition:opacity .25s ease}
+.fade-in.show{display:block;opacity:1;animation:fadeIn .25s ease}
 
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)){.navbar,.menu.menu-sm.dropdown-content,.menu.dropdown-content,.dropdown-content,.lang-menu,.cert-btn,.terminal-window{background-color:var(--card-bg)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -526,13 +545,38 @@ p a:hover{color:var(--primary-hover)}
   .skills-wrapper,.certifications-wrapper{grid-template-columns:1fr!important}
   .section-title{font-size:2rem}
   .terminal-window{max-width:100%;font-size:.85rem}
+  .command-input{font-size:16px}
   .terminal-header .title{font-size:.7rem}
   .terminal-body{padding:.5rem}
   .accordion-toggle{font-size:1rem}
   .social-icons{gap:1rem;flex-wrap:wrap;justify-content:center}
   .visitor-counter{font-size:.85rem}
-  .footer-title{font-size:.95rem}
-  .footer-note{font-size:.8rem}
+  .footer{padding:.85rem .75rem}
+  .footer-content{
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:.45rem .9rem
+  }
+  .footer-title{
+    font-size:.95rem;
+    margin:0
+  }
+  .footer .social-icons{
+    width:auto;
+    justify-content:center;
+    gap:.95rem
+  }
+  .footer-note{
+    order:3;
+    margin:0;
+    flex-basis:100%;
+    text-align:center;
+    font-size:.8rem;
+    line-height:1.45
+  }
 }
 @media (max-width:480px){
   .hero-avatar{width:120px;height:120px}

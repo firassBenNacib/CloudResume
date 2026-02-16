@@ -266,15 +266,16 @@
 
     if (moreBtn && moreSection) {
       moreBtn.setAttribute("aria-expanded", "false");
+      moreSection.setAttribute("aria-hidden", "true");
       setMoreProjectsLabel(false);
       moreBtn.addEventListener("click", () => {
-        const expanded = moreSection.classList.contains("show");
-        moreSection.classList.toggle("collapse", expanded);
-        moreSection.classList.toggle("expand", !expanded);
-        moreSection.classList.toggle("show", !expanded);
-        moreBtn.classList.toggle("collapsed", expanded);
-        moreBtn.setAttribute("aria-expanded", String(!expanded));
-        setMoreProjectsLabel(!expanded);
+        const isOpen = moreSection.classList.contains("show");
+        const nextOpen = !isOpen;
+        moreSection.classList.toggle("show", nextOpen);
+        moreBtn.classList.toggle("collapsed", !nextOpen);
+        moreBtn.setAttribute("aria-expanded", String(nextOpen));
+        moreSection.setAttribute("aria-hidden", String(!nextOpen));
+        setMoreProjectsLabel(nextOpen);
       });
     }
 
@@ -282,6 +283,11 @@
     stackButtons.forEach((btn) => {
       btn.setAttribute("aria-expanded", "false");
       setStackLabel(btn, false);
+      const block = btn.closest(".project")?.querySelector(".project-tools-collapsible");
+      if (block) {
+        block.classList.remove("open");
+        block.setAttribute("aria-hidden", "true");
+      }
     });
 
     const API_URL = "{{API_URL}}";
@@ -309,6 +315,7 @@
         block.classList.toggle("open", open);
         setStackLabel(btn, open);
         btn.setAttribute("aria-expanded", String(open));
+        block.setAttribute("aria-hidden", String(!open));
       }
     });
 
@@ -394,7 +401,14 @@
     function createLine() {
       const line = el("div", { class: "line" });
       const prompt = el("span", { class: "prompt" }, PROMPT);
-      const input = el("input", { class: "command-input", type: "text", autocomplete: "off" });
+      const input = el("input", {
+        class: "command-input",
+        type: "text",
+        autocomplete: "off",
+        id: "terminal-command-input",
+        name: "terminal-command",
+        "aria-label": "Terminal command input",
+      });
       input.addEventListener("keydown", handleInput);
       line.appendChild(prompt);
       line.appendChild(input);
