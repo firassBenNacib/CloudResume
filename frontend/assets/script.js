@@ -48,7 +48,7 @@
           skills: `
 <div><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, OpenStack</div>
 <div><strong>Infrastructure as Code:</strong> Terraform, Ansible</div>
-<div><strong>Containers & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, Karpenter</div>
+<div><strong>Containers & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, cert-manager, Karpenter</div>
 <div><strong>Observability:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</div>
 <div><strong>Networking & Service Mesh:</strong> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
 <div><strong>Security:</strong> HashiCorp Vault, Falco, Trivy</div>
@@ -133,7 +133,7 @@
           skills: `
 <div><strong>Plateformes Cloud:</strong> AWS, Microsoft Azure, OpenStack</div>
 <div><strong>Infrastructure as Code:</strong> Terraform, Ansible</div>
-<div><strong>Conteneurs & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, Karpenter</div>
+<div><strong>Conteneurs & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, cert-manager, Karpenter</div>
 <div><strong>Observabilité:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</div>
 <div><strong>Réseau & Service Mesh:</strong> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
 <div><strong>Sécurité:</strong> HashiCorp Vault, Falco, Trivy</div>
@@ -207,6 +207,7 @@
       const html = document.documentElement;
       html.setAttribute("data-theme", mode);
       html.classList.toggle("dark", mode === "dark");
+      applySkillIconTheme(mode);
       if (toggleBtn) {
         toggleBtn.classList.toggle("theme-toggle--toggled", mode === "dark");
         toggleBtn.setAttribute("aria-pressed", String(mode === "dark"));
@@ -322,6 +323,7 @@
     const terminalBody = byId("terminal-body");
     if (terminalBody) initTerminal(terminalBody, locale, i18n);
 
+    initSkillIcons();
     initDynamicNavbar();
 
     function initDynamicNavbar() {
@@ -370,6 +372,173 @@
       moreBtn.innerHTML = isOpen
         ? `${L.lessProjects}<span class="arrow-icon">▲</span>`
         : `${L.moreProjects}<span class="arrow-icon">▼</span>`;
+    }
+
+    function initSkillIcons() {
+      const themeIconUrls = {
+        GitHub: {
+          light: "https://cdn.simpleicons.org/github/181717",
+          dark: "https://cdn.simpleicons.org/github/f5f5f5",
+        },
+        Nexus: {
+          light: "https://cdn.simpleicons.org/sonatype/1B1C30",
+          dark: "https://cdn.simpleicons.org/sonatype/f5f5f5",
+        },
+      };
+
+      const iconUrls = {
+        AWS:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+        "Microsoft Azure":
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg",
+        KEDA:
+          "https://raw.githubusercontent.com/kedacore/keda-docs/main/static/img/logos/keda-icon-color.png",
+        Jenkins:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg",
+        "Argo CD":
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/argocd/argocd-original.svg",
+        SonarQube:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/sonarqube/sonarqube-original.svg",
+        Trivy:
+          "https://cdn.simpleicons.org/trivy/38BDF8",
+        CloudWatch:
+          "https://raw.githubusercontent.com/sashee/aws-svg-icons/main/docs/Architecture-Service-Icons_07302021/Arch_Management-Governance/64/Arch_Amazon-CloudWatch_64.svg",
+        PostgreSQL:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+        SQL:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/azuresqldatabase/azuresqldatabase-original.svg",
+        "Oracle SQL":
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg",
+        WildFly:
+          "https://raw.githubusercontent.com/wildfly/wildfly.org/main/public/assets/img/wildfly_icons_one-color-logo.png",
+        WebSphere:
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+        "Amazon Linux":
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+        "Talos Linux":
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/talos/talos-original.svg",
+        PowerShell:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/powershell/powershell-original.svg",
+        Groovy:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/groovy/groovy-original.svg",
+        "cert-manager":
+          "https://raw.githubusercontent.com/cncf/artwork/main/projects/cert-manager/icon/color/cert-manager-icon-color.svg",
+        Java:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+      };
+
+      const iconSlugs = {
+        AWS: "amazonaws",
+        "Microsoft Azure": "microsoftazure",
+        OpenStack: "openstack",
+        Jenkins: "jenkins",
+        "GitLab CI": "gitlab",
+        "GitHub Actions": "githubactions",
+        CircleCI: "circleci",
+        "Argo CD": "argocd",
+        SonarQube: "sonarqube",
+        Nexus: "sonatype",
+        Trivy: "aquasecurity",
+        Docker: "docker",
+        "Docker Compose": "docker",
+        Kubernetes: "kubernetes",
+        OpenShift: "redhatopenshift",
+        Helm: "helm",
+        KEDA: "keda",
+        "cert-manager": "kubernetes",
+        Karpenter: "kubernetes",
+        Terraform: "terraform",
+        Ansible: "ansible",
+        Bash: "gnubash",
+        "Shell Scripting": "gnubash",
+        "Scripts Shell": "gnubash",
+        Python: "python",
+        Prometheus: "prometheus",
+        Grafana: "grafana",
+        "ELK Stack": "elastic",
+        CloudWatch: "amazoncloudwatch",
+        PostgreSQL: "postgresql",
+        MySQL: "mysql",
+        "Oracle SQL": "oracle",
+        MongoDB: "mongodb",
+        WildFly: "wildfly",
+        WebSphere: "ibm",
+        Git: "git",
+        GitHub: "github",
+        GitLab: "gitlab",
+        Jira: "jira",
+        Ubuntu: "ubuntu",
+        CentOS: "centos",
+        RHEL: "redhat",
+        "Amazon Linux": "amazon",
+        "Talos Linux": "talos",
+        Istio: "istio",
+        Cilium: "cilium",
+        Traefik: "traefikproxy",
+        Ingress: "kubernetes",
+        DNS: "cloudflare",
+        "Load Balancing": "nginx",
+        "HashiCorp Vault": "vault",
+        Falco: "falco",
+        PowerShell: "powershell",
+        Groovy: "groovy",
+        Java: "java",
+        JavaScript: "javascript",
+        SQL: "sqlite",
+        YAML: "yaml",
+        VMware: "vmware",
+        VirtualBox: "virtualbox",
+        Proxmox: "proxmox",
+        Vagrant: "vagrant",
+        "VM Ubuntu": "ubuntu",
+      };
+
+      const skillLinks = document.querySelectorAll(".skills-section .skill-card li a");
+      skillLinks.forEach((link) => {
+        if (link.dataset.iconApplied === "1") return;
+        const label = link.textContent.trim();
+        const slug = iconSlugs[label];
+        const source = iconUrls[label] || (slug ? `https://cdn.simpleicons.org/${slug}` : "");
+        if (!source) return;
+
+        const icon = document.createElement("img");
+        icon.className = "skill-logo";
+        const themeSource = themeIconUrls[label];
+        if (themeSource) {
+          icon.dataset.lightSrc = themeSource.light;
+          icon.dataset.darkSrc = themeSource.dark;
+          icon.src =
+            document.documentElement.getAttribute("data-theme") === "dark"
+              ? themeSource.dark
+              : themeSource.light;
+        } else {
+          icon.src = source;
+        }
+        icon.alt = "";
+        icon.loading = "lazy";
+        icon.decoding = "async";
+        icon.setAttribute("aria-hidden", "true");
+        icon.dataset.skillKey = label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        icon.addEventListener("error", () => {
+          icon.remove();
+        });
+
+        link.classList.add("skill-link-with-icon");
+        link.prepend(icon);
+        link.dataset.iconApplied = "1";
+      });
+
+      applySkillIconTheme(document.documentElement.getAttribute("data-theme") || "light");
+    }
+
+    function applySkillIconTheme(mode) {
+      const logos = document.querySelectorAll(".skills-section .skill-logo[data-light-src][data-dark-src]");
+      logos.forEach((logo) => {
+        const lightSrc = logo.dataset.lightSrc;
+        const darkSrc = logo.dataset.darkSrc;
+        if (!lightSrc || !darkSrc) return;
+        logo.src = mode === "dark" ? darkSrc : lightSrc;
+      });
     }
   });
 

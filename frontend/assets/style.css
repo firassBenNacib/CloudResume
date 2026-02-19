@@ -407,9 +407,65 @@ textarea{
 [data-theme="dark"] .skill-card h4{color:var(--title-color)}
 .skill-card h4 i{margin-right:.5rem;vertical-align:-2px;color:var(--accent);transition:color .3s ease}
 .skill-card:hover h4 i{color:var(--primary)}
-.skill-card ul{list-style:none}
-.skill-card li{font-size:1rem;margin-bottom:.5rem;transition:transform .2s ease,color .2s ease}
-.skill-card li:hover{transform:translateX(6px);color:var(--accent)}
+.skill-card ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:.5rem;
+  padding:0;
+  margin:0
+}
+.skill-card li{
+  font-size:1rem;
+  margin:0;
+  width:100%;
+  transition:transform .2s ease,color .2s ease
+}
+.skill-card li:hover{
+  transform:translateY(-2px);
+  color:var(--accent)
+}
+.skills-section .skill-link-with-icon{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:100%;
+  gap:.6rem;
+  padding:.4rem .7rem;
+  border:1px solid var(--divider-color);
+  border-radius:12px;
+  line-height:1.1;
+  font-size:.95rem;
+  text-decoration:none;
+  color:var(--body-color);
+  background:transparent;
+  transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .2s ease
+}
+.skills-section .skill-link-with-icon:hover{
+  background:rgba(0,0,0,.04);
+  border-color:var(--subtext);
+  color:var(--title-color);
+  transform:translateY(-1px)
+}
+[data-theme="dark"] .skills-section .skill-link-with-icon{
+  border-color:#52525b;
+  color:#e4e4e7
+}
+[data-theme="dark"] .skills-section .skill-link-with-icon:hover{
+  background:rgba(255,255,255,.06);
+  border-color:#71717a;
+  color:#f4f4f5
+}
+.skill-logo{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+  flex:0 0 22px
+}
+[data-theme="light"] .skill-logo[data-skill-key="wildfly"]{
+  filter:invert(1) brightness(.2)
+}
 
 .certifications-section{padding:0 2rem 4rem;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .certifications-container{width:100%;max-width:1200px;display:flex;flex-direction:column;align-items:center}
