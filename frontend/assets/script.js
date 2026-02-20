@@ -199,10 +199,8 @@
       html.classList.toggle("dark", mode === "dark");
       applySkillIconTheme(mode);
       if (toggleBtn) {
-        toggleBtn.classList.toggle("theme-toggle--toggled", mode === "dark");
+        toggleBtn.classList.toggle("theme-toggle--toggled", mode === "light");
         toggleBtn.setAttribute("aria-pressed", String(mode === "dark"));
-        const title = mode === "dark" ? "Switch to light theme" : "Switch to dark theme";
-        toggleBtn.setAttribute("title", title);
         toggleBtn.setAttribute("aria-label", "Toggle theme");
       }
     }

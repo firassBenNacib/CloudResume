@@ -197,19 +197,19 @@ body{
   transition-duration:calc(var(--theme-toggle__expand--duration) * .6);
   transition-timing-function:cubic-bezier(0,0,.5,1)
 }
-[data-theme="dark"] .theme-toggle .theme-toggle__expand g circle,
+[data-theme="light"] .theme-toggle .theme-toggle__expand g circle,
 .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand g circle,
 .theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand g circle{
   transform:scale(1.4);
   transition-delay:0s
 }
-[data-theme="dark"] .theme-toggle .theme-toggle__expand g path,
+[data-theme="light"] .theme-toggle .theme-toggle__expand g path,
 .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand g path,
 .theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand g path{
   transform:scale(.75);
   transition-delay:0s
 }
-[data-theme="dark"] .theme-toggle .theme-toggle__expand :first-child path,
+[data-theme="light"] .theme-toggle .theme-toggle__expand :first-child path,
 .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand :first-child path,
 .theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand :first-child path{
   d:path("M-9 3h25a1 1 0 0017 13v30H0Z");
@@ -217,7 +217,7 @@ body{
   transition-timing-function:cubic-bezier(0,0,0,1.25)
 }
 @supports not (d:path("")){
-  [data-theme="dark"] .theme-toggle .theme-toggle__expand :first-child path,
+  [data-theme="light"] .theme-toggle .theme-toggle__expand :first-child path,
   .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand :first-child path,
   .theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand :first-child path{
     transform:translate3d(-9px,14px,0)
