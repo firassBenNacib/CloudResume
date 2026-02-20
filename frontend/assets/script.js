@@ -5,6 +5,12 @@
     const html = document.documentElement;
     const locale = (html.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
     safeSet("lang", locale);
+    const TERMINAL_ASCII = [
+      " _____ ___ ___ __  __ ___ _  _   _   _",
+      "|_   _| __| _ \\  \\/  |_ _| \\| | /_\\ | |",
+      "  | | | _||   / |\\/| || || .` |/ _ \\| |__",
+      "  |_| |___|_|_\\_|  |_|___|_|\\_/_/ \\_\\____|",
+    ].join("\n");
 
     const i18n = {
       en: {
@@ -12,21 +18,17 @@
         lessProjects: "Show fewer projects",
         stackView: "View stack",
         stackHide: "Hide stack",
-        prompt: "[guest@cloud-resume ~]$",
+        terminalTitle: "firas@cloud-resume - zsh",
+        terminalBannerAscii: TERMINAL_ASCII,
+        terminalWelcomeTitle: "Welcome to my interactive portfolio!",
+        terminalWelcomeHelpLead: "Type",
+        terminalWelcomeHelpTail: "to list available commands.",
+        promptUser: "firas",
+        promptHost: "cloud-resume",
+        promptPath: "~",
+        promptSign: "$",
         cmds: {
-          help: `
-    <div><span class="cmd">whoami</span> : General information</div>
-    <div><span class="cmd">experience</span> : Technical experience</div>
-    <div><span class="cmd">education</span> : Educational background</div>
-    <div><span class="cmd">skills</span> : Current technical skills</div>
-    <div><span class="cmd">projects</span> : Featured projects</div>
-    <div><span class="cmd">certs</span> : Certifications</div>
-    <div><span class="cmd">resume</span> : Download CV</div>
-    <div><span class="cmd">github</span> : GitHub profile</div>
-    <div><span class="cmd">linkedin</span> : LinkedIn profile</div>
-    <div><span class="cmd">contact</span> : Email</div>
-    <div><span class="cmd">sudo</span> : Try it :)</div>
-    <div><span class="cmd">clear</span> : Clear the terminal</div>`,
+          help: `<div><span class="cmd">whoami</span> : General information</div><div><span class="cmd">experience</span> : Technical experience</div><div><span class="cmd">education</span> : Educational background</div><div><span class="cmd">skills</span> : Current technical skills</div><div><span class="cmd">projects</span> : Featured projects</div><div><span class="cmd">certs</span> : Certifications</div><div><span class="cmd">resume</span> : Download CV</div><div><span class="cmd">github</span> : GitHub profile</div><div><span class="cmd">linkedin</span> : LinkedIn profile</div><div><span class="cmd">contact</span> : Email</div><div><span class="cmd">sudo</span> : Try it :)</div><div><span class="cmd">clear</span> : Clear the terminal</div>`,
           whoami: `
 <pre style="color:#38bdf8;font-family:monospace;line-height:1.2;">
  _____ _                 ____               _   _            _ _     
@@ -36,27 +38,23 @@
 |_|   |_|_|  \\__,_|___/ |____/ \\___|_| |_| |_| \\_|\\__,_|\\___|_|_.__/ 
 </pre>
 <div>Cloud & DevOps Engineer (Kubestronaut) - AWS, Azure, Kubernetes & Terraform Certified</div>`,
-          experience:
-            "Built prod-ready infra on AWS (EKS, VPC, ALB), GitOps with Argo CD & Helm, observability with Prometheus & Grafana, CI/CD with GitHub Actions / GitLab CI / Jenkins / CircleCI, and automation with Terraform & Ansible.",
-          education: `
-<div>ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</div>
-<div>Engineer's Degree, Computer Science</div>
-<div>2021 – 2024</div>
-<br>
-<div>IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</div>
-<div>2019 – 2021</div>`,
+          experience: `
+<div>Freelance Cloud and DevOps contractor working with startups, companies, and direct clients on infrastructure and automation projects.</div>
+<div>More than 10 certifications across AWS, Azure, Kubernetes, Terraform, and security domains.</div>`,
+          education:
+            `<div><span class="keyword">ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</span></div><div>Engineer's Degree, Computer Science</div><div>2021 – 2024</div><div class="terminal-edu-gap"></div><div><span class="keyword">IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</span></div><div>2019 – 2021</div>`,
           skills: `
-<div><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, OpenStack</div>
-<div><strong>Infrastructure as Code:</strong> Terraform, Ansible</div>
-<div><strong>Containers & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, cert-manager, Karpenter</div>
-<div><strong>Observability:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</div>
-<div><strong>Networking & Service Mesh:</strong> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
-<div><strong>Security:</strong> HashiCorp Vault, Falco, Trivy</div>
-<div><strong>CI/CD & DevOps Tooling:</strong> GitLab CI, GitHub Actions, Jenkins, CircleCI, Argo CD, SonarQube, Nexus</div>
-<div><strong>Languages & Scripting:</strong> Python, Bash, PowerShell, Groovy, Java, JavaScript, SQL, YAML</div>
-<div><strong>Version Control & Collaboration:</strong> Git, GitHub, GitLab, Jira</div>
-<div><strong>Operating Systems:</strong> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
-<div><strong>Virtualization & Platforms:</strong> VMware, VirtualBox, Proxmox, Vagrant</div>`,
+<div><span class="keyword">Cloud Platforms:</span> AWS, Microsoft Azure, OpenStack</div>
+<div><span class="keyword">Infrastructure as Code:</span> Terraform, Ansible</div>
+<div><span class="keyword">Containers & Orchestration:</span> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, cert-manager, Karpenter</div>
+<div><span class="keyword">Observability:</span> Prometheus, Grafana, ELK Stack, CloudWatch</div>
+<div><span class="keyword">Networking & Service Mesh:</span> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
+<div><span class="keyword">Security:</span> HashiCorp Vault, Falco, Trivy</div>
+<div><span class="keyword">CI/CD & DevOps Tooling:</span> GitLab CI, GitHub Actions, Jenkins, CircleCI, Argo CD, SonarQube, Nexus</div>
+<div><span class="keyword">Languages & Scripting:</span> Python, Bash, PowerShell, Groovy, Java, JavaScript, SQL, YAML</div>
+<div><span class="keyword">Version Control & Collaboration:</span> Git, GitHub, GitLab, Jira</div>
+<div><span class="keyword">Operating Systems:</span> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
+<div><span class="keyword">Virtualization & Platforms:</span> VMware, VirtualBox, Proxmox, Vagrant</div>`,
           projects: `
 <div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
 <div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
@@ -65,7 +63,7 @@
 <div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Demo</a></div>
 <div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
 <div><a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">OptiChat</a></div>
-<div>Release Automation Platform</div>`,
+<div><span class="keyword">Release Automation Platform</span></div>`,
           certs: `
 <div><a href="https://www.credly.com/badges/84ac6776-7130-487a-8e48-7455914f0e8c/public_url" target="_blank" rel="noopener noreferrer">Kubestronaut</a></div>
 <div><a href="https://www.credly.com/badges/f8b19abd-42f6-43f0-a21c-677ab19b535e/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Security Specialist (CKS)</a></div>
@@ -97,21 +95,17 @@
         lessProjects: "Afficher moins de projets",
         stackView: "Voir la stack",
         stackHide: "Masquer la stack",
-        prompt: "[invite@cloud-resume ~]$",
+        terminalTitle: "firas@cloud-resume - zsh",
+        terminalBannerAscii: TERMINAL_ASCII,
+        terminalWelcomeTitle: "Welcome to my interactive portfolio!",
+        terminalWelcomeHelpLead: "Type",
+        terminalWelcomeHelpTail: "to list available commands.",
+        promptUser: "firas",
+        promptHost: "cloud-resume",
+        promptPath: "~",
+        promptSign: "$",
         cmds: {
-          help: `
-    <div><span class="cmd">whoami</span> : Infos générales</div>
-    <div><span class="cmd">experience</span> : Expérience technique</div>
-    <div><span class="cmd">education</span> : Parcours académique</div>
-    <div><span class="cmd">skills</span> : Compétences techniques</div>
-    <div><span class="cmd">projects</span> : Projets principaux</div>
-    <div><span class="cmd">certs</span> : Certifications</div>
-    <div><span class="cmd">resume</span> : Télécharger le CV</div>
-    <div><span class="cmd">github</span> : Profil GitHub</div>
-    <div><span class="cmd">linkedin</span> : Profil LinkedIn</div>
-    <div><span class="cmd">contact</span> : Email</div>
-    <div><span class="cmd">sudo</span> : Essaie :)</div>
-    <div><span class="cmd">clear</span> : Effacer le terminal</div>`,
+          help: `<div><span class="cmd">whoami</span> : Infos générales</div><div><span class="cmd">experience</span> : Expérience technique</div><div><span class="cmd">education</span> : Parcours académique</div><div><span class="cmd">skills</span> : Compétences techniques</div><div><span class="cmd">projects</span> : Projets principaux</div><div><span class="cmd">certs</span> : Certifications</div><div><span class="cmd">resume</span> : Télécharger le CV</div><div><span class="cmd">github</span> : Profil GitHub</div><div><span class="cmd">linkedin</span> : Profil LinkedIn</div><div><span class="cmd">contact</span> : Email</div><div><span class="cmd">sudo</span> : Essaie :)</div><div><span class="cmd">clear</span> : Effacer le terminal</div>`,
           whoami: `
 <pre style="color:#38bdf8;font-family:monospace;line-height:1.2;">
  _____ _                 ____               _   _            _ _     
@@ -121,27 +115,23 @@
 |_|   |_|_|  \\__,_|___/ |____/ \\___|_| |_| |_| \\_|\\__,_|\\___|_|_.__/ 
 </pre>
 <div>Ingénieur Cloud & DevOps (Kubestronaut) - Certifié AWS, Azure, Kubernetes & Terraform</div>`,
-          experience:
-            "Mise en place d'infras prêtes pour la prod sur AWS (EKS, VPC, ALB), GitOps avec Argo CD & Helm, observabilité Prometheus & Grafana, CI/CD (GitHub Actions / GitLab CI / Jenkins / CircleCI), automatisation Terraform & Ansible.",
-          education: `
-<div>ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</div>
-<div>Diplôme d'ingénieur, Informatique</div>
-<div>2021 – 2024</div>
-<br>
-<div>IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</div>
-<div>2019 – 2021</div>`,
+          experience: `
+<div>Contractant freelance Cloud et DevOps auprès de startups, d’entreprises et de clients directs sur des projets d’infrastructure et d’automatisation.</div>
+<div>Plus de 10 certifications couvrant AWS, Azure, Kubernetes, Terraform et la sécurité.</div>`,
+          education:
+            `<div><span class="keyword">ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</span></div><div>Diplôme d'ingénieur, Informatique</div><div>2021 – 2024</div><div class="terminal-edu-gap"></div><div><span class="keyword">IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</span></div><div>2019 – 2021</div>`,
           skills: `
-<div><strong>Plateformes Cloud:</strong> AWS, Microsoft Azure, OpenStack</div>
-<div><strong>Infrastructure as Code:</strong> Terraform, Ansible</div>
-<div><strong>Conteneurs & Orchestration:</strong> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, cert-manager, Karpenter</div>
-<div><strong>Observabilité:</strong> Prometheus, Grafana, ELK Stack, CloudWatch</div>
-<div><strong>Réseau & Service Mesh:</strong> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
-<div><strong>Sécurité:</strong> HashiCorp Vault, Falco, Trivy</div>
-<div><strong>CI/CD & outils DevOps:</strong> GitLab CI, GitHub Actions, Jenkins, CircleCI, Argo CD, SonarQube, Nexus</div>
-<div><strong>Langages & Scripting:</strong> Python, Bash, PowerShell, Groovy, Java, JavaScript, SQL, YAML</div>
-<div><strong>Gestion de versions & Collaboration:</strong> Git, GitHub, GitLab, Jira</div>
-<div><strong>Systèmes:</strong> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
-<div><strong>Virtualisation & plateformes:</strong> VMware, VirtualBox, Proxmox, Vagrant</div>`,
+<div><span class="keyword">Plateformes Cloud:</span> AWS, Microsoft Azure, OpenStack</div>
+<div><span class="keyword">Infrastructure as Code:</span> Terraform, Ansible</div>
+<div><span class="keyword">Conteneurs & Orchestration:</span> Kubernetes, OpenShift, Docker, Docker Compose, Helm, KEDA, cert-manager, Karpenter</div>
+<div><span class="keyword">Observabilité:</span> Prometheus, Grafana, ELK Stack, CloudWatch</div>
+<div><span class="keyword">Réseau & Service Mesh:</span> Istio, Cilium, Traefik, Ingress, DNS, Load Balancing</div>
+<div><span class="keyword">Sécurité:</span> HashiCorp Vault, Falco, Trivy</div>
+<div><span class="keyword">CI/CD & outils DevOps:</span> GitLab CI, GitHub Actions, Jenkins, CircleCI, Argo CD, SonarQube, Nexus</div>
+<div><span class="keyword">Langages & Scripting:</span> Python, Bash, PowerShell, Groovy, Java, JavaScript, SQL, YAML</div>
+<div><span class="keyword">Gestion de versions & Collaboration:</span> Git, GitHub, GitLab, Jira</div>
+<div><span class="keyword">Systèmes:</span> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
+<div><span class="keyword">Virtualisation & plateformes:</span> VMware, VirtualBox, Proxmox, Vagrant</div>`,
           projects: `
 <div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
 <div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
@@ -150,7 +140,7 @@
 <div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Démo</a></div>
 <div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
 <div><a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">OptiChat</a></div>
-<div>Plateforme d’Automatisation des Déploiements</div>`,
+<div><span class="keyword">Plateforme d’Automatisation des Déploiements</span></div>`,
           certs: `
 <div><a href="https://www.credly.com/badges/84ac6776-7130-487a-8e48-7455914f0e8c/public_url" target="_blank" rel="noopener noreferrer">Kubestronaut</a></div>
 <div><a href="https://www.credly.com/badges/f8b19abd-42f6-43f0-a21c-677ab19b535e/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Security Specialist (CKS)</a></div>
@@ -544,9 +534,7 @@
 
   function initTerminal(terminalBody, locale = "en", i18nMap) {
     const L = (i18nMap && i18nMap[locale]) || i18nMap.en;
-    const PROMPT = L.prompt;
     const MAX_HISTORY = 50;
-
     const COMMANDS = {
       help: L.cmds.help,
       whoami: L.cmds.whoami,
@@ -560,82 +548,228 @@
       linkedin: L.cmds.linkedin,
       contact: L.cmds.contact,
       sudo: L.cmds.sudo,
+      clear: "__CLEAR__",
     };
 
+    const commandNames = Object.keys(COMMANDS);
     const history = [];
     let historyIndex = -1;
+    let currentInputSnapshot = "";
 
-    createLine();
+    const windowNode = terminalBody.closest(".terminal-window");
+    const titleNode = windowNode && windowNode.querySelector(".terminal-header .title");
+    if (titleNode && L.terminalTitle) titleNode.textContent = L.terminalTitle;
+    if (windowNode) windowNode.classList.add("terminal-window--startup");
 
-    function createLine() {
-      const line = el("div", { class: "line" });
-      const prompt = el("span", { class: "prompt" }, PROMPT);
-      const input = el("input", {
-        class: "command-input",
-        type: "text",
-        autocomplete: "off",
-        id: "terminal-command-input",
-        name: "terminal-command",
-        "aria-label": "Terminal command input",
-      });
-      input.addEventListener("keydown", handleInput);
-      line.appendChild(prompt);
-      line.appendChild(input);
-      terminalBody.appendChild(line);
-      input.focus();
-    }
+    terminalBody.textContent = "";
 
-    function handleInput(e) {
-      const input = e.target;
-      if (e.key === "Enter") {
-        const command = input.value.trim();
-        if (command) {
-          history.push(command);
-          if (history.length > MAX_HISTORY) history.shift();
-          historyIndex = history.length;
-        }
-        const echo = el("div", { class: "line" });
-        echo.appendChild(el("span", { class: "prompt" }, PROMPT));
-        echo.appendChild(document.createTextNode(" " + command));
-        terminalBody.appendChild(echo);
-        input.parentElement.remove();
-        executeCommand(command);
-      } else if (e.key === "ArrowUp") {
-        if (historyIndex > 0) {
-          historyIndex--;
-          input.value = history[historyIndex] || "";
-        }
-      } else if (e.key === "ArrowDown") {
-        if (historyIndex < history.length - 1) {
-          historyIndex++;
-          input.value = history[historyIndex] || "";
-        } else {
-          historyIndex = history.length;
-          input.value = "";
-        }
-      } else if (e.key === "Tab") {
+    const output = el("div", { class: "terminal-output terminal-output--startup" });
+    const inputRow = el("div", { class: "terminal-input-row" });
+    const promptNode = createPromptNode();
+    const input = el("input", {
+      class: "command-input",
+      type: "text",
+      autocomplete: "off",
+      autocapitalize: "off",
+      spellcheck: "false",
+      id: "terminal-command-input",
+      name: "terminal-command",
+      "aria-label": locale === "fr" ? "Saisie de commande du terminal" : "Terminal command input",
+    });
+
+    inputRow.appendChild(promptNode);
+    inputRow.appendChild(input);
+    terminalBody.appendChild(output);
+    terminalBody.appendChild(inputRow);
+    appendStartupBlock();
+
+    terminalBody.addEventListener("click", () => input.focus());
+    terminalBody.addEventListener(
+      "wheel",
+      (e) => {
+        if (output.scrollHeight <= output.clientHeight) return;
+        output.scrollTop += e.deltaY;
         e.preventDefault();
-        const match = Object.keys(COMMANDS).find((c) => c.startsWith(input.value));
-        if (match) input.value = match;
-      }
-    }
+      },
+      { passive: false }
+    );
+    input.addEventListener("keydown", handleInputKeydown);
+    input.focus();
 
-    function executeCommand(cmd) {
-      const out = el("div", { class: "output" });
-      if (cmd === "clear") {
-        terminalBody.textContent = "";
-        createLine();
+    function handleInputKeydown(e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const rawInput = input.value;
+        const trimmedInput = rawInput.trim();
+
+        appendCommandEcho(rawInput);
+
+        if (trimmedInput) {
+          if (history[0] !== trimmedInput) {
+            history.unshift(trimmedInput);
+            if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
+          }
+          historyIndex = -1;
+          currentInputSnapshot = "";
+          executeCommand(trimmedInput);
+        } else {
+          historyIndex = -1;
+          currentInputSnapshot = "";
+        }
+
+        input.value = "";
         return;
       }
-      const response = COMMANDS[cmd];
-      printOutput(out, response || (L.cmds.notfound ? L.cmds.notfound(cmd) : ""));
+
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (!history.length) return;
+        if (historyIndex === -1) currentInputSnapshot = input.value;
+        const nextIndex = Math.min(historyIndex + 1, history.length - 1);
+        historyIndex = nextIndex;
+        input.value = history[nextIndex];
+        return;
+      }
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (!history.length) return;
+        if (historyIndex > 0) {
+          historyIndex -= 1;
+          input.value = history[historyIndex];
+        } else if (historyIndex === 0) {
+          historyIndex = -1;
+          input.value = currentInputSnapshot;
+        }
+        return;
+      }
+
+      if (e.key === "Tab") {
+        e.preventDefault();
+        autocompleteCommand();
+        return;
+      }
+
+      if (e.key.toLowerCase() === "c" && e.ctrlKey) {
+        e.preventDefault();
+        if (input.value) {
+          appendCommandEcho(`${input.value}^C`);
+          input.value = "";
+          historyIndex = -1;
+          currentInputSnapshot = "";
+        }
+        return;
+      }
+
+      if (e.key.toLowerCase() === "l" && e.ctrlKey) {
+        e.preventDefault();
+        clearOutput();
+      }
     }
 
-    function printOutput(node, html) {
-      node.innerHTML = html;
-      terminalBody.appendChild(node);
-      createLine();
-      terminalBody.scrollTo({ top: terminalBody.scrollHeight, behavior: "smooth" });
+    function autocompleteCommand() {
+      const value = input.value.trim().toLowerCase();
+      if (!value) return;
+
+      const matches = commandNames.filter((name) => name.startsWith(value));
+      if (!matches.length) return;
+
+      if (matches.length === 1) {
+        input.value = matches[0];
+        return;
+      }
+
+      let prefix = matches[0];
+      for (let i = 1; i < matches.length; i++) {
+        while (prefix && !matches[i].startsWith(prefix)) {
+          prefix = prefix.slice(0, -1);
+        }
+      }
+
+      if (prefix.length > value.length) {
+        input.value = prefix;
+      } else {
+        appendCommandEcho(input.value);
+        appendResponse(`<div class="terminal-autocomplete">${matches.join("  ")}</div>`);
+      }
+    }
+
+    function executeCommand(commandLine) {
+      const parts = commandLine.split(/\s+/);
+      const commandName = (parts[0] || "").toLowerCase();
+      const response = COMMANDS[commandName];
+
+      if (response === "__CLEAR__") {
+        clearOutput();
+        return;
+      }
+
+      appendResponse(response || (L.cmds.notfound ? L.cmds.notfound(commandName) : ""));
+    }
+
+    function appendStartupBlock() {
+      const row = el("div", { class: "output terminal-response terminal-startup" });
+      row.appendChild(el("pre", { class: "terminal-ascii-banner" }, L.terminalBannerAscii || ""));
+      row.appendChild(el("div", { class: "terminal-welcome-title" }, L.terminalWelcomeTitle || ""));
+      const sub = el("div", { class: "terminal-welcome-sub" });
+      sub.appendChild(document.createTextNode(`${L.terminalWelcomeHelpLead || "Type"} '`));
+      sub.appendChild(el("span", { class: "cmd" }, "help"));
+      sub.appendChild(document.createTextNode(`' ${L.terminalWelcomeHelpTail || "to list available commands."}`));
+      row.appendChild(sub);
+      output.appendChild(row);
+      scrollOutputToBottom();
+    }
+
+    function clearOutput() {
+      output.textContent = "";
+      if (!output.classList.contains("terminal-output--startup")) {
+        output.classList.add("terminal-output--startup");
+      }
+      if (windowNode && !windowNode.classList.contains("terminal-window--startup")) {
+        windowNode.classList.add("terminal-window--startup");
+      }
+      appendStartupBlock();
+    }
+
+    function appendCommandEcho(commandText) {
+      disableStartupOutputLayout();
+      const row = el("div", { class: "terminal-line" });
+      row.appendChild(createPromptNode());
+      row.appendChild(el("span", { class: "terminal-command-text" }, commandText));
+      output.appendChild(row);
+      scrollOutputToBottom();
+    }
+
+    function appendResponse(html) {
+      disableStartupOutputLayout();
+      const row = el("div", { class: "output terminal-response" });
+      row.innerHTML = html;
+      output.appendChild(row);
+      scrollOutputToBottom();
+    }
+
+    function disableStartupOutputLayout() {
+      if (output.classList.contains("terminal-output--startup")) {
+        output.classList.remove("terminal-output--startup");
+      }
+      if (windowNode && windowNode.classList.contains("terminal-window--startup")) {
+        windowNode.classList.remove("terminal-window--startup");
+      }
+    }
+
+    function scrollOutputToBottom() {
+      output.scrollTop = output.scrollHeight;
+    }
+
+    function createPromptNode() {
+      const prompt = el("span", { class: "terminal-prompt" });
+      prompt.appendChild(el("span", { class: "prompt-user" }, L.promptUser || "visitor"));
+      prompt.appendChild(el("span", { class: "prompt-sep" }, " @ "));
+      prompt.appendChild(el("span", { class: "prompt-host" }, L.promptHost || "portfolio"));
+      prompt.appendChild(el("span", { class: "prompt-sep" }, " : "));
+      prompt.appendChild(el("span", { class: "prompt-path" }, L.promptPath || "~"));
+      prompt.appendChild(el("span", { class: "prompt-sign" }, ` ${L.promptSign || "$"}`));
+      return prompt;
     }
 
     function el(tag, attrs = {}, text) {

@@ -24,6 +24,9 @@
     })();
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="images/profile/chibi.webp" type="image/webp" />
@@ -134,13 +137,16 @@
 
     <div class="terminal-window">
       <div class="terminal-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="title">terminal</span>
+        <div class="terminal-dots" aria-hidden="true">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="title">firas@cloud-resume - zsh</span>
+        <div class="terminal-header-spacer" aria-hidden="true"></div>
       </div>
       <div class="terminal-body" id="terminal-body">
-        <div class="terminal-intro">Type <span class="keyword">'help'</span> to list commands.</div>
+        <div class="terminal-intro">Loading terminal...</div>
       </div>
     </div>
   </section>
