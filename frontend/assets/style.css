@@ -182,11 +182,47 @@ body{
 .theme-toggle{
   font-size:1.8rem;line-height:1;padding:.5rem;border:0;background:transparent;color:inherit;
   cursor:pointer;border-radius:8px;font-family:var(--font-ui);
+  --theme-toggle__expand--duration:500ms;
   transition:transform .15s ease,opacity .15s ease,background-color .15s ease,color .15s ease
 }
 .theme-toggle:hover{background-color:rgba(0,0,0,.05)}
 .theme-toggle:active{transform:scale(.92) rotate(-8deg)}
 .theme-toggle svg{width:1em;height:1em;display:block}
+.theme-toggle__expand g circle,.theme-toggle__expand g path{
+  transform-origin:center;
+  transition:transform calc(var(--theme-toggle__expand--duration) * .65) cubic-bezier(0,0,0,1.25) calc(var(--theme-toggle__expand--duration) * .35)
+}
+.theme-toggle__expand :first-child path{
+  transition-property:transform,d;
+  transition-duration:calc(var(--theme-toggle__expand--duration) * .6);
+  transition-timing-function:cubic-bezier(0,0,.5,1)
+}
+[data-theme="dark"] .theme-toggle .theme-toggle__expand g circle,
+.theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand g circle,
+.theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand g circle{
+  transform:scale(1.4);
+  transition-delay:0s
+}
+[data-theme="dark"] .theme-toggle .theme-toggle__expand g path,
+.theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand g path,
+.theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand g path{
+  transform:scale(.75);
+  transition-delay:0s
+}
+[data-theme="dark"] .theme-toggle .theme-toggle__expand :first-child path,
+.theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand :first-child path,
+.theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand :first-child path{
+  d:path("M-9 3h25a1 1 0 0017 13v30H0Z");
+  transition-delay:calc(var(--theme-toggle__expand--duration) * .4);
+  transition-timing-function:cubic-bezier(0,0,0,1.25)
+}
+@supports not (d:path("")){
+  [data-theme="dark"] .theme-toggle .theme-toggle__expand :first-child path,
+  .theme-toggle--toggled:not(label).theme-toggle .theme-toggle__expand :first-child path,
+  .theme-toggle input[type=checkbox]:checked ~ .theme-toggle__expand :first-child path{
+    transform:translate3d(-9px,14px,0)
+  }
+}
 .dark .theme-toggle:hover,[data-theme="dark"] .theme-toggle:hover{background-color:rgba(255,255,255,.06)}
 a:focus-visible,
 button:focus-visible,
