@@ -354,6 +354,8 @@
     function initScrollToTop() {
       const scrollBtn = byId("scroll-to-top");
       if (!scrollBtn) return;
+      const SHOW_THRESHOLD = 240;
+      const HIDE_IDLE_MS = 900;
 
       const indicator = scrollBtn.querySelector(".progress-indicator");
       const radius = Number(indicator?.getAttribute("r") || 22);
@@ -363,7 +365,23 @@
         indicator.style.strokeDashoffset = String(circumference);
       }
 
+      let hideTimer = null;
+      let lastScrollY = window.scrollY || document.documentElement.scrollTop || 0;
       let ticking = false;
+      const clearHideTimer = () => {
+        if (!hideTimer) return;
+        window.clearTimeout(hideTimer);
+        hideTimer = null;
+      };
+      const showButton = () => scrollBtn.classList.add("visible");
+      const hideButton = () => scrollBtn.classList.remove("visible");
+      const scheduleIdleHide = (scrolled) => {
+        if (scrolled <= SHOW_THRESHOLD) return;
+        clearHideTimer();
+        hideTimer = window.setTimeout(() => {
+          hideButton();
+        }, HIDE_IDLE_MS);
+      };
       const onScroll = () => {
         if (ticking) return;
         ticking = true;
@@ -373,17 +391,43 @@
           const scrolled = window.scrollY || document.documentElement.scrollTop || 0;
           const progress = scrollHeight > 0 ? Math.min(100, Math.max(0, (scrolled / scrollHeight) * 100)) : 0;
 
-          scrollBtn.classList.toggle("visible", scrolled > 320);
+          if (scrolled <= SHOW_THRESHOLD) {
+            clearHideTimer();
+            hideButton();
+          } else {
+            showButton();
+            scheduleIdleHide(scrolled);
+          }
           if (indicator) {
             indicator.style.strokeDashoffset = String(circumference - (progress / 100) * circumference);
           }
+          lastScrollY = scrolled;
 
           ticking = false;
         });
       };
 
       scrollBtn.addEventListener("click", () => {
+        clearHideTimer();
         window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+      scrollBtn.addEventListener("mouseenter", () => {
+        if (lastScrollY > SHOW_THRESHOLD) {
+          clearHideTimer();
+          showButton();
+        }
+      });
+      scrollBtn.addEventListener("focusin", () => {
+        if (lastScrollY > SHOW_THRESHOLD) {
+          clearHideTimer();
+          showButton();
+        }
+      });
+      scrollBtn.addEventListener("mouseleave", () => {
+        scheduleIdleHide(lastScrollY);
+      });
+      scrollBtn.addEventListener("focusout", () => {
+        scheduleIdleHide(lastScrollY);
       });
 
       window.addEventListener("scroll", onScroll, { passive: true });

@@ -948,6 +948,7 @@ p a:hover{color:var(--primary-hover)}
   padding:0;
   opacity:0;
   visibility:hidden;
+  pointer-events:none;
   transform:translateY(18px);
   transition:opacity .25s ease,visibility .25s ease,transform .25s ease,background-color .2s ease,border-color .2s ease,box-shadow .2s ease;
   overflow:hidden
@@ -955,6 +956,7 @@ p a:hover{color:var(--primary-hover)}
 .scroll-top-btn.visible{
   opacity:1;
   visibility:visible;
+  pointer-events:auto;
   transform:translateY(0)
 }
 .scroll-top-btn:hover{
