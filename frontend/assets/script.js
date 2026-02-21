@@ -313,6 +313,7 @@
 
     initSkillIcons();
     initDynamicNavbar();
+    initScrollToTop();
 
     function initDynamicNavbar() {
       const navbar = document.querySelector(".navbar");
@@ -347,6 +348,45 @@
         { passive: true }
       );
 
+      onScroll();
+    }
+
+    function initScrollToTop() {
+      const scrollBtn = byId("scroll-to-top");
+      if (!scrollBtn) return;
+
+      const indicator = scrollBtn.querySelector(".progress-indicator");
+      const radius = Number(indicator?.getAttribute("r") || 22);
+      const circumference = 2 * Math.PI * radius;
+      if (indicator) {
+        indicator.style.strokeDasharray = String(circumference);
+        indicator.style.strokeDashoffset = String(circumference);
+      }
+
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          const scrollHeight =
+            document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = window.scrollY || document.documentElement.scrollTop || 0;
+          const progress = scrollHeight > 0 ? Math.min(100, Math.max(0, (scrolled / scrollHeight) * 100)) : 0;
+
+          scrollBtn.classList.toggle("visible", scrolled > 320);
+          if (indicator) {
+            indicator.style.strokeDashoffset = String(circumference - (progress / 100) * circumference);
+          }
+
+          ticking = false;
+        });
+      };
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
     }
 

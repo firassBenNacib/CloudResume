@@ -113,7 +113,9 @@
   <main class="main-content">
     <section id="home" class="section hero">
       <div class="hero-centered">
-        <img src="../images/profile/chibi.webp" alt="Firas Ben Nacib" class="hero-avatar" width="160" height="160" decoding="async" fetchpriority="high" />
+        <div class="hero-avatar-wrapper">
+          <img src="../images/profile/chibi.webp" alt="Firas Ben Nacib" class="hero-avatar" width="160" height="160" decoding="async" fetchpriority="high" />
+        </div>
         <h2 class="hero-intro">Salut ! Je suis Firas Ben Nacib</h2>
         <h1 class="hero-title">Ingénieur Cloud &amp; DevOps</h1>
         <div class="hero-subinfo">
@@ -678,6 +680,18 @@
       <p class="footer-note">Réalisé par Firas Ben Nacib &copy; 2025</p>
     </div>
   </footer>
+
+  <button id="scroll-to-top" class="scroll-top-btn" type="button" aria-label="Retour en haut">
+    <svg class="scroll-progress-svg" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+      <circle class="progress-track" cx="26" cy="26" r="22"></circle>
+      <circle class="progress-indicator" cx="26" cy="26" r="22"></circle>
+    </svg>
+    <span class="scroll-arrow-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"></path>
+      </svg>
+    </span>
+  </button>
 
   <script defer src="../assets/script.js"></script>
   <script defer src="https://kit.fontawesome.com/53050f10f4.js" crossorigin="anonymous"></script>
