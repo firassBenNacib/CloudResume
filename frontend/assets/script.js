@@ -355,7 +355,7 @@
       const scrollBtn = byId("scroll-to-top");
       if (!scrollBtn) return;
       const SHOW_THRESHOLD = 240;
-      const HIDE_IDLE_MS = 900;
+      const HIDE_IDLE_MS = 3000;
 
       const indicator = scrollBtn.querySelector(".progress-indicator");
       const radius = Number(indicator?.getAttribute("r") || 22);
