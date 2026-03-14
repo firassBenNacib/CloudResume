@@ -56,12 +56,14 @@
 <div><span class="keyword">Operating Systems:</span> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
 <div><span class="keyword">Virtualization & Platforms:</span> VMware, VirtualBox, Proxmox, Vagrant</div>`,
           projects: `
-<div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
-<div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
-<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Demo</a></div>
-<div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Demo</a></div>
-<div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Demo</a></div>
+<div><a href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer">AWS-ECS-Blueprint</a></div>
+<div><span class="keyword">mini-microservices</span> | <a href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer">Spring/Angular</a> | <a href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer">Node/React</a></div>
 <div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
+<div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
+<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Demo</a></div>
+<div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Demo</a></div>
+<div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
+<div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Demo</a></div>
 <div><a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">OptiChat</a></div>
 <div><span class="keyword">Release Automation Platform</span></div>`,
           certs: `
@@ -133,12 +135,14 @@
 <div><span class="keyword">Systèmes:</span> Linux (Ubuntu, CentOS, RHEL, Amazon Linux, Talos Linux)</div>
 <div><span class="keyword">Virtualisation & plateformes:</span> VMware, VirtualBox, Proxmox, Vagrant</div>`,
           projects: `
-<div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
-<div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
-<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Démo</a></div>
-<div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Démo</a></div>
-<div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Démo</a></div>
+<div><a href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer">AWS-ECS-Blueprint</a></div>
+<div><span class="keyword">mini-microservices</span> | <a href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer">Spring/Angular</a> | <a href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer">Node/React</a></div>
 <div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
+<div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
+<div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Démo</a></div>
+<div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Démo</a></div>
+<div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
+<div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Démo</a></div>
 <div><a href="https://github.com/firassBenNacib/OptiChat" target="_blank" rel="noopener noreferrer">OptiChat</a></div>
 <div><span class="keyword">Plateforme d’Automatisation des Déploiements</span></div>`,
           certs: `
@@ -311,6 +315,7 @@
     const terminalBody = byId("terminal-body");
     if (terminalBody) initTerminal(terminalBody, locale, i18n);
 
+    initProjectCarousels();
     initSkillIcons();
     initDynamicNavbar();
     initScrollToTop();
@@ -432,6 +437,35 @@
 
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
+    }
+
+    function initProjectCarousels() {
+      const carousels = document.querySelectorAll("[data-project-carousel]");
+      carousels.forEach((carousel) => {
+        const slides = Array.from(carousel.querySelectorAll("[data-project-slide]"));
+        const dots = Array.from(carousel.querySelectorAll("[data-project-dot]"));
+        if (!slides.length || slides.length !== dots.length) return;
+
+        const setActiveSlide = (index) => {
+          slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === index;
+            slide.classList.toggle("is-active", isActive);
+            slide.setAttribute("aria-hidden", String(!isActive));
+          });
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === index;
+            dot.classList.toggle("is-active", isActive);
+            dot.setAttribute("aria-pressed", String(isActive));
+            dot.tabIndex = isActive ? 0 : -1;
+          });
+        };
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => setActiveSlide(index));
+        });
+
+        setActiveSlide(0);
+      });
     }
 
     function setStackLabel(btn, isOpen) {

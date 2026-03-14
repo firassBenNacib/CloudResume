@@ -175,6 +175,78 @@
     <h2 class="section-title">Projects</h2>
     <div class="project-wrapper">
       <div class="project">
+        <a class="project-media-link" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer" aria-label="AWS ECS Blueprint media preview">
+          <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/AWS-ECS-Blueprint/main/img/aws-ecs-blueprint-architecture.png" alt="AWS ECS Blueprint architecture diagram" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
+        </a>
+        <div class="project-title">
+          <a class="project-title-link" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">AWS-ECS-Blueprint&nbsp;&nbsp;-&nbsp;&nbsp;Private Web on Fargate</a>
+          <a href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p>
+          AWS Terraform blueprint for private web workloads on ECS Fargate, using Route 53 and dual CloudFront distributions to front a private S3 origin and a backend path secured by WAF, an internal ALB, private ECS services, VPC endpoints, and Multi-AZ RDS.
+          The repo also includes GitHub Actions workflows for plan, deploy approval, security scans, and live validation.
+        </p>
+        <div class="project-links">
+          <a class="project-link-btn" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer">Repo</a>
+        </div>
+        <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> AWS (ECS Fargate, CloudFront, WAF, ALB, Route 53, S3, ACM, RDS, Cloud Map, ECR, VPC Endpoints, AWS Backup, Secrets Manager, GuardDuty), Terraform, GitHub Actions, Checkov, tfsec, Terrascan, TFLint</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-media-carousel" data-project-carousel>
+          <div class="project-media-static project-media-carousel-frame">
+            <a class="project-media-slide is-active" data-project-slide href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="Open mini-microservices Spring Angular repo">
+              <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-spring-angular/main/demo/demo_ui.png" alt="mini-microservices Spring Angular UI preview" loading="lazy" decoding="async">
+            </a>
+            <a class="project-media-slide" data-project-slide href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer" aria-label="Open mini-microservices Node React repo">
+              <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-node-react/main/demo/demo_ui.png" alt="mini-microservices Node React UI preview" loading="lazy" decoding="async">
+            </a>
+            <a class="project-media-slide" data-project-slide href="https://asciinema.org/a/837850" target="_blank" rel="noopener noreferrer" aria-label="Open mini-microservices Spring Angular demo">
+              <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-spring-angular/main/demo/demo.gif" alt="mini-microservices Spring Angular demo" loading="lazy" decoding="async">
+            </a>
+            <a class="project-media-slide" data-project-slide href="https://asciinema.org/a/837762" target="_blank" rel="noopener noreferrer" aria-label="Open mini-microservices Node React demo">
+              <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-node-react/main/demo/demo.gif" alt="mini-microservices Node React demo" loading="lazy" decoding="async">
+            </a>
+            <a class="project-media-slide" data-project-slide href="https://github.com/firassBenNacib/mini-microservices-spring-angular#cicd-and-security-workflows" target="_blank" rel="noopener noreferrer" aria-label="Open mini-microservices security workflows">
+              <img class="project-media-img project-media-img--contain" src="images/projects/sonarqubes_projects.png" alt="mini-microservices SonarQube quality snapshot" loading="lazy" decoding="async">
+            </a>
+          </div>
+          <div class="project-media-dots" aria-label="mini-microservices media selector">
+            <button class="project-media-dot is-active" type="button" data-project-dot aria-label="Show Spring Angular UI" aria-pressed="true"></button>
+            <button class="project-media-dot" type="button" data-project-dot aria-label="Show Node React UI" aria-pressed="false"></button>
+            <button class="project-media-dot" type="button" data-project-dot aria-label="Show Spring Angular demo" aria-pressed="false"></button>
+            <button class="project-media-dot" type="button" data-project-dot aria-label="Show Node React demo" aria-pressed="false"></button>
+            <button class="project-media-dot" type="button" data-project-dot aria-label="Show SonarQube quality view" aria-pressed="false"></button>
+          </div>
+        </div>
+        <div class="project-title">
+          <a class="project-title-link" href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">mini-microservices&nbsp;&nbsp;-&nbsp;&nbsp;Secure Polyglot Microservices</a>
+          <a href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p>
+          Secure polyglot microservices demo shipped in Spring Boot plus Angular plus MySQL and Node.js plus React plus Postgres variants, behind Nginx with a shared Python/FastAPI notification worker.
+          Its DevSecOps pipeline covers dependency review and SCA, CodeQL SAST, Gitleaks and Trivy baseline scans, SBOM plus Grype container checks, OWASP ZAP and optional Nuclei DAST, smoke and integration tests, signed image publishing, and SonarQube quality reporting.
+        </p>
+        <div class="project-links">
+          <a class="project-link-btn" href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer">Spring/Angular</a>
+          <a class="project-link-btn" href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer">Node/React</a>
+          <a class="project-link-btn" href="https://asciinema.org/a/837850" target="_blank" rel="noopener noreferrer">Spring Demo</a>
+          <a class="project-link-btn" href="https://asciinema.org/a/837762" target="_blank" rel="noopener noreferrer">Node Demo</a>
+        </div>
+        <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> Spring Boot, Angular, Node.js, React, Python, FastAPI, Nginx, Docker Compose, MySQL, PostgreSQL, Mailpit, Twilio, SonarQube, GitHub Actions, CodeQL, Gitleaks, Trivy, Grype, OWASP ZAP, Nuclei, OSSF Scorecard, Docker Hub, Amazon ECR, S3</p>
+        </div>
+      </div>
+
+      <div class="project">
         <a class="project-media-link" href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer" aria-label="KubleOps media preview">
           <img class="project-media-img" src="https://raw.githubusercontent.com/firassBenNacib/KubleOps/main/KubleOps-architecture.gif" alt="KubleOps architecture preview" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
         </a>
@@ -195,6 +267,29 @@
         <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
         <div class="project-tools-collapsible">
           <p><strong>Tools:</strong> AWS (EKS, EC2, VPC, ALB, ECR, IAM/IRSA, Route 53, ACM, CloudWatch), Terraform, Kubernetes, Helm, Argo CD, CircleCI, Karpenter, ExternalDNS, Fluent Bit, Prometheus, Grafana, Trivy</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <a class="project-media-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="EcoAuto media preview">
+          <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/EcoAuto_AWS_Terraform/main/img/ecoauto-architecture.png" alt="EcoAuto AWS Terraform architecture diagram" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
+        </a>
+        <div class="project-title">
+          <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">EcoAuto&nbsp;&nbsp;-&nbsp;&nbsp;Cost-Effective Web Hosting Architecture</a>
+          <a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p>
+          Cost-aware AWS Terraform architecture with private S3 behind CloudFront OAC, backend CloudFront plus Lambda@Edge origin selection for Auto Scaling EC2 and RDS-backed workloads, origin-auth controls, and EventBridge automation for routing, start-stop, and snapshot workflows.
+          GitLab CI adds validate, TFLint, tfsec, gitleaks, plan/apply gates, and controlled frontend deployment handoff.
+        </p>
+        <div class="project-links">
+          <a class="project-link-btn" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">Repo</a>
+        </div>
+        <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
+        <div class="project-tools-collapsible">
+          <p><strong>Tools:</strong> AWS (EC2, Auto Scaling, RDS, S3, CloudFront, Lambda, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge, SQS), Terraform, GitLab CI, TFLint, tfsec, gitleaks, Docker</p>
         </div>
       </div>
 
@@ -223,29 +318,6 @@
       </div>
 
       <div class="project">
-        <a class="project-media-link" href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer" aria-label="k3s media preview">
-          <img class="project-media-img" src="https://raw.githubusercontent.com/firassBenNacib/k3s-Cluster-Setup/refs/heads/main/demo/demo.gif" alt="k3s setup demo" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
-        </a>
-        <div class="project-title">
-          <a class="project-title-link" href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">k3s-Cluster-Setup</a>
-          <a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-            <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
-          </a>
-        </div>
-        <p>
-          PowerShell tool to create and manage local k3s Kubernetes clusters on Ubuntu Multipass VMs.
-        </p>
-        <div class="project-links">
-          <a class="project-link-btn" href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">Repo</a>
-          <a class="project-link-btn" href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Demo</a>
-        </div>
-        <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
-        <div class="project-tools-collapsible">
-          <p><strong>Tools:</strong> PowerShell, k3s, Kubernetes, Multipass, Hyper-V, Ubuntu VMs</p>
-        </div>
-      </div>
-
-      <div class="project">
         <a class="project-media-link" href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer" aria-label="Talos media preview">
           <img class="project-media-img" src="https://raw.githubusercontent.com/firassBenNacib/Talos-HyperV-Bootstrap/refs/heads/main/demo/demo.gif" alt="Talos bootstrap demo" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
         </a>
@@ -267,31 +339,32 @@
           <p><strong>Tools:</strong> PowerShell, Talos Linux, Kubernetes, Hyper-V</p>
         </div>
       </div>
+
     </div>
 
     <div class="more-projects-wrapper">
       <div id="more-projects-section" class="fade-in">
         <div class="project-wrapper project-wrapper--more">
           <div class="project">
-            <a class="project-media-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="EcoAuto media preview">
-              <img class="project-media-img" src="https://opengraph.githubassets.com/1/firassBenNacib/EcoAuto_AWS_Terraform" alt="EcoAuto repository preview" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
+            <a class="project-media-link" href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer" aria-label="k3s media preview">
+              <img class="project-media-img" src="https://raw.githubusercontent.com/firassBenNacib/k3s-Cluster-Setup/refs/heads/main/demo/demo.gif" alt="k3s setup demo" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
             </a>
             <div class="project-title">
-              <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">EcoAuto&nbsp;&nbsp;-&nbsp;&nbsp;Cost-Effective Web Hosting Architecture</a>
-              <a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
+              <a class="project-title-link" href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">k3s-Cluster-Setup</a>
+              <a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
                 <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
               </a>
             </div>
             <p>
-              AWS Terraform infrastructure for cost-aware hosting with modular EC2 Auto Scaling, RDS, S3, and CloudFront components.
-              EventBridge schedules and Lambda functions handle compute and database lifecycle tasks, routing updates, and security-group synchronization.
+              PowerShell tool to create and manage local k3s Kubernetes clusters on Ubuntu Multipass VMs.
             </p>
             <div class="project-links">
-              <a class="project-link-btn" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">Repo</a>
+              <a class="project-link-btn" href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">Repo</a>
+              <a class="project-link-btn" href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Demo</a>
             </div>
             <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
             <div class="project-tools-collapsible">
-              <p><strong>Tools:</strong> AWS (EC2, Auto Scaling, RDS, S3, CloudFront, Lambda, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge), Terraform, GitLab CI, Docker</p>
+              <p><strong>Tools:</strong> PowerShell, k3s, Kubernetes, Multipass, Hyper-V, Ubuntu VMs</p>
             </div>
           </div>
 
