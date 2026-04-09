@@ -591,12 +591,14 @@
             event.preventDefault();
             event.stopPropagation();
             setActiveSlide(activeIndex - 1);
+            if (event.detail > 0) event.currentTarget.blur();
           });
 
           nextBtn.addEventListener("click", (event) => {
             event.preventDefault();
             event.stopPropagation();
             setActiveSlide(activeIndex + 1);
+            if (event.detail > 0) event.currentTarget.blur();
           });
         }
 
