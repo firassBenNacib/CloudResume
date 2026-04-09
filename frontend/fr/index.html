@@ -121,7 +121,7 @@
         <div class="hero-subinfo">
           <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Tunisie</p>
           <p><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 25 ans</p>
-          <p><i class="fa-solid fa-certificate" aria-hidden="true"></i> Kubestronaut | Certifié AWS, Azure, Kubernetes &amp; Terraform</p>
+          <p><i class="fa-solid fa-certificate" aria-hidden="true"></i> Kubestronaut | Certifié AWS, Azure, Kubernetes, Terraform et Red Hat</p>
           <p><i class="fa-solid fa-terminal" aria-hidden="true"></i> Fan d’Infrastructure as Code</p>
         </div>
         <div class="hero-buttons">
@@ -172,65 +172,84 @@
       <h2 class="section-title">Projets</h2>
       <div class="project-wrapper">
         <div class="project">
-          <a class="project-media-link" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer" aria-label="Aperçu média AWS ECS Blueprint">
-            <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/AWS-ECS-Blueprint/main/img/aws-ecs-blueprint-architecture.png" alt="Schéma d’architecture AWS ECS Blueprint" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
-          </a>
+          <div class="project-media-carousel" data-project-carousel>
+            <div class="project-media-static project-media-carousel-frame">
+              <a class="project-media-slide is-active" data-project-slide data-project-media-title="Architecture frontend S3 privée" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint/blob/main/img/aws-ecs-blueprint-architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser l’architecture AWS ECS Blueprint par défaut">
+                <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/AWS-ECS-Blueprint/main/img/aws-ecs-blueprint-architecture.png" alt="Schéma d’architecture AWS ECS Blueprint" loading="lazy" decoding="async">
+              </a>
+              <a class="project-media-slide" data-project-slide data-project-media-title="Architecture frontend sur ECS" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint/blob/main/img/aws-ecs-blueprint-architecture-frontend-ecs.png" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser la variante frontend sur ECS">
+                <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/AWS-ECS-Blueprint/main/img/aws-ecs-blueprint-architecture-frontend-ecs.png" alt="Schéma AWS ECS Blueprint avec frontend sur ECS" loading="lazy" decoding="async">
+              </a>
+              <a class="project-media-slide" data-project-slide data-project-media-title="Architecture avec ALB public limité à CloudFront" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint/blob/main/img/aws-ecs-blueprint-architecture-public-alb-restricted.png" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser la variante ALB public restreint à CloudFront">
+                <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/AWS-ECS-Blueprint/main/img/aws-ecs-blueprint-architecture-public-alb-restricted.png" alt="Schéma AWS ECS Blueprint avec ALB public restreint" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <div class="project-media-dots" aria-label="Sélecteur média AWS ECS Blueprint">
+              <button class="project-media-dot is-active" type="button" data-project-dot aria-label="Afficher l’architecture par défaut" aria-pressed="true"></button>
+              <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher l’architecture frontend sur ECS" aria-pressed="false"></button>
+              <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher l’architecture ALB public restreint" aria-pressed="false"></button>
+            </div>
+          </div>
           <div class="project-title">
             <a class="project-title-link" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">AWS-ECS-Blueprint&nbsp;&nbsp;-&nbsp;&nbsp;Web Privé sur Fargate</a>
             <a href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">
               <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
             </a>
           </div>
-          <p>
-            Blueprint Terraform AWS pour des applications web privées sur ECS Fargate, avec Route 53 et deux distributions CloudFront devant une origine S3 privée et un backend protégé par WAF, ALB interne, services ECS privés, endpoints VPC et RDS Multi-AZ.
-            Le dépôt inclut aussi des pipelines GitHub Actions pour le plan, les validations de sécurité, les approbations de déploiement et la validation en environnement réel.
-          </p>
+          <div class="project-description">
+            <p>
+              Blueprint Terraform pour des applications web privées sur ECS Fargate, avec deux options de frontend : un site privé sur S3 derrière CloudFront, ou un frontend servi depuis ECS via la même couche CloudFront.
+            </p>
+            <p>
+              Le trafic API peut rester entièrement privé via CloudFront vers un ALB interne, ou passer par un ALB public limité à CloudFront pour les services qui ont besoin d’une exposition contrôlée. Le blueprint garde aussi RDS privé, s’appuie sur des endpoints VPC et une sortie Internet maîtrisée, puis ajoute des validations GitHub Actions, la détection de dérive, des vérifications de bon fonctionnement et des scans de sécurité IaC.
+            </p>
+          </div>
           <div class="project-links">
             <a class="project-link-btn" href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer">Dépôt</a>
           </div>
           <button class="expand-btn">Voir la stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p><strong>Outils :</strong> AWS (ECS Fargate, CloudFront, WAF, ALB, Route 53, S3, ACM, RDS, Cloud Map, ECR, VPC Endpoints, AWS Backup, Secrets Manager, GuardDuty), Terraform, GitHub Actions, Checkov, tfsec, Terrascan, TFLint</p>
+            <p><strong>Outils :</strong> AWS (ECS Fargate, CloudFront, WAF, ALB, Route 53, S3, ACM, RDS, Cloud Map, CloudWatch, VPC endpoints, NAT, AWS Backup, Secrets Manager), Terraform, GitHub Actions, Terratest, Infracost, TFLint, Checkov, tfsec, Snyk, Bash, Python</p>
           </div>
         </div>
 
         <div class="project">
           <div class="project-media-carousel" data-project-carousel>
             <div class="project-media-static project-media-carousel-frame">
-              <a class="project-media-slide is-active" data-project-slide href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le dépôt mini-microservices Spring Angular">
+              <a class="project-media-slide is-active" data-project-slide data-project-media-title="Interface Spring/Angular" href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser l’interface Spring/Angular">
                 <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-spring-angular/main/demo/demo_ui.png" alt="Aperçu UI mini-microservices Spring Angular" loading="lazy" decoding="async">
               </a>
-              <a class="project-media-slide" data-project-slide href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le dépôt mini-microservices Node React">
-                <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-node-react/main/demo/demo_ui.png" alt="Aperçu UI mini-microservices Node React" loading="lazy" decoding="async">
-              </a>
-              <a class="project-media-slide" data-project-slide href="https://asciinema.org/a/837850" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la démo mini-microservices Spring Angular">
+              <a class="project-media-slide" data-project-slide data-project-media-title="Démo Spring/Angular" href="https://asciinema.org/a/837850" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser la démo mini-microservices Spring Angular">
                 <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-spring-angular/main/demo/demo.gif" alt="Démo mini-microservices Spring Angular" loading="lazy" decoding="async">
               </a>
-              <a class="project-media-slide" data-project-slide href="https://asciinema.org/a/837762" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la démo mini-microservices Node React">
-                <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/mini-microservices-node-react/main/demo/demo.gif" alt="Démo mini-microservices Node React" loading="lazy" decoding="async">
-              </a>
-              <a class="project-media-slide" data-project-slide href="https://github.com/firassBenNacib/mini-microservices-spring-angular#cicd-and-security-workflows" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir les workflows sécurité mini-microservices">
+              <a class="project-media-slide" data-project-slide data-project-media-title="Vue qualité SonarQube" href="https://github.com/firassBenNacib/mini-microservices-spring-angular#cicd-and-security-workflows" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser la vue SonarQube mini-microservices">
                 <img class="project-media-img project-media-img--contain" src="../images/projects/sonarqubes_projects.png" alt="Aperçu qualité SonarQube mini-microservices" loading="lazy" decoding="async">
+              </a>
+              <a class="project-media-slide" data-project-slide data-project-media-title="Vue d’ensemble du pipeline CI" href="https://github.com/firassBenNacib/mini-microservices-spring-angular/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer" aria-label="Prévisualiser le workflow CI mini-microservices">
+                <img class="project-media-img project-media-img--contain" src="../images/projects/mini_microservices_ci_workflow.png" alt="Aperçu du workflow CI mini-microservices" loading="lazy" decoding="async">
               </a>
             </div>
             <div class="project-media-dots" aria-label="Sélecteur média mini-microservices">
               <button class="project-media-dot is-active" type="button" data-project-dot aria-label="Afficher l’interface Spring Angular" aria-pressed="true"></button>
-              <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher l’interface Node React" aria-pressed="false"></button>
               <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher la démo Spring Angular" aria-pressed="false"></button>
-              <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher la démo Node React" aria-pressed="false"></button>
               <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher la vue qualité SonarQube" aria-pressed="false"></button>
+              <button class="project-media-dot" type="button" data-project-dot aria-label="Afficher le workflow CI" aria-pressed="false"></button>
             </div>
           </div>
           <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">mini-microservices&nbsp;&nbsp;-&nbsp;&nbsp;Polyglotte et Sécurisé</a>
+            <a class="project-title-link" href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">mini-microservices&nbsp;&nbsp;-&nbsp;&nbsp;Microservices Polyglottes Sécurisés</a>
             <a href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">
               <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
             </a>
           </div>
-          <p>
-            Démonstration de microservices polyglottes proposée en deux variantes : Spring Boot avec Angular et MySQL, puis Node.js avec React et Postgres, le tout derrière une passerelle Nginx et avec un service de notification partagé en Python/FastAPI.
-            La chaîne DevSecOps couvre l’analyse des dépendances, le SAST avec CodeQL, les scans Gitleaks et Trivy, l’analyse d’images via SBOM et Grype, le DAST avec OWASP ZAP et Nuclei en option, ainsi que les smoke tests, les tests d’intégration, la signature des images et le suivi qualité dans SonarQube.
-          </p>
+          <div class="project-description">
+            <p>
+              Deux implémentations d’une même plateforme de microservices : Spring Boot avec Angular et MySQL, puis Node.js avec React et Postgres, toutes deux exposées via Nginx avec des services auth, API et audit dédiés, ainsi qu’un worker FastAPI partagé pour les envois SMTP et Twilio.
+            </p>
+            <p>
+              Les deux dépôts mettent l’accent sur une chaîne DevSecOps complète, avec CI/CD, SCA et contrôle des dépendances, SAST avec CodeQL, scans de secrets et de configuration, génération de SBOM, analyse d’images avec Trivy et Grype, DAST avec OWASP ZAP et Nuclei en option, publications signées, tests smoke et d’intégration, contrôles qualité SonarQube et déploiement du frontend Spring/Angular sur stockage objet.
+            </p>
+          </div>
           <div class="project-links">
             <a class="project-link-btn" href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer">Spring/Angular</a>
             <a class="project-link-btn" href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer">Node/React</a>
@@ -239,7 +258,7 @@
           </div>
           <button class="expand-btn">Voir la stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p><strong>Outils :</strong> Spring Boot, Angular, Node.js, React, Python, FastAPI, Nginx, Docker Compose, MySQL, PostgreSQL, Mailpit, Twilio, SonarQube, GitHub Actions, CodeQL, Gitleaks, Trivy, Grype, OWASP ZAP, Nuclei, OSSF Scorecard, Docker Hub, Amazon ECR, S3</p>
+            <p><strong>Outils :</strong> Spring Boot, Angular, Node.js, React, Python, FastAPI, Nginx, Docker Compose, MySQL, PostgreSQL, DevSecOps (SCA, SAST, DAST, SBOM, scan d’images, publications signées), SonarQube, GitHub Actions, GitHub Dependency Review, Snyk, CodeQL, Gitleaks, Trivy, Grype, OWASP ZAP, Nuclei, OSSF Scorecard, Docker Hub, Amazon ECR, S3</p>
           </div>
         </div>
 
@@ -272,21 +291,25 @@
             <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/EcoAuto_AWS_Terraform/main/img/ecoauto-architecture.png" alt="Schéma d’architecture EcoAuto AWS Terraform" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
           </a>
           <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">EcoAuto&nbsp;&nbsp;-&nbsp;&nbsp;Hébergement Web Optimisé</a>
+            <a class="project-title-link" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">EcoAuto&nbsp;&nbsp;-&nbsp;&nbsp;Hébergement AWS Optimisé</a>
             <a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">
               <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
             </a>
           </div>
-          <p>
-            Architecture AWS Terraform optimisée pour les coûts, avec S3 privé derrière CloudFront OAC, un CloudFront backend piloté par Lambda@Edge pour router vers des instances EC2 Auto Scaling adossées à RDS, des contrôles d’authentification d’origine et une automatisation EventBridge pour le routage, le démarrage/arrêt et les snapshots.
-            GitLab CI ajoute les étapes de validation Terraform, TFLint, tfsec et gitleaks, les garde-fous plan/apply, ainsi qu’un déclenchement contrôlé du déploiement frontend.
-          </p>
+          <div class="project-description">
+            <p>
+              Architecture Terraform modulaire pour un hébergement AWS optimisé en coût, combinant EC2 Auto Scaling, RDS MySQL, S3 privé derrière CloudFront OAC, Route 53, IAM et Lambda@Edge pour diriger le trafic vers les instances actives.
+            </p>
+            <p>
+              L’automatisation pilotée par événements maintient les origines à jour, gère en option le démarrage et l’arrêt d’EC2 et RDS, nettoie les snapshots et traite les scénarios d’échec, avec AWS WAF en option, en-têtes d’authentification d’origine, options d’observabilité, SQS et DLQ, contrôles IaC dans GitLab CI et profils d’économie configurables.
+            </p>
+          </div>
           <div class="project-links">
             <a class="project-link-btn" href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">Dépôt</a>
           </div>
           <button class="expand-btn">Voir la stack <span class="arrow-icon">▼</span></button>
           <div class="project-tools-collapsible">
-            <p><strong>Outils :</strong> AWS (EC2, Auto Scaling, RDS, S3, CloudFront, Lambda, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge, SQS), Terraform, GitLab CI, TFLint, tfsec, gitleaks, Docker</p>
+            <p><strong>Outils :</strong> AWS (EC2, Auto Scaling, RDS, S3, CloudFront OAC, Lambda, Lambda@Edge, Route 53, ACM, IAM, CloudWatch, EventBridge, SQS, DLQ, WAF), Terraform, GitLab CI, TFLint, tfsec, gitleaks, Docker</p>
           </div>
         </div>
 
@@ -295,15 +318,19 @@
             <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/CloudResume/main/CloudResume-Diagram.png" alt="Schéma architecture Cloud Resume" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
           </a>
           <div class="project-title">
-            <a class="project-title-link" href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">Cloud Resume Challenge&nbsp;&nbsp;-&nbsp;&nbsp;Édition AWS</a>
+            <a class="project-title-link" href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">Cloud Resume Challenge&nbsp;&nbsp;-&nbsp;&nbsp;Site CV sur AWS</a>
             <a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer" aria-label="Dépôt GitHub">
               <i class="fa-brands fa-github fa-xl" aria-hidden="true"></i>
             </a>
           </div>
-          <p>
-            Site Cloud Resume Challenge sur AWS avec diffusion globale, TLS sur domaine personnalisé et compteur de visites serverless.
-            L’implémentation comprend des pipelines GitHub Actions, des métriques CloudWatch et des alertes SNS pour le déploiement et le suivi en exécution.
-          </p>
+          <div class="project-description">
+            <p>
+              Site Cloud Resume Challenge sur AWS avec diffusion globale, TLS sur domaine personnalisé et compteur de visites sans serveur.
+            </p>
+            <p>
+              L’implémentation comprend des pipelines GitHub Actions, des métriques CloudWatch et des alertes SNS pour le déploiement et la supervision.
+            </p>
+          </div>
           <div class="project-links">
             <a class="project-link-btn" href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Dépôt</a>
             <a class="project-link-btn" href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Démo</a>
@@ -670,6 +697,17 @@
           </div>
 
           <div class="certification-card">
+            <a href="https://www.credly.com/badges/5954a246-dc19-4697-a2dc-5a12d8395184" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="Certificat RHCSA">
+              <img src="https://images.credly.com/images/572de0ba-2c59-4816-a59d-b0e1687e45ee/linkedin_thumb_image.png" alt="Badge RHCSA" class="cert-badge-img" loading="lazy" decoding="async">
+            </a>
+            <h4><i class="fa-brands fa-redhat" aria-hidden="true"></i> Red Hat Certified System Administrator (RHCSA)</h4>
+            <p>Délivrée par Red Hat</p>
+            <a href="https://www.credly.com/badges/5954a246-dc19-4697-a2dc-5a12d8395184" target="_blank" rel="noopener noreferrer" class="cert-btn">
+              <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le certificat
+            </a>
+          </div>
+
+          <div class="certification-card">
             <a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="Certificat AWS SAA">
               <img src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/linkedin_thumb_image.png" alt="Badge AWS SAA" class="cert-badge-img" loading="lazy" decoding="async">
             </a>
@@ -692,17 +730,6 @@
           </div>
 
           <div class="certification-card">
-            <a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="Certificat Azure Fundamentals">
-              <img src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Badge Azure AZ-900" class="cert-badge-img" loading="lazy" decoding="async">
-            </a>
-            <h4><i class="fa-brands fa-microsoft" aria-hidden="true"></i> Microsoft Azure Fundamentals (AZ-900)</h4>
-            <p>Délivrée par Microsoft</p>
-            <a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer" class="cert-btn">
-              <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le certificat
-            </a>
-          </div>
-
-          <div class="certification-card">
             <a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="Certificat Terraform Associate">
               <img src="https://images.credly.com/images/0dc62494-dc94-469a-83af-e35309f27356/linkedin_thumb_blob" alt="Badge Terraform Associate" class="cert-badge-img" loading="lazy" decoding="async">
             </a>
@@ -712,6 +739,17 @@
                 </svg></span> HashiCorp Terraform Associate (003)</h4>
             <p>Délivrée par HashiCorp</p>
             <a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer" class="cert-btn">
+              <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le certificat
+            </a>
+          </div>
+
+          <div class="certification-card">
+            <a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="Certificat Azure Fundamentals">
+              <img src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Badge Azure AZ-900" class="cert-badge-img" loading="lazy" decoding="async">
+            </a>
+            <h4><i class="fa-brands fa-microsoft" aria-hidden="true"></i> Microsoft Azure Fundamentals (AZ-900)</h4>
+            <p>Délivrée par Microsoft</p>
+            <a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer" class="cert-btn">
               <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Voir le certificat
             </a>
           </div>

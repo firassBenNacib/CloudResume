@@ -37,12 +37,12 @@
 |  _| | | | | (_| \\__ \\ | |_) |  __/ | | | | |\\  | (_| | (__| | |_) |
 |_|   |_|_|  \\__,_|___/ |____/ \\___|_| |_| |_| \\_|\\__,_|\\___|_|_.__/ 
 </pre>
-<div>Cloud & DevOps Engineer (Kubestronaut) - AWS, Azure, Kubernetes & Terraform Certified</div>`,
+<div>Cloud & DevOps Engineer (Kubestronaut) - AWS, Azure, Kubernetes, Terraform & Red Hat Certified</div>`,
           experience: `
 <div>Freelance Cloud and DevOps contractor working with startups, companies, and direct clients on infrastructure and automation projects.</div>
-<div>More than 10 certifications across AWS, Azure, Kubernetes, Terraform, and security domains.</div>`,
+<div>More than 10 certifications across AWS, Azure, Kubernetes, Terraform, Linux, and security domains.</div>`,
           education:
-            `<div><span class="keyword">ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</span></div><div>Engineer's Degree, Computer Science</div><div>2021 – 2024</div><div class="terminal-edu-gap"></div><div><span class="keyword">IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</span></div><div>2019 – 2021</div>`,
+            `<div><span class="keyword">ESPRIT - École Supérieure Privée d'Ingénierie et de Technologies</span></div><div>Engineer's Degree, Computer Science</div><div>2021 – 2024</div><div class="terminal-edu-gap"></div><div><span class="keyword">IPEIT - Institut Préparatoire aux Études d'Ingénieurs de Tunis</span></div><div>2019 – 2021</div>`,
           skills: `
 <div><span class="keyword">Cloud Platforms:</span> AWS, Microsoft Azure, OpenStack</div>
 <div><span class="keyword">Infrastructure as Code:</span> Terraform, Ansible</div>
@@ -73,10 +73,11 @@
 <div><a href="https://www.credly.com/badges/21b34410-97f6-4b26-a592-9018f97c128f/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
 <div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Security Associate (KCSA)</a></div>
 <div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Associate (KCNA)</a></div>
+<div><a href="https://www.credly.com/badges/5954a246-dc19-4697-a2dc-5a12d8395184" target="_blank" rel="noopener noreferrer">Red Hat Certified System Administrator (RHCSA)</a></div>
 <div><a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
 <div><a href="https://www.credly.com/badges/e20edd1d-e44a-4543-bfde-8e4a7a544a3c" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
-<div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer">HashiCorp Terraform Associate (003)</a></div>
+<div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/2d760ef9-0f9a-4ed7-9c55-3a3180aadb40/public_url" target="_blank" rel="noopener noreferrer">Cisco Network Security</a></div>`,
           github:
             '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer">github.com/firassBenNacib</a>',
@@ -99,9 +100,9 @@
         stackHide: "Masquer la stack",
         terminalTitle: "firas@cloud-resume - zsh",
         terminalBannerAscii: TERMINAL_ASCII,
-        terminalWelcomeTitle: "Welcome to my interactive portfolio!",
-        terminalWelcomeHelpLead: "Type",
-        terminalWelcomeHelpTail: "to list available commands.",
+        terminalWelcomeTitle: "Bienvenue sur mon portfolio interactif !",
+        terminalWelcomeHelpLead: "Tapez",
+        terminalWelcomeHelpTail: "pour afficher les commandes disponibles.",
         promptUser: "firas",
         promptHost: "cloud-resume",
         promptPath: "~",
@@ -116,12 +117,12 @@
 |  _| | | | | (_| \\__ \\ | |_) |  __/ | | | | |\\  | (_| | (__| | |_) |
 |_|   |_|_|  \\__,_|___/ |____/ \\___|_| |_| |_| \\_|\\__,_|\\___|_|_.__/ 
 </pre>
-<div>Ingénieur Cloud & DevOps (Kubestronaut) - Certifié AWS, Azure, Kubernetes & Terraform</div>`,
+<div>Ingénieur Cloud & DevOps (Kubestronaut) - Certifié AWS, Azure, Kubernetes, Terraform et Red Hat</div>`,
           experience: `
 <div>Contractant freelance Cloud et DevOps auprès de startups, d’entreprises et de clients directs sur des projets d’infrastructure et d’automatisation.</div>
-<div>Plus de 10 certifications couvrant AWS, Azure, Kubernetes, Terraform et la sécurité.</div>`,
+<div>Plus de 10 certifications couvrant AWS, Azure, Kubernetes, Terraform, Linux et la sécurité.</div>`,
           education:
-            `<div><span class="keyword">ESPRIT - Ecole Supérieure Privée d'Ingénierie et de Technologies</span></div><div>Diplôme d'ingénieur, Informatique</div><div>2021 – 2024</div><div class="terminal-edu-gap"></div><div><span class="keyword">IPEIT - Institut Préparatoire aux Etudes d'Ingénieurs de Tunis</span></div><div>2019 – 2021</div>`,
+            `<div><span class="keyword">ESPRIT - École Supérieure Privée d'Ingénierie et de Technologies</span></div><div>Diplôme d'ingénieur, Informatique</div><div>2021 – 2024</div><div class="terminal-edu-gap"></div><div><span class="keyword">IPEIT - Institut Préparatoire aux Études d'Ingénieurs de Tunis</span></div><div>2019 – 2021</div>`,
           skills: `
 <div><span class="keyword">Plateformes Cloud:</span> AWS, Microsoft Azure, OpenStack</div>
 <div><span class="keyword">Infrastructure as Code:</span> Terraform, Ansible</div>
@@ -152,10 +153,11 @@
 <div><a href="https://www.credly.com/badges/21b34410-97f6-4b26-a592-9018f97c128f/public_url" target="_blank" rel="noopener noreferrer">Certified Kubernetes Application Developer (CKAD)</a></div>
 <div><a href="https://www.credly.com/badges/1e6984bc-8c24-4745-942b-0604900bed0a/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Security Associate (KCSA)</a></div>
 <div><a href="https://www.credly.com/badges/7239a686-9e24-424a-a17d-580487fbaed3/public_url" target="_blank" rel="noopener noreferrer">Kubernetes and Cloud Native Associate (KCNA)</a></div>
+<div><a href="https://www.credly.com/badges/5954a246-dc19-4697-a2dc-5a12d8395184" target="_blank" rel="noopener noreferrer">Red Hat Certified System Administrator (RHCSA)</a></div>
 <div><a href="https://www.credly.com/badges/0d0cfc0a-735f-4581-9269-85d8464e968d/public_url" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></div>
 <div><a href="https://www.credly.com/badges/e20edd1d-e44a-4543-bfde-8e4a7a544a3c" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></div>
-<div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/5a87f62e-a264-4349-89ea-e1d8cbf9ae2d/public_url" target="_blank" rel="noopener noreferrer">HashiCorp Terraform Associate (003)</a></div>
+<div><a href="https://learn.microsoft.com/fr-fr/users/firasbennacib-6669/credentials/d1931b541bd8428e?ref=https%3A%2F%2Fwww.credly.com%2F" target="_blank" rel="noopener noreferrer">Microsoft Azure Fundamentals (AZ-900)</a></div>
 <div><a href="https://www.credly.com/badges/2d760ef9-0f9a-4ed7-9c55-3a3180aadb40/public_url" target="_blank" rel="noopener noreferrer">Cisco Network Security</a></div>`,
           github:
             '<a href="https://github.com/firassBenNacib" target="_blank" rel="noopener noreferrer">github.com/firassBenNacib</a>',
@@ -315,7 +317,10 @@
     const terminalBody = byId("terminal-body");
     if (terminalBody) initTerminal(terminalBody, locale, i18n);
 
+    wrapProjectMediaLinks();
     initProjectCarousels();
+    initProjectMediaOverlays();
+    initProjectMediaViewer();
     initSkillIcons();
     initDynamicNavbar();
     initScrollToTop();
@@ -439,32 +444,338 @@
       onScroll();
     }
 
+    function getProjectMediaImage(node) {
+      if (!node) return null;
+      if (node.tagName === "IMG") return node;
+      return node.querySelector("img");
+    }
+
+    function getProjectMediaTitle(node) {
+      if (!node) return "";
+      const explicitTitle = node.getAttribute("data-project-media-title");
+      if (explicitTitle) return explicitTitle;
+      const image = getProjectMediaImage(node);
+      return image?.getAttribute("data-project-media-title") || image?.alt || node.getAttribute("aria-label") || "";
+    }
+
+    function getProjectMediaHref(node) {
+      if (!node || node.tagName !== "A") return "";
+      return node.getAttribute("href") || node.href || "";
+    }
+
+    function getProjectMediaTarget(node) {
+      if (!node || node.tagName !== "A") return "";
+      return node.getAttribute("target") || "";
+    }
+
+    function getProjectMediaRel(node) {
+      if (!node || node.tagName !== "A") return "";
+      return node.getAttribute("rel") || "";
+    }
+
+    function getProjectMediaGroup(node) {
+      if (!node) return [];
+      if (node.matches?.("[data-project-slide]")) {
+        const carousel = node.closest("[data-project-carousel]");
+        if (carousel) {
+          return Array.from(carousel.querySelectorAll("[data-project-slide]")).filter((slide) => getProjectMediaImage(slide));
+        }
+      }
+      return [node];
+    }
+
+    function syncProjectCarouselSelection(node) {
+      if (!node?.matches?.("[data-project-slide]")) return;
+      const carousel = node.closest("[data-project-carousel]");
+      if (!carousel) return;
+      const slides = Array.from(carousel.querySelectorAll("[data-project-slide]"));
+      const nextIndex = slides.indexOf(node);
+      if (nextIndex < 0) return;
+
+      if (typeof carousel._setActiveProjectSlide === "function") {
+        carousel._setActiveProjectSlide(nextIndex);
+      }
+    }
+
+    function wrapProjectMediaLinks() {
+      const mediaLinks = document.querySelectorAll(".project-media-link");
+      mediaLinks.forEach((link) => {
+        if (link.parentElement && link.parentElement.classList.contains("project-media-shell")) return;
+        const shell = document.createElement("div");
+        shell.className = "project-media-shell";
+        link.parentNode.insertBefore(shell, link);
+        shell.appendChild(link);
+      });
+    }
+
+    function ensureProjectMediaOverlay(host) {
+      let overlay = Array.from(host.children || []).find((child) => child.classList && child.classList.contains("project-media-overlay"));
+      if (overlay) return overlay;
+
+      overlay = document.createElement("div");
+      overlay.className = "project-media-overlay";
+      overlay.innerHTML = `<div class="project-media-overlay__title"></div>`;
+      host.appendChild(overlay);
+      return overlay;
+    }
+
+    function syncProjectMediaOverlay(host, sourceNode) {
+      if (!host || !sourceNode) return;
+
+      const overlay = ensureProjectMediaOverlay(host);
+      const titleEl = overlay.querySelector(".project-media-overlay__title");
+      const title = getProjectMediaTitle(sourceNode);
+
+      titleEl.textContent = title;
+    }
+
+    function ensureProjectCarouselNav(frame, labels) {
+      if (!frame) return null;
+
+      let nav = Array.from(frame.children || []).find((child) => child.classList && child.classList.contains("project-media-carousel-nav"));
+      if (nav) return nav;
+
+      nav = document.createElement("div");
+      nav.className = "project-media-carousel-nav";
+      nav.innerHTML = `
+        <button class="project-media-carousel-nav__btn project-media-carousel-nav__btn--prev" type="button" aria-label="${labels.prev}">‹</button>
+        <button class="project-media-carousel-nav__btn project-media-carousel-nav__btn--next" type="button" aria-label="${labels.next}">›</button>
+      `;
+      frame.appendChild(nav);
+      return nav;
+    }
+
     function initProjectCarousels() {
       const carousels = document.querySelectorAll("[data-project-carousel]");
       carousels.forEach((carousel) => {
         const slides = Array.from(carousel.querySelectorAll("[data-project-slide]"));
         const dots = Array.from(carousel.querySelectorAll("[data-project-dot]"));
         if (!slides.length || slides.length !== dots.length) return;
+        const frame = carousel.querySelector(".project-media-carousel-frame");
+        let activeIndex = 0;
+
+        const navLabels = {
+          prev: locale === "fr" ? "Image précédente" : "Previous image",
+          next: locale === "fr" ? "Image suivante" : "Next image",
+        };
 
         const setActiveSlide = (index) => {
+          activeIndex = (index + slides.length) % slides.length;
           slides.forEach((slide, slideIndex) => {
-            const isActive = slideIndex === index;
+            const isActive = slideIndex === activeIndex;
             slide.classList.toggle("is-active", isActive);
             slide.setAttribute("aria-hidden", String(!isActive));
           });
           dots.forEach((dot, dotIndex) => {
-            const isActive = dotIndex === index;
+            const isActive = dotIndex === activeIndex;
             dot.classList.toggle("is-active", isActive);
             dot.setAttribute("aria-pressed", String(isActive));
             dot.tabIndex = isActive ? 0 : -1;
           });
+          if (frame) {
+            frame.setAttribute("data-project-media-title", getProjectMediaTitle(slides[activeIndex]));
+            frame.dispatchEvent(new Event("projectmediachange"));
+          }
         };
 
         dots.forEach((dot, index) => {
           dot.addEventListener("click", () => setActiveSlide(index));
         });
 
+        if (frame && slides.length > 1) {
+          const nav = ensureProjectCarouselNav(frame, navLabels);
+          const prevBtn = nav.querySelector(".project-media-carousel-nav__btn--prev");
+          const nextBtn = nav.querySelector(".project-media-carousel-nav__btn--next");
+
+          prevBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            setActiveSlide(activeIndex - 1);
+          });
+
+          nextBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            setActiveSlide(activeIndex + 1);
+          });
+        }
+
+        carousel._setActiveProjectSlide = setActiveSlide;
         setActiveSlide(0);
+      });
+    }
+
+    function initProjectMediaOverlays() {
+      const carouselFrames = document.querySelectorAll(".project-media-carousel-frame");
+      carouselFrames.forEach((frame) => {
+        const sync = () => syncProjectMediaOverlay(frame, frame.querySelector(".project-media-slide.is-active"));
+        frame.addEventListener("projectmediachange", sync);
+        sync();
+      });
+
+      const mediaShells = document.querySelectorAll(".project-media-shell");
+      mediaShells.forEach((shell) => {
+        const mediaLink = shell.querySelector(".project-media-link");
+        if (!mediaLink) return;
+        syncProjectMediaOverlay(shell, mediaLink);
+      });
+
+      const staticMedia = document.querySelectorAll(".project-media-static");
+      staticMedia.forEach((container) => {
+        if (container.classList.contains("project-media-carousel-frame")) return;
+        if (container.querySelector(".project-media-link")) return;
+
+        const image = container.querySelector("img");
+        if (!image) return;
+        syncProjectMediaOverlay(container, image);
+      });
+    }
+
+    function initProjectMediaViewer() {
+      const mediaNodes = Array.from(
+        document.querySelectorAll(".project-media-link, [data-project-slide], .project-media-static > img")
+      ).filter((node) => getProjectMediaImage(node));
+
+      if (!mediaNodes.length) return;
+
+      const closeLabel = locale === "fr" ? "Fermer l’aperçu" : "Close preview";
+      const previousLabel = locale === "fr" ? "Image précédente" : "Previous image";
+      const nextLabel = locale === "fr" ? "Image suivante" : "Next image";
+      const dialog = document.createElement("div");
+      dialog.className = "project-media-dialog";
+      dialog.hidden = true;
+      dialog.innerHTML = `
+        <div class="project-media-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="project-media-dialog-title">
+          <button class="project-media-dialog__close" type="button" aria-label="${closeLabel}">×</button>
+          <p class="project-media-dialog__title" id="project-media-dialog-title"></p>
+          <div class="project-media-dialog__stage">
+            <button class="project-media-dialog__nav project-media-dialog__nav--prev" type="button" aria-label="${previousLabel}" hidden>‹</button>
+            <a class="project-media-dialog__media-link" target="_blank" rel="noopener noreferrer">
+              <img class="project-media-dialog__img" alt="">
+            </a>
+            <button class="project-media-dialog__nav project-media-dialog__nav--next" type="button" aria-label="${nextLabel}" hidden>›</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(dialog);
+
+      const closeBtn = dialog.querySelector(".project-media-dialog__close");
+      const titleEl = dialog.querySelector(".project-media-dialog__title");
+      const mediaLinkEl = dialog.querySelector(".project-media-dialog__media-link");
+      const imageEl = dialog.querySelector(".project-media-dialog__img");
+      const prevBtn = dialog.querySelector(".project-media-dialog__nav--prev");
+      const nextBtn = dialog.querySelector(".project-media-dialog__nav--next");
+      let currentGroup = [];
+      let currentIndex = 0;
+
+      const syncDialogNav = () => {
+        const hasMultiple = currentGroup.length > 1;
+        prevBtn.hidden = !hasMultiple;
+        nextBtn.hidden = !hasMultiple;
+      };
+
+      const renderDialogNode = (node) => {
+        const image = getProjectMediaImage(node);
+        if (!image) return;
+        titleEl.textContent = getProjectMediaTitle(node);
+        imageEl.src = image.currentSrc || image.src;
+        imageEl.alt = image.alt || titleEl.textContent;
+        const href = getProjectMediaHref(node);
+        const target = getProjectMediaTarget(node);
+        const rel = getProjectMediaRel(node);
+
+        if (href) {
+          mediaLinkEl.href = href;
+          mediaLinkEl.classList.add("is-link");
+          mediaLinkEl.setAttribute("aria-label", titleEl.textContent);
+          if (target) mediaLinkEl.target = target;
+          else mediaLinkEl.removeAttribute("target");
+          if (rel) mediaLinkEl.rel = rel;
+          else mediaLinkEl.removeAttribute("rel");
+        } else {
+          mediaLinkEl.removeAttribute("href");
+          mediaLinkEl.removeAttribute("target");
+          mediaLinkEl.removeAttribute("rel");
+          mediaLinkEl.removeAttribute("aria-label");
+          mediaLinkEl.classList.remove("is-link");
+        }
+
+        syncProjectCarouselSelection(node);
+        syncDialogNav();
+      };
+
+      const showDialogIndex = (nextIndex) => {
+        if (!currentGroup.length) return;
+        currentIndex = (nextIndex + currentGroup.length) % currentGroup.length;
+        renderDialogNode(currentGroup[currentIndex]);
+      };
+
+      const closeDialog = () => {
+        dialog.classList.remove("is-open");
+        dialog.hidden = true;
+        currentGroup = [];
+        currentIndex = 0;
+        mediaLinkEl.removeAttribute("href");
+        mediaLinkEl.removeAttribute("target");
+        mediaLinkEl.removeAttribute("rel");
+        mediaLinkEl.removeAttribute("aria-label");
+        mediaLinkEl.classList.remove("is-link");
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        syncDialogNav();
+        document.body.classList.remove("has-media-dialog");
+      };
+
+      const openDialog = (node) => {
+        currentGroup = getProjectMediaGroup(node);
+        currentIndex = Math.max(0, currentGroup.indexOf(node));
+        showDialogIndex(currentIndex);
+        dialog.hidden = false;
+        document.body.classList.add("has-media-dialog");
+        requestAnimationFrame(() => dialog.classList.add("is-open"));
+        closeBtn.focus();
+      };
+
+      mediaNodes.forEach((node) => {
+        if (node.tagName === "A") {
+          node.setAttribute("aria-haspopup", "dialog");
+        } else {
+          node.tabIndex = 0;
+          node.setAttribute("role", "button");
+          node.setAttribute("aria-label", getProjectMediaTitle(node));
+          node.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+            event.preventDefault();
+            openDialog(node);
+          });
+        }
+        node.addEventListener("click", (event) => {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+          event.preventDefault();
+          openDialog(node);
+        });
+      });
+
+      prevBtn.addEventListener("click", () => showDialogIndex(currentIndex - 1));
+      nextBtn.addEventListener("click", () => showDialogIndex(currentIndex + 1));
+      closeBtn.addEventListener("click", closeDialog);
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) closeDialog();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (dialog.hidden) return;
+        if (event.key === "Escape") {
+          closeDialog();
+          return;
+        }
+        if (currentGroup.length <= 1) return;
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          showDialogIndex(currentIndex - 1);
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          showDialogIndex(currentIndex + 1);
+        }
       });
     }
 
