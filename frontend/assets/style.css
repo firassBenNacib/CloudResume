@@ -605,6 +605,7 @@ textarea{
   color:inherit;
   text-align:left;
   display:-webkit-box;
+  line-clamp:3;
   -webkit-line-clamp:3;
   -webkit-box-orient:vertical;
   overflow:hidden;
@@ -1537,6 +1538,7 @@ p a:hover{color:var(--primary-hover)}
   }
   .project-media-overlay__title{
     font-size:.85rem;
+    line-clamp:2;
     -webkit-line-clamp:2
   }
   .project-media-dialog__panel{padding:.8rem;width:min(96vw,96vw)}
