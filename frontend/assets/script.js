@@ -58,9 +58,10 @@
           projects: `
 <div><a href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer">AWS-ECS-Blueprint</a></div>
 <div><span class="keyword">mini-microservices</span> | <a href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer">Spring/Angular</a> | <a href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer">Node/React</a></div>
-<div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
 <div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
+<div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
 <div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Demo</a></div>
+<div><a href="https://github.com/firassBenNacib/RHCSA-Simulator" target="_blank" rel="noopener noreferrer">RHCSA-Simulator</a> | <a href="https://github.com/firassBenNacib/RHCSA-Simulator/blob/main/demo/demo.gif" target="_blank" rel="noopener noreferrer">Demo</a></div>
 <div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Demo</a></div>
 <div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
 <div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Demo</a></div>
@@ -138,9 +139,10 @@
           projects: `
 <div><a href="https://github.com/firassBenNacib/AWS-ECS-Blueprint" target="_blank" rel="noopener noreferrer">AWS-ECS-Blueprint</a></div>
 <div><span class="keyword">mini-microservices</span> | <a href="https://github.com/firassBenNacib/mini-microservices-spring-angular" target="_blank" rel="noopener noreferrer">Spring/Angular</a> | <a href="https://github.com/firassBenNacib/mini-microservices-node-react" target="_blank" rel="noopener noreferrer">Node/React</a></div>
-<div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
 <div><a href="https://github.com/firassBenNacib/KubleOps" target="_blank" rel="noopener noreferrer">KubleOps</a></div>
+<div><a href="https://github.com/firassBenNacib/EcoAuto_AWS_Terraform" target="_blank" rel="noopener noreferrer">EcoAuto</a></div>
 <div><a href="https://github.com/firassBenNacib/CloudResume" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge</a> | <a href="https://firasbennacib.com" target="_blank" rel="noopener noreferrer">Démo</a></div>
+<div><a href="https://github.com/firassBenNacib/RHCSA-Simulator" target="_blank" rel="noopener noreferrer">RHCSA-Simulator</a> | <a href="https://github.com/firassBenNacib/RHCSA-Simulator/blob/main/demo/demo.gif" target="_blank" rel="noopener noreferrer">Démo</a></div>
 <div><a href="https://github.com/firassBenNacib/Talos-HyperV-Bootstrap" target="_blank" rel="noopener noreferrer">Talos-HyperV-Bootstrap</a> | <a href="https://asciinema.org/a/747251" target="_blank" rel="noopener noreferrer">Démo</a></div>
 <div><a href="https://github.com/firassBenNacib/KubleOps-manifest" target="_blank" rel="noopener noreferrer">KubleOps-manifest (GitOps)</a></div>
 <div><a href="https://github.com/firassBenNacib/k3s-Cluster-Setup" target="_blank" rel="noopener noreferrer">k3s-Cluster-Setup</a> | <a href="https://asciinema.org/a/772374" target="_blank" rel="noopener noreferrer">Démo</a></div>
