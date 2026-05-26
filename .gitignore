@@ -18,3 +18,4 @@ modules/lambda/src/*.zip
 purge.config.cjs
 */*.zip
 **/*.zip
+/output/
