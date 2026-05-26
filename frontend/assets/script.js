@@ -28,7 +28,7 @@
         promptPath: "~",
         promptSign: "$",
         cmds: {
-          help: `<div><span class="cmd">whoami</span> : General information</div><div><span class="cmd">experience</span> : Technical experience</div><div><span class="cmd">education</span> : Educational background</div><div><span class="cmd">skills</span> : Current technical skills</div><div><span class="cmd">projects</span> : Featured projects</div><div><span class="cmd">certs</span> : Certifications</div><div><span class="cmd">resume</span> : Download CV</div><div><span class="cmd">github</span> : GitHub profile</div><div><span class="cmd">linkedin</span> : LinkedIn profile</div><div><span class="cmd">contact</span> : Email</div><div><span class="cmd">sudo</span> : Try it :)</div><div><span class="cmd">clear</span> : Clear the terminal</div>`,
+          help: `<div><span class="cmd">whoami</span> : General information</div><div><span class="cmd">experience</span> : Technical experience</div><div><span class="cmd">education</span> : Educational background</div><div><span class="cmd">skills</span> : Current technical skills</div><div><span class="cmd">projects</span> : Featured projects</div><div><span class="cmd">certs</span> : Certifications</div><div><span class="cmd">resume</span> : Download CV</div><div><span class="cmd">github</span> : GitHub profile</div><div><span class="cmd">linkedin</span> : LinkedIn profile</div><div><span class="cmd">other</span> : External certification profiles</div><div><span class="cmd">contact</span> : Email</div><div><span class="cmd">sudo</span> : Try it :)</div><div><span class="cmd">clear</span> : Clear the terminal</div>`,
           whoami: `
 <pre style="color:#38bdf8;font-family:monospace;line-height:1.2;">
  _____ _                 ____               _   _            _ _     
@@ -86,6 +86,10 @@
             '<a href="files/Firas_Ben_Nacib_Resume_EN.pdf" target="_blank" rel="noopener noreferrer">firas_ben_nacib resume</a>',
           linkedin:
             '<a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener noreferrer">linkedin.com/in/firas-ben-nacib-27a858243</a>',
+          other: `<pre class="terminal-links-output"><span class="keyword">CertDirectory:</span>
+<a class="terminal-url" href="https://certdirectory.io/profile/firas-ben-nacib" target="_blank" rel="noopener noreferrer">certdirectory.io/profile/firas-ben-nacib</a>
+<span class="keyword">CNCF Kubestronaut:</span>
+<a class="terminal-url" href="https://www.cncf.io/training/kubestronaut/?_sft_lf-country=tn&p=firas-ben-nacib&_sf_s=firas+ben+nacib" target="_blank" rel="noopener noreferrer">cncf.io/training/kubestronaut/?p=firas-ben-nacib</a></pre>`,
           contact:
             '<a href="mailto:bennacibfiras@gmail.com">bennacibfiras@gmail.com</a>',
           sudo:
@@ -109,7 +113,7 @@
         promptPath: "~",
         promptSign: "$",
         cmds: {
-          help: `<div><span class="cmd">whoami</span> : Infos générales</div><div><span class="cmd">experience</span> : Expérience technique</div><div><span class="cmd">education</span> : Parcours académique</div><div><span class="cmd">skills</span> : Compétences techniques</div><div><span class="cmd">projects</span> : Projets principaux</div><div><span class="cmd">certs</span> : Certifications</div><div><span class="cmd">resume</span> : Télécharger le CV</div><div><span class="cmd">github</span> : Profil GitHub</div><div><span class="cmd">linkedin</span> : Profil LinkedIn</div><div><span class="cmd">contact</span> : Email</div><div><span class="cmd">sudo</span> : Essaie :)</div><div><span class="cmd">clear</span> : Effacer le terminal</div>`,
+          help: `<div><span class="cmd">whoami</span> : Infos générales</div><div><span class="cmd">experience</span> : Expérience technique</div><div><span class="cmd">education</span> : Parcours académique</div><div><span class="cmd">skills</span> : Compétences techniques</div><div><span class="cmd">projects</span> : Projets principaux</div><div><span class="cmd">certs</span> : Certifications</div><div><span class="cmd">resume</span> : Télécharger le CV</div><div><span class="cmd">github</span> : Profil GitHub</div><div><span class="cmd">linkedin</span> : Profil LinkedIn</div><div><span class="cmd">other</span> : Profils de certification externes</div><div><span class="cmd">contact</span> : Email</div><div><span class="cmd">sudo</span> : Essaie :)</div><div><span class="cmd">clear</span> : Effacer le terminal</div>`,
           whoami: `
 <pre style="color:#38bdf8;font-family:monospace;line-height:1.2;">
  _____ _                 ____               _   _            _ _     
@@ -167,6 +171,10 @@
             '<a href="../files/Firas_Ben_Nacib_Resume_FR.pdf" target="_blank" rel="noopener noreferrer">firas_ben_nacib cv</a>',
           linkedin:
             '<a href="https://www.linkedin.com/in/firas-ben-nacib-27a858243" target="_blank" rel="noopener noreferrer">linkedin.com/in/firas-ben-nacib-27a858243</a>',
+          other: `<pre class="terminal-links-output"><span class="keyword">CertDirectory :</span>
+<a class="terminal-url" href="https://certdirectory.io/profile/firas-ben-nacib" target="_blank" rel="noopener noreferrer">certdirectory.io/profile/firas-ben-nacib</a>
+<span class="keyword">CNCF Kubestronaut :</span>
+<a class="terminal-url" href="https://www.cncf.io/training/kubestronaut/?_sft_lf-country=tn&p=firas-ben-nacib&_sf_s=firas+ben+nacib" target="_blank" rel="noopener noreferrer">cncf.io/training/kubestronaut/?p=firas-ben-nacib</a></pre>`,
           contact:
             '<a href="mailto:bennacibfiras@gmail.com">bennacibfiras@gmail.com</a>',
           sudo:
@@ -977,6 +985,7 @@
       resume: L.cmds.resume,
       github: L.cmds.github,
       linkedin: L.cmds.linkedin,
+      other: L.cmds.other,
       contact: L.cmds.contact,
       sudo: L.cmds.sudo,
       clear: "__CLEAR__",

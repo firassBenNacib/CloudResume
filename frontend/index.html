@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=20260418-6" />
+  <link rel="stylesheet" href="assets/style.css?v=20260525-2" />
   <link rel="icon" href="images/profile/chibi.webp" type="image/webp" />
   <link rel="preload" as="image" href="images/profile/chibi.webp" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vscode/codicons/dist/codicon.css">
@@ -72,6 +72,7 @@
           <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#kubestronaut">Kubestronaut</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#certifications">Certifications</a></li>
@@ -164,6 +165,37 @@
             Hey! I'm Firas, a <strong>Cloud &amp; DevOps Engineer</strong> who loves <strong>AWS</strong> and tries to automate everything. I'm always building solid <strong>CI/CD pipelines</strong>, managing infrastructure with <strong>Terraform</strong> and <strong>Ansible</strong>, and exploring <strong>Kubernetes</strong> and <strong>GitOps</strong> to make life easier. I've also worked a bit with Azure, but AWS is where my heart is. I enjoy solving real problems and making technology work seamlessly.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="kubestronaut" class="section kubestronaut-section" aria-label="Kubestronaut profile">
+    <div class="kubestronaut-shell">
+      <h2 class="section-title kubestronaut-title">CNCF Kubestronaut Profile</h2>
+      <div class="kubestronaut-card">
+        <aside class="kubestronaut-profile-panel">
+          <img class="kubestronaut-profile-photo" src="images/profile/kubestronaut-profile-firas.webp" alt="Firas Ben Nacib" loading="lazy" decoding="async">
+          <div class="kubestronaut-profile-body">
+            <strong>Firas Ben Nacib</strong>
+            <span>(He/Him)</span>
+            <div class="kubestronaut-actions" aria-label="Kubestronaut redirects">
+              <a class="btn-primary kubestronaut-btn" href="https://www.cncf.io/training/kubestronaut/?_sft_lf-country=tn&p=firas-ben-nacib&_sf_s=firas+ben+nacib" target="_blank" rel="noopener noreferrer" aria-label="Open CNCF Kubestronaut profile">
+                <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
+                Open CNCF Profile
+              </a>
+              <a class="btn-outline kubestronaut-btn" href="https://www.cncf.io/training/kubestronaut/" target="_blank" rel="noopener noreferrer" aria-label="Open CNCF Kubestronaut list">
+                <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
+                Kubestronaut List
+              </a>
+            </div>
+          </div>
+        </aside>
+        <a class="kubestronaut-map-panel" href="https://www.cncf.io/training/kubestronaut/" target="_blank" rel="noopener noreferrer" aria-label="Open CNCF Kubestronaut map" title="Open CNCF Kubestronaut map">
+          <img src="images/profile/kubestronaut-map-firas.webp" alt="CNCF Kubestronaut map pin for Firas Ben Nacib" loading="lazy" decoding="async">
+          <div class="kubestronaut-map-shade" aria-hidden="true"></div>
+        </a>
       </div>
     </div>
   </section>
@@ -329,9 +361,24 @@
       </div>
 
       <div class="project">
-        <a class="project-media-link" href="https://github.com/firassBenNacib/RHCSA-Simulator/blob/main/demo/demo.gif" target="_blank" rel="noopener noreferrer" aria-label="RHCSA Simulator media preview">
-          <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/RHCSA-Simulator/main/demo/demo.gif" alt="RHCSA Simulator terminal UI demo" loading="lazy" decoding="async" onerror="this.closest('.project-media-link').style.display='none';">
-        </a>
+        <div class="project-media-carousel" data-project-carousel>
+          <div class="project-media-static project-media-carousel-frame">
+            <a class="project-media-slide is-active" data-project-slide data-project-media-title="Terminal UI Demo" href="https://github.com/firassBenNacib/RHCSA-Simulator/blob/main/demo/demo.gif" target="_blank" rel="noopener noreferrer" aria-label="Preview RHCSA Simulator terminal UI demo">
+              <img class="project-media-img project-media-img--contain" src="https://raw.githubusercontent.com/firassBenNacib/RHCSA-Simulator/main/demo/demo.gif" alt="RHCSA Simulator terminal UI demo" loading="lazy" decoding="async">
+            </a>
+            <a class="project-media-slide" data-project-slide data-project-media-title="Lab Task View" href="images/projects/rhcsa-simulator-tui-lab.png" target="_blank" rel="noopener noreferrer" aria-label="Preview RHCSA Simulator lab task view">
+              <img class="project-media-img project-media-img--contain" src="images/projects/rhcsa-simulator-tui-lab.png" alt="RHCSA Simulator lab task view with task list and instructions" loading="lazy" decoding="async">
+            </a>
+            <a class="project-media-slide" data-project-slide data-project-media-title="PowerShell Runner" href="images/projects/rhcsa-simulator-powershell-run.png" target="_blank" rel="noopener noreferrer" aria-label="Preview RHCSA Simulator PowerShell runner">
+              <img class="project-media-img project-media-img--contain" src="images/projects/rhcsa-simulator-powershell-run.png" alt="RHCSA Simulator PowerShell command runner and provisioning status" loading="lazy" decoding="async">
+            </a>
+          </div>
+          <div class="project-media-dots" aria-label="RHCSA Simulator media selector">
+            <button class="project-media-dot is-active" type="button" data-project-dot aria-label="Show terminal UI demo" aria-pressed="true"></button>
+            <button class="project-media-dot" type="button" data-project-dot aria-label="Show lab task view" aria-pressed="false"></button>
+            <button class="project-media-dot" type="button" data-project-dot aria-label="Show PowerShell runner" aria-pressed="false"></button>
+          </div>
+        </div>
         <div class="project-title">
           <a class="project-title-link" href="https://github.com/firassBenNacib/RHCSA-Simulator" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo"><span class="project-title-label">RHCSA-Simulator&nbsp;&nbsp;-&nbsp;&nbsp;RHCSA Lab &amp; Exam Trainer</span><i class="fa-brands fa-github fa-xl" aria-hidden="true"></i></a>
         </div>
@@ -349,7 +396,7 @@
         </div>
         <button class="expand-btn">View stack <span class="arrow-icon">▼</span></button>
         <div class="project-tools-collapsible">
-          <p><strong>Tools:</strong> PowerShell, Go, Vagrant, VirtualBox, SSH, terminal UI, RHCSA 9, RHCSA 10, RHEL labs, GitHub Actions, GoReleaser, Windows installer</p>
+          <p><strong>Tools:</strong> PowerShell, Python, Go, Vagrant, VirtualBox, RHEL, GitHub Actions, GoReleaser</p>
         </div>
       </div>
 
